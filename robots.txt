@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /favicon.png
+Disallow: /OfferLetter.pdf
+Disallow: /CNAME
+Disallow: /README.me
+Disallow: /js
+Disallow: /inc
+Disallow: /css
