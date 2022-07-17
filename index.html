@@ -19,11 +19,6 @@
 					ML applications, that can contribute as a solution in real
 					world problems.">  
 	<meta name="author" content="Lakshay Kumar">
-	<meta property="og:title" content="Lakshay Kumar">
-<meta property="og:description" content="Data Scientist | Founder of Techuro | Tech Coder | Startup Enthusiast">
-<meta property="og:image" content="favicon.png">
-<meta property="og:url" content="https://www.linkedin.com/feed/update/urn:li:activity:6919125838126858240/">
-
 
    <!-- mobile specific metas
    ================================================== -->
@@ -95,7 +90,10 @@
 	   				<span>Python A.I and M.L.</span> 
 	   			</p>
 
+
+
 	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+	   			<a class="button stroke smoothscroll" href="#resume" title="">Webinars</a>
 
 	   		</div>  
    			
@@ -111,6 +109,65 @@
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
+   <section class="grey-section" id="resume" >
+	<div class="row section-intro">
+		<div class="col-twelve">
+
+			<h5>Webinar</h5>
+			<h1>Watch me live</h1>
+	
+	</div> <!-- /section-intro -->
+
+	<div class="row about-content">
+		<div>
+
+		<div class="col-six tab-full">
+
+			<h3>Topic</h3>
+			<p>Artificial Intelligence and Machine Learning implementation in Drones</p>
+
+			<ul class="info-list">
+				<li>
+					<strong>Details</strong>
+					<p>
+						<b>Learn and Implement AI</b><br>
+						
+						
+						Bangalore AI/ML Meetup invites you to this special meetup to enhance your knowledge around Artificial Intelligence and its applications.
+
+					</p>
+				</li>
+				<li>
+					<strong>RSVP</strong>
+					<p><img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" style="height:15px;">&nbsp;August 6, 2022. 10:15 AM<br><img src="https://cdn-icons-png.flaticon.com/512/67/67347.png" style="height:15px;">&nbsp;Microsoft Reactor Bengaluru<br>
+						Lavelle Road · Bengaluru, KA</p>
+				</li>
+				<li>
+					<b><a href="https://www.meetup.com/bangalore-ai-ml-meetup/events/286848463/" style="padding:10px;border: 3px #000 solid">Register Now</a></b>
+				</li>
+				
+
+				
+
+			</ul> <!-- /info-list -->
+
+		</div>
+
+		<div class="col-six tab-full">
+			<img src="reactorWebinar.png" height="200px">
+
+		
+
+		</div><br>
+		
+	</div>
+	<hr>
+	</div>
+
+	
+	
+	
+   </section>
 
 
    <!-- about section
@@ -159,11 +216,11 @@
    				</li>
    				<li>
    					<strong>Website:</strong>
-   					<span>www.lakshaykumar.tech</span>
+   					<span>www.lakshaykumar.me</span>
    				</li>
    				<li>
    					<strong>Email:</strong>
-   					<span>contact@lakshaykumar.tech</span>
+   					<span>contact@lakshaykumar.me</span>
    				</li>
 
    			</ul> <!-- /info-list -->
@@ -876,7 +933,7 @@
 	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
-                     <button class="submitform">Submit</button>
+                     <button class="submitform" type="submit" onclick="myFunction()">Submit</button>
                      <div id="submit-loader">
                         <div class="text-loader">Sending...</div>                             
        				      <div class="s-loader">
@@ -979,6 +1036,48 @@
    <div id="preloader"> 
     	<div id="loader"></div>
    </div> 
+ 
+   <script>
+	function myFunction() {
+	 var name = document.getElementById("contactName").value;
+	 var email = document.getElementById("contactEmail").value;
+	 var subject = document.getElementById("contactSubject").value;
+	 var message = document.getElementById("contactMessage").value;
+	 if(name=="" || email=="" || subject=="" || message==""){
+		
+
+	 }
+	 else{
+		//  let text = email;
+		//  let pattern = "[a-z0-9]+@[a-z]+\.[a-z]{2,3}";
+		//  let result = pattern.test(text);
+		//  var url = "https://script.google.com/macros/s/AKfycbxapJnBBkyU1Do1TcpkLRq5Bfe11wPAsrcPvR9pGmkz1sWmKsAq4yQsNzo6iryFRwyg/exec?name="+name+"&email="+email+"&message"+message+"&subject="+subject;
+		//  document.getElementById("myFrame").src = url;
+		//  if(result){
+			
+
+		//  }
+		let xhr = new XMLHttpRequest();
+xhr.open("POST", "https://script.google.com/macros/s/AKfycbyWaXmnMp_dCps2w4JVJMh-s7bdmGiYXyKbrC5qeDTdsxaO1GingzeTOwBggO2pcIFC/exec");
+
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.onload = () => console.log(xhr.responseText);
+
+let data = `{
+  "name": "Lakshay Kumar",
+  "email": "lakshaykumar2193@gmail.com",
+  "subject":"TEST",
+  "message":"WorkingWell",
+}`;
+
+xhr.send(data);
+		 
+	 }
+	 
+	}
+	</script>
 
    <!-- Java Script
    ================================================== --> 
