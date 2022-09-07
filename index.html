@@ -1071,8 +1071,7 @@
       		</form> <!-- Form End -->
 
             <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
+                   
             <!-- contact-success -->
       		<div id="message-success">
                <i class="fa fa-check"></i>Your message was sent, thank you!<br>
@@ -1166,38 +1165,17 @@
 	 var email = document.getElementById("contactEmail").value;
 	 var subject = document.getElementById("contactSubject").value;
 	 var message = document.getElementById("contactMessage").value;
-	 if(name=="" || email=="" || subject=="" || message==""){
+		if(name=="" || email=="" || subject=="" || message==""){
+		alert("Please fill all the fields");
 		
 
 	 }
 	 else{
-		//  let text = email;
-		//  let pattern = "[a-z0-9]+@[a-z]+\.[a-z]{2,3}";
-		//  let result = pattern.test(text);
-		//  var url = "https://script.google.com/macros/s/AKfycbxapJnBBkyU1Do1TcpkLRq5Bfe11wPAsrcPvR9pGmkz1sWmKsAq4yQsNzo6iryFRwyg/exec?name="+name+"&email="+email+"&message"+message+"&subject="+subject;
-		//  document.getElementById("myFrame").src = url;
-		//  if(result){
-			
-
-		//  }
-		let xhr = new XMLHttpRequest();
-xhr.open("POST", "https://script.google.com/macros/s/AKfycbyWaXmnMp_dCps2w4JVJMh-s7bdmGiYXyKbrC5qeDTdsxaO1GingzeTOwBggO2pcIFC/exec");
-
-xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Content-Type", "application/json");
-
-xhr.onload = () => console.log(xhr.responseText);
-
-let data = `{
-  "name": "Lakshay Kumar",
-  "email": "lakshaykumar2193@gmail.com",
-  "subject":"TEST",
-  "message":"WorkingWell",
-}`;
-
-xhr.send(data);
+		var body = "Name : "+name+"\n Email : "+email+" \n"+message;
+		window.location='mailto:lakshaykumar.coder@gmail.com?subject='+subject+'&body='+body;
 		 
 	 }
+	
 	 
 	}
 	</script>
