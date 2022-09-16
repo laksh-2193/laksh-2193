@@ -8,7 +8,7 @@ const loading = document.getElementById("loading");
 
 const currentYear = new Date().getFullYear();
 
-const birthdayTime = new Date(`September 20 ${currentYear} 00:00:00`);
+const birthdayTime = new Date(`September 20 ${currentYear} 20:00:00`);
 
 const today = new Date();
 const currentDateTime = new Date(
