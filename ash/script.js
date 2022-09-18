@@ -49,7 +49,7 @@ function updateCountdown() {
     hours.innerHTML = "";
     minutes.innerHTML = "";
     seconds.innerHTML = "";
-    wishes.innerHTML = "Happy Birthday Ash 💖🔥!! <br><a href='https://drive.google.com/file/d/1rRnyYt5SUxLWKTvY3wD1dyV5przww2H-/view?usp=sharing'><small>(Click here)<small></a>";
+    wishes.innerHTML = "Happy Birthday Ash 💖🔥!! <br><a href='https://drive.google.com/file/d/1sHnnaqNG_0V3ZrEXro6msJyeB0b33BTv/view?usp=sharing'><small>(Click here)<small></a>";
   }
   
   
