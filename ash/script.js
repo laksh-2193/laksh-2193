@@ -1,65 +1,30 @@
-const days = document.getElementById("days");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
-const countdown = document.getElementById("countdown");
-const year = document.getElementById("year");
-const loading = document.getElementById("loading");
-
-const currentYear = new Date().getFullYear();
-
-const birthdayTime = new Date(`September 21 2022 00:00:00`);
-
-const today = new Date();
-const currentDateTime = new Date(
-  `${today.getMonth()} ${today.getDate()} ${currentYear}`
-);
-
-const age =
-  currentDateTime < birthdayTime ? currentYear - 1994 - 1 : currentYear - 1994;
-
-// Set background year
-// year.innerText = `${age + 1}y`;
-
-// Update countdown time
-function updateCountdown() {
-  const currentTime = new Date();
-  const newYearBirthday = new Date(`September 20 ${currentYear} 00:00:00`);
-  const diff =
-    birthdayTime < currentTime
-      ? newYearBirthday - currentTime
-      : birthdayTime - currentTime;
-
-  const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-  const h = Math.floor(diff / 1000 / 60 / 60) % 24;
-  const m = Math.floor(diff / 1000 / 60) % 60;
-  const s = Math.floor(diff / 1000) % 60;
-
-  if(d>0)
-  {
-    days.innerHTML = d + "<small> days. </small>";
-  hours.innerHTML = h+ "<small> hrs. </small>";
-  minutes.innerHTML = m + "<small> min. </small>";
-  seconds.innerHTML = s + "<small> sec. </small>";
-
-  }
-  else
-  {
-    days.innerHTML = "";
-    hours.innerHTML = "";
-    minutes.innerHTML = "";
-    seconds.innerHTML = "";
-    wishes.innerHTML = "Happy Birthday Ash 💖🔥!! <br><a href='https://drive.google.com/file/d/1sHnnaqNG_0V3ZrEXro6msJyeB0b33BTv/view?usp=sharing'><small>(Click here)<small></a>";
-  }
+// Set the date we're counting down to
+var endDate = new Date("Sep 20, 2022 00:00:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+    // Get todays date and time
+    var now = new Date().getTime();
+    // Find the distance between now an the count down date
+    var distance = endDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Output the result in elements with id="cdHour/cdMin/cdSec"
+    document.getElementById("daysNum").innerHTML = ("0" + days).slice(-2);  
+    document.getElementById("hoursNum").innerHTML = ("0" + hours).slice(-2);
+    document.getElementById("minsNum").innerHTML = ("0" + minutes).slice(-2);
+    document.getElementById("secsNum").innerHTML = ("0" + seconds).slice(-2);
   
-  
-}
-
-// Show spinner before countdown
-setTimeout(() => {
-  loading.remove();
-  countdown.style.display = "flex";
+ if(parseInt(("0" + hours).slice(-2))<0)
+   {
+    window.location="https://drive.google.com/file/d/1sHnnaqNG_0V3ZrEXro6msJyeB0b33BTv/view?usp=sharing";
+    
+   }
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countContainer").innerHTML = "EXPIRED";
+    }
 }, 1000);
-
-// Run every second
-setInterval(updateCountdown, 1000);
