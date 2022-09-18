@@ -8,7 +8,7 @@ const loading = document.getElementById("loading");
 
 const currentYear = new Date().getFullYear();
 
-const birthdayTime = new Date(`September 20 ${currentYear} 20:00:00`);
+const birthdayTime = new Date(`September 20 ${currentYear} 00:00:00`);
 
 const today = new Date();
 const currentDateTime = new Date(
@@ -49,7 +49,7 @@ function updateCountdown() {
     hours.innerHTML = "";
     minutes.innerHTML = "";
     seconds.innerHTML = "";
-    wishes.innerHTML = "Happy Birthday Ash 💖🔥!! <br><a href='http://www.ashmitadas.me'><small>(Click here)<small></a>";
+    wishes.innerHTML = "Happy Birthday Ash 💖🔥!! <br><a href='https://drive.google.com/file/d/1rRnyYt5SUxLWKTvY3wD1dyV5przww2H-/view?usp=sharing'><small>(Click here)<small></a>";
   }
   
   
