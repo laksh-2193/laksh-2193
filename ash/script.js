@@ -19,7 +19,7 @@ var x = setInterval(function() {
   
  if(parseInt(("0" + hours).slice(-2))<0)
    {
-     window.location="https://drive.google.com/file/d/1sHnnaqNG_0V3ZrEXro6msJyeB0b33BTv/view?usp=sharing";
+     window.location="https://drive.google.com/file/d/1ek-IwDMvi5dVLj6uEl8EYtFFu9_VZwXA/view?usp=drivesdk";
    }
     // If the count down is over, write some text 
     if (distance < 0) {
