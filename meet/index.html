@@ -26,20 +26,23 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
+
 <body>
+    
 
     <nav class="navbar">
         <a class="navbar-brand" href="#">
             <img src="logo.png" style="height:50px;width:280px">
         </a>
         <div class="tags">
-            <span class="badge rounded-pill bg-success">End to end encrypted</span>
-            <span class="badge rounded-pill bg-danger">Please do not share this meeting link</span>
+            <span class="badge rounded-pill bg-success">End to end encrypted</span> &nbsp;
+            <span class="badge rounded-pill bg-danger">Please do not share this meeting link</span> &nbsp;
             <span class="badge rounded-pill bg-primary">
-                <a href="mailto:contact@lakshaykumar.tech">contact@lakshaykumar.tech</a></span>
+                <a href="mailto:contact@lakshaykumar.tech">contact@lakshaykumar.tech</a></span> &nbsp;
 
 
         </div>
+        
 
 
     </nav>
@@ -47,6 +50,35 @@
         <div class="shadow p-3 mb-5 bg-white rounded">
             <div id="jaas-container">
             </div>
+            <div style="margin-top: 6px; text-align: right;">
+                <span>
+                    
+                        <a href="https://www.lakshaykumar.tech/schedule" type="button" class="btn btn-primary p-1"> 
+                            <small><b>Schedule new meeting</b></small>
+                        </a>
+                    
+                </span>
+                                &nbsp;
+                                &nbsp;
+                <span>
+                
+                    <a href="tel:+918595984485" type="button"> 
+                        <img src="call.png" style="height:25px;width:25px;">
+                        </a>
+                
+                </span>
+                &nbsp;
+
+                &nbsp;
+                <span style="cursor: pointer;">
+                   
+                        <img src="fullscreen.png" onclick="openFullscreen()" style="height:25px;width:25px;">
+                    
+
+                </span>
+                
+            </div>
+            
         </div>
     </div>
 
@@ -56,24 +88,62 @@
 
 </html>
 <script type="text/javascript">
+    function openFullscreen() {
+        var elem = document.getElementById('jaas-container');
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+        }
+    }
+
+    function closeFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+            document.msExitFullscreen();
+        }
+    }
+
     window.onload = () => {
-        const currentURL = window.location.href;
-        const urlParts = currentURL.split('=');
-        const meetid = urlParts[urlParts.length - 1];
+        const el = document.getElementById('jaas-container');
+        const meetid = getMeetIdFromURL();
 
-        
-        var urlPartsLength = urlParts.length;
-        console.log(urlPartsLength);
-
-        if(urlPartsLength==1)
-        {
+        if (!meetid) {
             window.location.href = "error.html";
+            return;
         }
 
         const api = new JitsiMeetExternalAPI("8x8.vc", {
             roomName: "vpaas-magic-cookie-ee4fa37a0fb74ec89883fd85bcf6b4db/" + meetid,
-            parentNode: document.querySelector('#jaas-container'),
-
+            parentNode: el,
         });
+
+        // Fullscreen button event listeners
+        const openFullscreenBtn = document.getElementById('openFullscreenBtn');
+        const closeFullscreenBtn = document.getElementById('closeFullscreenBtn');
+
+        openFullscreenBtn.addEventListener('click', openFullscreen);
+        closeFullscreenBtn.addEventListener('click', closeFullscreen);
+    };
+
+    function getMeetIdFromURL() {
+        const currentURL = window.location.href;
+        const urlParts = currentURL.split('=');
+        const urlPartsLength = urlParts.length;
+
+        if (urlPartsLength < 2) {
+            return null;
+        }
+
+        return urlParts[urlPartsLength - 1];
     }
 </script>
