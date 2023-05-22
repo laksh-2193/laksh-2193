@@ -67,24 +67,24 @@ fetch(url)
   .then(data => {
     const isEvent = data.isEvent;
     const description = data.description;
-   
-    if(!isEvent && getMeetIdFromURL()!='instant2193')
-    {
+    description = description+"";
+    console.log('------------------------------------------------------------------');
+    
+    console.log(isEvent);
+    console.log(getMeetIdFromURL());
+    console.log(description);
+
+   if(!getMeetIdFromURL=='instant2193')
+   {
+     if(!isEvent || !description.includes(getMeetIdFromURL()))
+     {
         window.location.href = "error.html";
         return;
-
-    }
-    if(description.includes(getMeetIdFromURL()) || getMeetIdFromURL()=='instant2193' )
-        {
-            console.log(getMeetIdFromURL());
-            
-        }
-        else
-        {
-             window.location.href = "error.html";
+     }
+   }
+    
 
 
-        }
 
   })
   .catch(error => {
