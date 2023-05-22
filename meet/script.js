@@ -74,11 +74,7 @@ fetch(url)
         return;
 
     }
-    else
-    {
-       
-
-        if(description.includes(getMeetIdFromURL()) || getMeetIdFromURL()=='instant2193' )
+    if(description.includes(getMeetIdFromURL()) || getMeetIdFromURL()=='instant2193' )
         {
             console.log(getMeetIdFromURL());
             
@@ -89,8 +85,6 @@ fetch(url)
 
 
         }
-
-    }
 
   })
   .catch(error => {
