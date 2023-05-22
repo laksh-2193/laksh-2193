@@ -78,8 +78,9 @@ fetch(url)
     {
        
 
-        if(description.includes(getMeetIdFromURL()) || getMeetIdFromURL()=='SelfMeeting_2193' )
+        if(description.includes(getMeetIdFromURL()) || getMeetIdFromURL()=='instant2193' )
         {
+            console.log(getMeetIdFromURL());
             
         }
         else
