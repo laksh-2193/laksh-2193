@@ -68,7 +68,7 @@ fetch(url)
     const isEvent = data.isEvent;
     const description = data.description;
    
-    if(!isEvent)
+    if(!isEvent || getMeetIdFromURL()!='instant2193')
     {
         window.location.href = "error.html";
         return;
