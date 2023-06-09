@@ -74,14 +74,14 @@ fetch(url)
     console.log(getMeetIdFromURL());
     console.log(description);
 
-   if(!getMeetIdFromURL=='instant2193')
-   {
-     if(!isEvent || !description.includes(getMeetIdFromURL()))
-     {
-        window.location.href = "error.html";
-        return;
-     }
-   }
+//    if(!getMeetIdFromURL=='instant2193')
+//    {
+//      if(!isEvent || !description.includes(getMeetIdFromURL()))
+//      {
+//         window.location.href = "error.html";
+//         return;
+//      }
+//    }
     
 
 
