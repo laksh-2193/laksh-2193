@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> iCrested : Evaluation Form </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h2 align="center"><b>CReSTeD – India<br>
+
+                Registration / Re-registration Application Form</b></h2>
+        <br><br>
+        <b>Please note:</b><br>
+        <ul>
+            <li><b class="text-warning">You must have a valid google account to fill this form. Make sure you are signed in with google in your browser to fill in this form.</b></li>
+            <li>Try to fill in as much fields as you can.</li>
+            <li>Areas marked in <font color="blue">blue</font> are for completion by either the consultant or office
+                staff</li>
+            <li>A complete list of the criteria can be found at the end of this form.</li>
+            <li>Supporting documentation   as part of the registration / re-registration process are indicated in
+                red
+                within the form, please ensure you supply copies via email with your application.</li>
+            <li>Details of documentation to be available on the day of the visit are listed at the end of the form.</li>
+            <li><b>Upload Link for the documents asked for.</b><br></li>
+        </ul>
+        <br>
+        <hr>
+
+       
+        <form method="POST" id="userForm" action="https://script.google.com/macros/s/AKfycbyROqCRzW0dCl2bZUP2x8T2sxavWFDCoPva3-H9fvU_v-RDJrwL5dyp1Yc7F9hgcCWBHQ/exec">
+
+            <h3><b>Contact Details</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="person_name" class="form-label">Name of person completing the form</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="person_name" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="telephone" class="form-label">Telephone</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="telephone" required>
+                </div>
+                <p class="mt-3">
+                    The consultant will need to contact the centre prior to the visit. Please provide appropriate
+                    contact details if they are different from above.
+                </p>
+                <div class="col-md-4">
+                    <label for="alt_person_name" class="form-label">Name of alternative contact person</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="alt_person_name">
+                </div>
+                <div class="col-md-4">
+                    <label for="alt_email" class="form-label">Alternative Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email" name="alt_email">
+                </div>
+                <div class="col-md-4">
+                    <label for="alt_telephone" class="form-label">Alternative Telephone</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="alt_telephone">
+                </div>
+            </div>
+            <div class="mb-4"></div>
+            <br>
+            <hr>
+
+        <h3><b>School Details</b></h3><br><br>
+        <div class="row">
+            <div class="col-md-6 mt-2">
+                <label for="school_name" class="form-label">Name of school</label>
+                <input type="text" class="form-control" placeholder="Enter school name" name="school_name" required>
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="school_address" class="form-label">Address of school</label>
+                <input type="text" class="form-control" placeholder="Enter school address" name="school_address">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="school_telephone" class="form-label">Telephone</label>
+                <input type="tel" class="form-control" placeholder="Enter school telephone" name="school_telephone">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="school_fax" class="form-label">Fax</label>
+                <input type="tel" class="form-control" placeholder="Enter school fax" name="school_fax">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="school_email" class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter school email" name="school_email" required>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="school_website" class="form-label">Website</label>
+                <input type="url" class="form-control" placeholder="Enter school website" name="school_website">
+            </div>
+        </div>
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Name and qualifications of Head/Principal, with title used:</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <label for="head_name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="head_name">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_title" class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="Enter title" name="head_title">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_telephone" class="form-label">Head/Principal’s telephone number if different from above</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="head_telephone">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_qualifications" class="form-label">Qualifications</label>
+                    <input type="text" class="form-control" placeholder="Enter qualifications" name="head_qualifications">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_awarding_body" class="form-label">Awarding body</label>
+                    <input type="text" class="form-control" placeholder="Enter awarding body" name="head_awarding_body">
+                </div>
+            </div>
+
+
+
+        <br>
+        <hr class="mt-5">
+        <h3><b>Name and qualifications of Head of Specialist Provision or Senior SpLD teacher:</b></h3><br><br>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <label for="specialist_name" class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter name" name="specialist_name">
+            </div>
+            <div class="col-md-12 mt-3">
+                <label for="specialist_title" class="form-label">Title (e.g. SENCO):</label>
+                <input type="text" class="form-control" placeholder="Enter title" name="specialist_title">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="specialist_telephone" class="form-label">Telephone number if different from above:</label>
+                <input type="tel" class="form-control" placeholder="Enter telephone" name="specialist_telephone">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="specialist_qualifications" class="form-label">Qualifications</label>
+                <input type="text" class="form-control" placeholder="Enter qualifications" name="specialist_qualifications">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="specialist_awarding_body" class="form-label">Awarding body</label>
+                <input type="text" class="form-control" placeholder="Enter awarding body" name="specialist_awarding_body">
+            </div>
+        </div>
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Background & General Information</b></h3><br><br>
+            <div class="col-md-12 mt-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Numbers, sex and age of pupils:</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">SpLD</th>
+                            <th scope="col">Accepted age range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Day Boys:</th>
+                            <td><input type="number" class="form-control" name="day_boys_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="day_boys_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="day_boys_age_range" placeholder="Accepted age range">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Day Girls:</th>
+                            <td><input type="number" class="form-control" name="day_girls_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="day_girls_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="day_girls_age_range" placeholder="Accepted age range">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Boarding Boys:</th>
+                            <td><input type="number" class="form-control" name="boarding_boys_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="boarding_boys_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="boarding_boys_age_range"
+                                    placeholder="Accepted age range"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Boarding Girls:</th>
+                            <td><input type="number" class="form-control" name="boarding_girls_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="boarding_girls_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="boarding_girls_age_range"
+                                    placeholder="Accepted age range"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Overall total:</th>
+                            <td><input type="number" class="form-control" name="overall_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="overall_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="overall_age_range" placeholder="Accepted age range">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+<!-- ------------------------------CHAT GPT DONE ABOVE -------------------- -->
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <label for="class_size_mainstream" class="form-label">Class Size - mainstream</label>
+                <textarea class="form-control" placeholder="Enter class size" name="class_size_mainstream"></textarea>
+            </div>
+        
+            <div class="col-md-6 mt-3">
+                <label for="class_size_learning_support" class="form-label">Class Size - learning support</label>
+                <textarea class="form-control" placeholder="Enter class size" name="class_size_learning_support"></textarea>
+            </div>
+        
+            <div class="col-md-6 mt-3">
+                <label for="class_size_prospectus" class="form-label">Prospectus, including staff list (if this does
+                    not clearly show which teachers teach English, then please supply this as a separate item).</label>
+                <input type="text" class="form-control" placeholder="Enter website" name="class_size_prospectus">
+            </div>
+        
+            <div class="col-md-4 mt-3">
+                <label for="fees_spld_pupils" class="form-label">Details of Fees and compulsory extras for SpLD pupils
+                    (if applicable)</label>
+                <input type="text" class="form-control" placeholder="Enter website" name="fees_spld_pupils">
+            </div>
+        </div>
+        
+        <br>
+        <hr class="mt-5">
+        <h3><b>Policy and Philosophy with Regard to SpLD Pupils</b></h3><br><br>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <small class="text-secondary">Criteria 1 &amp; 2</small><br>
+                <label for="aims_philosophy" class="form-label">Aims and philosophy of the whole school</label>
+                <textarea class="form-control" placeholder="Enter aims and philosophy" name="aims_philosophy"></textarea>
+            </div>
+        
+            <div class="col-md-6 mt-3">
+                <small class="text-secondary">Criteria 1 &amp; 2</small><br>
+                <label for="staff_handbook_copy" class="form-label">Provide link to the whole school Staff Handbook
+                    (SH)</label>
+                <input type="text" class="form-control" placeholder="Enter website" name="staff_handbook_copy">
+            </div>
+        </div>
+        
+        <div class="col-md-12 mt-3">
+            <label for="policy_statements" class="form-label"><u>If not within SH,</u> &nbsp; please enclose copies of whole
+                school policy statement(s) with regard to SpLD pupils outlining:<br>
+                i. Policy for SEN/SpLD<br>
+                ii. Support for policy from Senior<br>
+                Management Team<br>
+                iii. Support for policy from governors<br>
+                iv. Admissions Policy/Selection Criteria <br>
+                v. Identification and assessment<br></label>
+            <input type="text" class="form-control" placeholder="Enter policy statements" name="policy_statements">
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <small class="text-secondary">Criteria 4</small><br>
+                <label for="school_response" class="form-label">Give specific examples of the whole school response to
+                    SpLD</label>
+                <input type="text" class="form-control" placeholder="Enter school response" name="school_response">
+            </div>
+            <div class="col-md-6 mt-3">
+                <small class="text-secondary"></small><br>
+                <label for="government_funded_pupils" class="form-label">Number of Government Funded pupils</label>
+                <input type="text" class="form-control" placeholder="Enter number of Government Funded pupils"
+                    name="government_funded_pupils">
+            </div>
+        </div>
+
+
+            <br>
+            <hr class="mt-5">
+
+            <h3><b>Identification and Assessment</b></h3><br><br>
+        <div class="col-md-12 mt-3">
+            <small class="text-secondary">Criteria 1</small><br>
+            <label for="identify_pupils_details" class="form-label">Give details of how you identify pupils in your
+                school who have or are at risk of SpLD and when this takes place in the admissions process:</label>
+            <textarea class="form-control" placeholder="Enter details" name="identify_pupils_details"></textarea>
+        </div>
+        
+        <div class="col-md-12 mt-3">
+            <small class="text-secondary">Criteria 1</small><br>
+            <label for="action_taken_details" class="form-label">Give details of what action you take when children
+                are identified as at risk of SpLD:</label>
+            <textarea class="form-control" placeholder="Enter details" name="action_taken_details"></textarea>
+        </div>
+        
+        <div class="col-md-12 mt-3">
+            <small class="text-secondary">Criteria 1</small><br>
+            <label for="access_assessment_details" class="form-label">Give details of how children in your school
+                can access a full assessment for SpLD:</label>
+            <textarea class="form-control" placeholder="Enter details" name="access_assessment_details"></textarea>
+        </div>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Teaching and Learning</b></h3><br><br>
+
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <label for="week_organisation_details" class="form-label">How is the week organised?</label>
+                    <textarea class="form-control" id="week_organisation_details" placeholder="Enter details"
+                        name="week_organisation_details"></textarea>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="arrangements_details" class="form-label">Details of arrangements for SpLD pupils,
+                        including prep/homework:</label>
+                    <textarea class="form-control" id="arrangements_details" placeholder="Enter details"
+                        name="arrangements_details"></textarea>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 3 & 4</small><br>
+                    <label for="lesson_preparation_details" class="form-label">Lesson preparation and delivery to meet the needs of
+                        SpLD pupils for:<br>
+                        • Curriculum subjects<br>
+                        • Literacy support</label>
+                    <textarea class="form-control" id="lesson_preparation_details" placeholder="Enter details"
+                        name="lesson_preparation_details"></textarea>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 3 & 4</small><br>
+                    <label for="provision_map_urls" class="form-label">Use of provision maps/IEP's (or equivalent):
+                        Please indicate two example URLs</label>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" id="provision_map1" placeholder="Enter URL"
+                                name="provision_map1">
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <input type="text" class="form-control" id="provision_map2" placeholder="Enter URL"
+                                name="provision_map2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="row">
+    <div class="col-md-6 mt-3">
+        <small class="text-secondary">Criteria 3 & 4</small><br>
+        <label for="record_keeping_details" class="form-label">Records and record keeping:</label>
+        <textarea class="form-control" placeholder="Enter details" name="record_keeping_details"></textarea>
+    </div>
+    <div class="col-md-6 mt-3">
+        <small class="text-secondary">Criteria 3</small><br>
+        <label for="studying_board" class="form-label">Studying Board</label>
+        <select class="form-select" name="  ">
+            <option value="state">State Board</option>
+            <option value="cbse">Central Board of Secondary Education (CBSE)</option>
+            <option value="cisce">Council for Indian Certificate of Secondary Education (CISCE)</option>
+            <option value="ib">International Baccalaureate (IB)</option>
+            <option value="cambridge">Cambridge Assessment International Education (CAIE)</option>
+        </select>
+    </div>
+</div>
+
+
+
+            <div class="col-md-12 mt-3">
+
+                <label class="mt-3" for="assessment_summary">
+                    <small class="text-secondary">Criteria 3</small><br>
+                    Impact of provision – assessment summary for all pupils (only fill in the Key Stages relevant to
+                    your school):
+                </label>
+<table class="table">
+    <thead>
+        <tr>
+            <th>College / Undergrad</th>
+            <th>No. of Pupils Year 12 &amp; 13</th>
+            <th>Number Entered</th>
+            <th>Percentage grade A-E</th>
+            <th>Average Point per score per pupil</th>
+            <th>Average point score per exam entry</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Whole School</td>
+            <td><input type="text" class="form-control" name="college_pupils"
+                    placeholder="Enter the number of pupils" /></td>
+            <td><input type="text" class="form-control" name="college_number_entered"
+                    placeholder="Enter the number entered" /></td>
+            <td><input type="text" class="form-control" name="college_percentage_grade"
+                    placeholder="Enter the percentage grade A-E" /></td>
+            <td><input type="text" class="form-control" name="college_avg_point_per_pupil"
+                    placeholder="Enter the average point per score per pupil" /></td>
+            <td><input type="text" class="form-control" name="college_avg_point_per_entry"
+                    placeholder="Enter the average point score per exam entry" /></td>
+        </tr>
+        <tr>
+            <td>SpLD Pupils</td>
+            <td><input type="text" class="form-control" name="college_spld_pupils"
+                    placeholder="Enter the number of SpLD pupils" /></td>
+            <td><input type="text" class="form-control" name="college_spld_number_entered"
+                    placeholder="Enter the number entered" /></td>
+            <td><input type="text" class="form-control" name="college_spld_percentage_grade"
+                    placeholder="Enter the percentage grade A-E" /></td>
+            <td><input type="text" class="form-control" name="college_spld_avg_point_per_pupil"
+                    placeholder="Enter the average point per score per pupil" /></td>
+            <td><input type="text" class="form-control" name="college_spld_avg_point_per_entry"
+                    placeholder="Enter the average point score per exam entry" /></td>
+        </tr>
+    </tbody>
+</table>
+
+
+                <br><br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Std. 12</th>
+            <th>No. of students</th>
+            <th>Percentage A* - C<br>Grade 9 - 4</th>
+            <th>Percentage 5+<br>A* - C<br>Grade 9 - 4</th>
+            <th>Percentage 5+<br>A* - G<br>Grade 9 - 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Whole School</td>
+            <td><input type="number" class="form-control" name="std12_whole_school_pupils"
+                    placeholder="No. of students"></td>
+            <td><input type="number" class="form-control" name="std12_whole_school_percentage_ac"
+                    placeholder="Percentage A* - C"></td>
+            <td><input type="number" class="form-control" name="std12_whole_school_percentage_5plus"
+                    placeholder="Percentage 5+ A* - C"></td>
+            <td><input type="number" class="form-control" name="std12_whole_school_percentage_5plus_2"
+                    placeholder="Percentage 5+ A* - G"></td>
+        </tr>
+        <tr>
+            <td>SpLD Pupils</td>
+            <td><input type="number" class="form-control" name="std12_spld_pupils" placeholder="No. of students"></td>
+            <td><input type="number" class="form-control" name="std12_spld_percentage_ac"
+                    placeholder="Percentage A* - C"></td>
+            <td><input type="number" class="form-control" name="std12_spld_percentage_5plus"
+                    placeholder="Percentage 5+ A* - C"></td>
+            <td><input type="number" class="form-control" name="std12_spld_percentage_5plus_2"
+                    placeholder="Percentage 5+ A* - G"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+                <br><br>
+
+                <div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr>
+            <th rowspan="2">Std. 10</th>
+            <th rowspan="2">No. of students</th>
+            <th colspan="2">English</th>
+            <th colspan="2">Maths</th>
+            <th colspan="2">Science</th>
+        </tr>
+        <tr>
+            <th>L4+</th>
+            <th>A/D</th>
+            <th>L4+</th>
+            <th>A/D</th>
+            <th>L4+</th>
+            <th>A/D</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Whole School</td>
+            <td><input type="number" class="form-control" name="std10_whole_school_students"
+                    placeholder="No. of students" /></td>
+            <td><input type="number" class="form-control" name="std10_whole_school_english_l4_plus" placeholder="L4+" />
+            </td>
+            <td><input type="number" class="form-control" name="std10_whole_school_english_ad" placeholder="A/D" /></td>
+            <td><input type="number" class="form-control" name="std10_whole_school_maths_l4_plus" placeholder="L4+" /></td>
+            <td><input type="number" class="form-control" name="std10_whole_school_maths_ad" placeholder="A/D" /></td>
+            <td><input type="number" class="form-control" name="std10_whole_school_science_l4_plus" placeholder="L4+" />
+            </td>
+            <td><input type="number" class="form-control" name="std10_whole_school_science_ad" placeholder="A/D" /></td>
+        </tr>
+        <tr>
+            <td>SpLD Pupils</td>
+            <td><input type="number" class="form-control" name="std10_spld_pupils" placeholder="No. of students" /></td>
+            <td><input type="number" class="form-control" name="std10_spld_english_l4_plus" placeholder="L4+" /></td>
+            <td><input type="number" class="form-control" name="std10_spld_english_ad" placeholder="A/D" /></td>
+            <td><input type="number" class="form-control" name="std10_spld_maths_l4_plus" placeholder="L4+" /></td>
+            <td><input type="number" class="form-control" name="std10_spld_maths_ad" placeholder="A/D" /></td>
+            <td><input type="number" class="form-control" name="std10_spld_science_l4_plus" placeholder="L4+" /></td>
+            <td><input type="number" class="form-control" name="std10_spld_science_ad" placeholder="A/D" /></td>
+        </tr>
+    </tbody>
+</table>
+
+                </div>
+
+                <br><br>
+
+                <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Std. 5</th>
+                            <th rowspan="2">No. of students</th>
+                            <th colspan="2">English</th>
+                            <th colspan="2">Maths</th>
+                            <th colspan="2">Science</th>
+                        </tr>
+                        <tr>
+                            <th>L4+</th>
+                            <th>A/D</th>
+                            <th>L4+</th>
+                            <th>A/D</th>
+                            <th>L4+</th>
+                            <th>A/D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Whole School</td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_no_of_students" /></td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_english_l4_plus" /></td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_english_ad" /></td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_maths_l4_plus" /></td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_maths_ad" /></td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_science_l4_plus" /></td>
+                            <td><input type="number" class="form-control" name="std5_whole_school_science_ad" /></td>
+                        </tr>
+                        <tr>
+                            <td>Dyslexic Pupils</td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_no_of_students" /></td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_english_l4_plus" /></td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_english_ad" /></td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_maths_l4_plus" /></td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_maths_ad" /></td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_science_l4_plus" /></td>
+                            <td><input type="number" class="form-control" name="std5_dyslexic_pupils_science_ad" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                    <label for="other_teaching_and_learning" class="form-label">Any other relevant information, e.g. details
+                        of any other examinations taken, literacy/numeracy assessments:</label>
+                    <textarea class="form-control" placeholder="Enter relevant information" name="other_teaching_and_learning"></textarea>
+                </div>
+
+            </div>
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Facilities and Equipment for Access to Teaching of SpLD Pupils (These can be observed remotely.)</b>
+            </h3><br><br>
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.1</small><br>
+                    <label for="general_resources" class="form-label">General resources for teaching SpLD pupils:</label>
+                    <textarea class="form-control" placeholder="Enter general resources" name="general_resources"></textarea>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.2</small><br>
+                    <label for="ict_resources" class="form-label">ICT:</label>
+                    <textarea class="form-control" placeholder="Enter ICT resources" name="ict_resources"></textarea>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.3</small><br>
+                    <label for="exam_arrangements" class="form-label">Details of access (special examination) arrangements requested
+                        and made for SpLD pupils:</label>
+                    <textarea class="form-control" id="exam_arrangements" placeholder="Enter exam arrangements" name="exam_arrangements"
+                         ></textarea>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.4</small><br>
+                    <label for="library_resources" class="form-label">Library:</label>
+                    <textarea class="form-control" id="library_resources" placeholder="Enter library resources" name="library_resources"
+                         ></textarea>
+                </div>
+
+            </div>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Details of Learning Support Provision</b></h3><br><br>
+        <div class="row">
+            <div class="col-md-4 mt-2">
+                <label for="learning_support_role" class="form-label">Role of the Learning Support Department within the
+                    school:</label>
+                <textarea class="form-control" id="learning_support_role" placeholder="Enter learning support role"
+                    name="learning_support_role"></textarea>
+            </div>
+            <div class="col-md-4 mt-2">
+                <label for="learning_centre_organization" class="form-label">Organisation of the Learning Centre or
+                    equivalent:</label>
+                <textarea class="form-control" id="learning_centre_organization"
+                    placeholder="Enter learning centre organization" name="learning_centre_organization"></textarea>
+            </div>
+            <div class="col-md-4 mt-2">
+                <label for="head_of_unit_status" class="form-label">Does the Head of Unit have Head of Department status and
+                    input into curriculum design and delivery?</label>
+                <textarea class="form-control" id="head_of_unit_status" placeholder="Enter head of unit status"
+                    name="head_of_unit_status"></textarea>
+            </div>
+        </div>
+
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Staffing and Staff Development</b></h3><br><br>
+<div class="row">
+    <div class="col-md-4 mt-2">
+        <small class="text-secondary">Criteria 7</small><br>
+        <label for="learning_support_staff" class="form-label">Qualifications, date, awarding body, and experience of
+            all learning support staff:</label>
+        <textarea class="form-control" id="learning_support_staff"
+            placeholder="Enter qualifications, date, awarding body, and experience"
+            name="learning_support_staff"></textarea>
+    </div>
+    <div class="col-md-4 mt-2">
+        <small class="text-secondary">Criteria 7</small><br>
+        <label for="staff_development" class="form-label">Staff development and in-service training of learning support
+            staff within the last 18 months:</label>
+        <textarea class="form-control" id="staff_development"
+            placeholder="Enter staff development and in-service training details" name="staff_development"></textarea>
+    </div>
+    <div class="col-md-4 mt-2">
+        <small class="text-secondary">Criteria 7</small><br>
+        <label for="school_staff_development" class="form-label">Whole school staff development in relation to Dyslexia
+            Awareness and Inclusion strategies e.g. IDP (Inclusion Development Programme):</label>
+        <textarea class="form-control" id="school_staff_development"
+            placeholder="Enter whole school staff development details" name="school_staff_development"></textarea>
+    </div>
+</div>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>The experience of parents & pupils regarding the school, in particular, its response
+                    to SpLD pupils</b></h3><br><br>
+        <div class="col-md-12 mt-2">
+            <label for="list_of_spLD_pupils" class="form-label">Schools should provide link, with the supporting
+                documentation, a list of the names of all known SpLD pupils in the school. CReSTeD will provide an explanatory
+                letter to be sent to parents of all those named informing them of the visit and seeking their permission to give
+                their contact details to the consultant. The consultant will randomly select names from the list to discuss
+                their experiences as parents in relation to the school.<br><b>Parents can be contacted by email/school will
+                    acquire their permission</b></label>
+            <textarea class="form-control" placeholder="Enter the names of all known SpLD pupils" name="list_of_spLD_pupils"
+                 ></textarea>
+        </div>
+        
+        <div class="col-md-8 mt-5">
+            <input class="form-check-input" type="checkbox" value="" id="confirm_details_checkbox"  required>
+            <label class="form-check-label" for="confirm_details_checkbox">
+                I hereby agree that all the above-mentioned details are correct and I am the Head/Principal of the institute
+            </label>
+        </div>
+        
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+    </div>
+
+    </form>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+        function saveFormData() {
+            const form = document.getElementById('userForm');
+            const formData = new FormData(form);
+
+
+            for (let [key, value] of formData.entries()) {
+                localStorage.setItem(key, value);
+            }
+
+        }
+
+
+        function loadFormData() {
+            const form = document.getElementById('userForm');
+
+
+            for (let key in localStorage) {
+                if (localStorage.hasOwnProperty(key)) {
+                    const field = form.elements[key];
+                    if (field) {
+                        field.value = localStorage.getItem(key);
+                    }
+                }
+            }
+        }
+
+
+        const form = document.getElementById('userForm');
+        form.addEventListener('submit', function (event) {
+            localStorage.clear();
+        });
+
+
+        window.addEventListener('load', loadFormData);
+
+
+        setInterval(saveFormData, 1000);
+
+</script>
