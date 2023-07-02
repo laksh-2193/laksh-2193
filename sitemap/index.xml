@@ -3,22 +3,62 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://lakshaykumar.tech/</loc>
-	<lastmod>2023-06-24T18:13:28+01:00</lastmod>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://lakshaykumar.tech/index.html</loc>
-	<lastmod>2023-06-24T18:13:28+01:00</lastmod>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://lakshaykumar.tech/webinars.html</loc>
-	<lastmod>2023-06-24T18:13:28+01:00</lastmod>
+	<loc>https://lakshaykumar.tech/about.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/projects.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/talks.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/contact.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/schedule.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/linkedin.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/github.html</loc>
+	<lastmod>2023-07-02T08:49:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/twitter.html</loc>
+	<lastmod>2023-07-02T08:49:59+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://lakshaykumar.tech/resume.pdf</loc>
-	<lastmod>2023-06-24T18:13:28+01:00</lastmod>
+	<lastmod>2023-07-02T08:49:59+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lakshaykumar.tech/instagram.html</loc>
+	<lastmod>2023-07-02T08:50:00+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 </urlset>
