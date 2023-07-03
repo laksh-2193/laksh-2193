@@ -47,7 +47,7 @@
             <h1 class="text-danger">Invalid Link! Please contact the administrator</h1>
         </div>
         <form
-            action="https://script.google.com/macros/s/AKfycbz75hOy1dhOYmwRai9gJVWY3wpzzyXmSbXNnGpElVvaO4MhX0jzKzCzswDUBIJFtHDx9Q/exec"
+            action="https://script.google.com/macros/s/AKfycbyGmmHUUuZOBND6Hp7rLYomOQRWiey3im-hmauAANFyfaI8Cr2_lKCzQYcHsObIssZmMw/exec"
             id="userForm" method="POST">
             <br>
             Response by : <p class="text-primary" name="nameOfConsultant" id="nameOfConsultant"></p>
@@ -870,8 +870,45 @@
     console.log(idValue);
     form.style.display='none';
     loader.style.display = 'block';
+    function saveFormData() {
+        const form = document.getElementById('userForm');
+        const formData = new FormData(form);
 
-    var fetchUrl = 'https://script.google.com/macros/s/AKfycbz75hOy1dhOYmwRai9gJVWY3wpzzyXmSbXNnGpElVvaO4MhX0jzKzCzswDUBIJFtHDx9Q/exec?id='+idValue;
+
+        for (let [key, value] of formData.entries()) {
+            localStorage.setItem(key, value);
+        }
+
+    }
+
+
+    function loadFormData() {
+        const form = document.getElementById('userForm');
+
+
+        for (let key in localStorage) {
+            if (localStorage.hasOwnProperty(key)) {
+                const field = form.elements[key];
+                if (field) {
+                    field.value = localStorage.getItem(key);
+                }
+            }
+        }
+    }
+
+
+    
+    form.addEventListener('submit', function (event) {
+        localStorage.clear();
+    });
+
+
+    window.addEventListener('load', loadFormData);
+
+
+    setInterval(saveFormData, 1000);
+
+    var fetchUrl = 'https://script.google.com/macros/s/AKfycbyGmmHUUuZOBND6Hp7rLYomOQRWiey3im-hmauAANFyfaI8Cr2_lKCzQYcHsObIssZmMw/exec?id='+idValue;
     fetch(fetchUrl)
             .then(function (response) {
                 return response.json();
@@ -1029,42 +1066,6 @@
                 
             });
 
-    function saveFormData() {
-        const form = document.getElementById('userForm');
-        const formData = new FormData(form);
-
-
-        for (let [key, value] of formData.entries()) {
-            localStorage.setItem(key, value);
-        }
-
-    }
-
-
-    function loadFormData() {
-        const form = document.getElementById('userForm');
-
-
-        for (let key in localStorage) {
-            if (localStorage.hasOwnProperty(key)) {
-                const field = form.elements[key];
-                if (field) {
-                    field.value = localStorage.getItem(key);
-                }
-            }
-        }
-    }
-
-
     
-    form.addEventListener('submit', function (event) {
-        localStorage.clear();
-    });
-
-
-    window.addEventListener('load', loadFormData);
-
-
-    setInterval(saveFormData, 1000);
 
 </script>
