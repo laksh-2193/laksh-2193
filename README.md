@@ -3,12 +3,14 @@
 </div>  
   
 
-### <div align="center">I'm Lakshay Kumar, an aspiring 👨‍💻 Data Scientist 🚀</div>  
-  
+### <div align="center">I'm Lakshay Kumar, an aspiring 👨‍💻 Data Scientist 🚀</div> 
+
+- 📕Author ~ "From Data to World: 5 Real-Life Secrets with Data Science".
+
+- 🎤Community Speaker
 
 - 🌱 I’m currently learning Machine Learning  
   
-
 - ⚡ Fun fact: I use tabs over spaces  
   
 
