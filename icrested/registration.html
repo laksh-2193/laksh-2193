@@ -19,16 +19,15 @@
         <br><br>
         <b>Please note:</b><br>
         <ul>
-            <li><b class="text-warning">You must have a valid google account to fill this form. Make sure you are signed in with google in your browser to fill in this form.</b></li>
+            <li><b class="text-warning">You must have a valid google account to fill this form. Make sure you are signed in with google to fill in this form.</b></li>
             <li>Try to fill in as much fields as you can.</li>
-            <li>Areas marked in <font color="blue">blue</font> are for completion by either the consultant or office
-                staff</li>
+            <li>Areas marked in <font color="blue">blue</font> are for completion by either the consultant</li>
             <li>A complete list of the criteria can be found at the end of this form.</li>
-            <li>Supporting documentation   as part of the registration / re-registration process are indicated in
-                red
-                within the form, please ensure you supply copies via email with your application.</li>
-            <li>Details of documentation to be available on the day of the visit are listed at the end of the form.</li>
-            <li><b>Upload Link for the documents asked for.</b><br></li>
+            <li>Information that is mandatory for the registration/re-registration process
+is marked using a red asterisk. Please ensure copies have been included
+using email attachments with your application</li>
+<!--             <li>Details of documentation to be available on the day of the visit are listed at the end of the form.</li> -->
+            <li><b>Share Link for the documents asked for.</b><br></li>
         </ul>
         <br>
         <hr>
@@ -86,7 +85,7 @@
                 <input type="tel" class="form-control" placeholder="Enter school telephone" name="school_telephone">
             </div>
             <div class="col-md-6 mt-3">
-                <label for="school_fax" class="form-label">Fax</label>
+                <label for="school_fax" class="form-label invisible">Fax</label>
                 <input type="tel" class="form-control" placeholder="Enter school fax" name="school_fax">
             </div>
             <div class="col-md-6 mt-3">
@@ -102,7 +101,7 @@
 
             <br>
             <hr class="mt-5">
-            <h3><b>Name and qualifications of Head/Principal, with title used:</b></h3><br><br>
+            <h3><b>Name and qualifications of Head/Principal, with title used</b></h3><br><br>
             <div class="row">
                 <div class="col-md-6 mt-2">
                     <label for="head_name" class="form-label">Name</label>
@@ -130,7 +129,7 @@
 
         <br>
         <hr class="mt-5">
-        <h3><b>Name and qualifications of Head of Specialist Provision or Senior SpLD teacher:</b></h3><br><br>
+        <h3><b>Name and qualifications of Head of Specialist Provision or Senior SpLD teacher</b></h3><br><br>
         <div class="row">
             <div class="col-md-12 mt-3">
                 <label for="specialist_name" class="form-label">Name</label>
@@ -221,14 +220,18 @@
             </div>
         
             <div class="col-md-6 mt-3">
-                <label for="class_size_prospectus" class="form-label">Prospectus, including staff list (if this does
-                    not clearly show which teachers teach English, then please supply this as a separate item).</label>
+                <label for="class_size_prospectus" class="form-label">Please share a
+Prospectus web link, including staff list; if this does not clearly show which
+teachers teach English, please indicate a copy will be supplied as a separate
+
+attachment or share a web link.</label>
                 <input type="text" class="form-control" placeholder="Enter website" name="class_size_prospectus">
             </div>
         
             <div class="col-md-4 mt-3">
-                <label for="fees_spld_pupils" class="form-label">Details of Fees and compulsory extras for SpLD pupils
-                    (if applicable)</label>
+                <label for="fees_spld_pupils" class="form-label">Details
+of Fees and compulsory extras for SpLD pupils, if applicable. Please indicate
+if a separate attachment is included or share a web link</label>
                 <input type="text" class="form-control" placeholder="Enter website" name="fees_spld_pupils">
             </div>
         </div>
@@ -260,14 +263,21 @@
                 iii. Support for policy from governors<br>
                 iv. Admissions Policy/Selection Criteria <br>
                 v. Identification and assessment<br></label>
-            <input type="text" class="form-control" placeholder="Enter policy statements" name="policy_statements">
+           <textarea class="form-control" placeholder="Enter policy statements" name="policy_statements" rows="5" cols="2">
+I
+II
+III
+IV
+V
+</textarea>
+
         </div>
         <div class="row">
             <div class="col-md-6 mt-3">
                 <small class="text-secondary">Criteria 4</small><br>
                 <label for="school_response" class="form-label">Give specific examples of the whole school response to
                     SpLD</label>
-                <input type="text" class="form-control" placeholder="Enter school response" name="school_response">
+                <textarea class="form-control" placeholder="Enter school response" name="school_response"></textarea>
             </div>
             <div class="col-md-6 mt-3">
                 <small class="text-secondary"></small><br>
@@ -377,7 +387,7 @@
                     Impact of provision – assessment summary for all pupils (only fill in the Key Stages relevant to
                     your school):
                 </label>
-<table class="table">
+<table class="table invisible">
     <thead>
         <tr>
             <th>College / Undergrad</th>
@@ -426,9 +436,12 @@
         <tr>
             <th>Std. 12</th>
             <th>No. of students</th>
-            <th>Percentage A* - C<br>Grade 9 - 4</th>
-            <th>Percentage 5+<br>A* - C<br>Grade 9 - 4</th>
-            <th>Percentage 5+<br>A* - G<br>Grade 9 - 1</th>
+            <th>No. of students entered</th>
+            <th>Percentage<br>
+A*-E</th>
+            <th>Average
+point score
+per pupil</th>
         </tr>
     </thead>
     <tbody>
@@ -466,9 +479,20 @@
         <tr>
             <th rowspan="2">Std. 10</th>
             <th rowspan="2">No. of students</th>
-            <th colspan="2">English</th>
-            <th colspan="2">Maths</th>
-            <th colspan="2">Science</th>
+            <th colspan="2">Percentage
+A*-C<br>
+(grade 9-
+4)</th>
+            <th colspan="2">Percentage
+A*-C<br>
+(grade 9-
+4) for 5+
+GCSEs</th>
+            <th colspan="2">Percentage
+A*-
+G(grade 9-
+1)<br> for 5+
+GCSEs</th>
         </tr>
         <tr>
             <th>L4+</th>
@@ -575,7 +599,9 @@
                 </div>
                 <div class="col-md-6 mt-3">
                     <small class="text-secondary">Criteria 5.2</small><br>
-                    <label for="ict_resources" class="form-label">ICT:</label>
+                    <label for="ict_resources" class="form-label">ICT: Use of Assistive Technology prevalent across school; scanning pens,
+OrCam device, KAZ touch tying, Read &amp; Write software, O365 immersive
+reader </label>
                     <textarea class="form-control" placeholder="Enter ICT resources" name="ict_resources"></textarea>
                 </div>
 
@@ -591,7 +617,8 @@
                 </div>
                 <div class="col-md-6 mt-3">
                     <small class="text-secondary">Criteria 5.4</small><br>
-                    <label for="library_resources" class="form-label">Library:</label>
+                    <label for="library_resources" class="form-label">Library: Colour coded books based on reading age
+Reading diary to promote positive reading culture</label>
                     <textarea class="form-control" id="library_resources" placeholder="Enter library resources" name="library_resources"
                          ></textarea>
                 </div>
