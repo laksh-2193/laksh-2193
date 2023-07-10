@@ -47,7 +47,7 @@
             <h1 class="text-danger">Invalid Link! Please contact the administrator</h1>
         </div>
         <form method="POST" id="userForm"
-            action="https://script.google.com/macros/s/AKfycbw_T_PcXVH5Yyd2L853wZqGHTNUr7tTgCBkKGRXrHikqioR5mtuZC0U69Vn4w6vf2fZkQ/exec">
+            action="https://script.google.com/macros/s/AKfycby5mpVVMEK_s3dnh2Cqy_L5ZJ9Rwib2_m6Lsa07usW1S0oo6O6QGe3OR-sJzgvNitiN_g/exec">
 
             <h3><b>Contact Details</b></h3><br><br>
             <div class="row">
@@ -1326,7 +1326,7 @@
         form.style.display = 'none';
         loader.style.display = 'block';
 
-        var fetchUrl = 'https://script.google.com/macros/s/AKfycbw_T_PcXVH5Yyd2L853wZqGHTNUr7tTgCBkKGRXrHikqioR5mtuZC0U69Vn4w6vf2fZkQ/exec?id=' + idValue;
+        var fetchUrl = 'https://script.google.com/macros/s/AKfycby5mpVVMEK_s3dnh2Cqy_L5ZJ9Rwib2_m6Lsa07usW1S0oo6O6QGe3OR-sJzgvNitiN_g/exec?id=' + idValue;
         fetch(fetchUrl)
             .then(function (response) {
                 return response.json();
@@ -1341,6 +1341,14 @@
                 }
                 else {
                     console.log(data);
+                    
+                    policy_documents = data.policy_documents.split('\n');
+                    console.log(policy_documents);
+                    form.elements['policy_sen_spld'].value=policy_documents[0];
+                    form.elements['policy_support_senior'].value =policy_documents[1];
+                    form.elements['policy_support_governors'].value =policy_documents[2];
+                    form.elements['policy_admissions_criteria'].value =policy_documents[3];
+                    form.elements['policy_identification_assessment'].value =policy_documents[4];
                     form.elements["sheet_id"].value = idValue;
                     form.elements["person_name"].value = data.person_name;
                     form.elements["telephone"].value = data.telephone;
