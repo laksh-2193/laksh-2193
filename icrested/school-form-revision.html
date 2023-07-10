@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>iCrested : Evaluation Form</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #loader {
+            display: none;
+        }
+
+        #error {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h2 align="center"><b>CReSTeD - India<br></b></h2>
+        <p class="text-primary"><b>Revised Application Form</b></p><br>
+        <br>
+        <b>Please note:</b><br>
+        <ul>
+            <li><b class="text-warning">You must have a valid google account to fill this form. Make sure you are signed
+                    in with google in your browser to fill in this form.</b></li>
+            <li class="text-primary">Please update this form as per consultant's comments</li>
+            <li>Try to fill in as much fields as you can.</li>
+            <li>Areas marked in <font color="blue">blue</font> are for completion by either the consultant or office
+                staff</li>
+            <li>A complete list of the criteria can be found at the end of this form.</li>
+            <li>Supporting documentation as part of the registration / re-registration process are indicated in red
+                within the form, please ensure you supply copies via email with your application.</li>
+            <li>Details of documentation to be available on the day of the visit are listed at the end of the form.</li>
+            <li><b>Upload Link for the documents asked for.</b><br></li>
+        </ul><br>
+        <hr>
+        <div id="loader">
+            Loading...
+        </div>
+        <div id="error">
+            <h1 class="text-danger">Invalid Link! Please contact the administrator</h1>
+        </div>
+        <form method="POST" id="userForm"
+            action="https://script.google.com/macros/s/AKfycbw_T_PcXVH5Yyd2L853wZqGHTNUr7tTgCBkKGRXrHikqioR5mtuZC0U69Vn4w6vf2fZkQ/exec">
+
+            <h3><b>Contact Details</b></h3><br><br>
+            <div class="row">
+                
+                    
+                    <input type="text" class="form-control d-none" name="sheet_id" required>
+                
+
+                <div class="col-md-4">
+                    <label for="person_name" class="form-label">Name of person completing the form</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="person_name" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="telephone" class="form-label">Telephone</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="telephone" required>
+                </div>
+                <p class="mt-3">
+                    The consultant will need to contact the centre prior to the visit. Please provide appropriate
+                    contact details if they are different from above.
+                </p>
+                <div class="col-md-4">
+                    <label for="alt_person_name" class="form-label">Name of alternative contact person</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="alt_person_name">
+                </div>
+                <div class="col-md-4">
+                    <label for="alt_email" class="form-label">Alternative Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email" name="alt_email">
+                </div>
+                <div class="col-md-4">
+                    <label for="alt_telephone" class="form-label">Alternative Telephone</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="alt_telephone">
+                </div>
+                <p class="text-primary" id="nameOfConsultant" name="nameOfConsultant"></p>
+
+
+            </div>
+            <div class="mb-4"></div>
+            <br>
+            <hr>
+
+            <h3><b>School Details</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <label for="school_name" class="form-label">Name of school</label>
+                    <input type="text" class="form-control" placeholder="Enter school name" name="school_name" required>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="school_address" class="form-label">Address of school</label>
+                    <input type="text" class="form-control" placeholder="Enter school address" name="school_address">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="school_telephone" class="form-label">Telephone</label>
+                    <input type="tel" class="form-control" placeholder="Enter school telephone" name="school_telephone">
+                </div>
+
+                <div class="col-md-6 mt-3">
+                    <label for="school_email" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter school email" name="school_email"
+                        required>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="school_website" class="form-label">Website</label>
+                    <input type="url" class="form-control" placeholder="Enter school website" name="school_website">
+                </div>
+            </div>
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Name and qualifications of Head/Principal, with title used</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <label for="head_name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="head_name">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_title" class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="Enter title" name="head_title">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_telephone" class="form-label">Head/Principal’s telephone number if different from
+                        above</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="head_telephone">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_qualifications" class="form-label">Qualifications</label>
+                    <input type="text" class="form-control" placeholder="Enter qualifications"
+                        name="head_qualifications">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="head_awarding_body" class="form-label">Awarding body</label>
+                    <input type="text" class="form-control" placeholder="Enter awarding body" name="head_awarding_body">
+                </div>
+
+            </div>
+            <p class="text-primary" id="principalConsultantComment" name="principalConsultantComment"></p>
+
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Name and qualifications of Head of Specialist Provision or Senior SpLD teacher</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <label for="specialist_name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter name" name="specialist_name">
+                </div>
+                <div class="col-md-12 mt-3">
+                    <label for="specialist_title" class="form-label">Title (e.g. SENCO):</label>
+                    <input type="text" class="form-control" placeholder="Enter title" name="specialist_title">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="specialist_telephone" class="form-label">Telephone number if different from
+                        above:</label>
+                    <input type="tel" class="form-control" placeholder="Enter telephone" name="specialist_telephone">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="specialist_qualifications" class="form-label">Qualifications</label>
+                    <input type="text" class="form-control" placeholder="Enter qualifications"
+                        name="specialist_qualifications">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="specialist_awarding_body" class="form-label">Awarding body</label>
+                    <input type="text" class="form-control" placeholder="Enter awarding body"
+                        name="specialist_awarding_body">
+                </div>
+            </div>
+            <p class="text-primary" id="spldConsultantComment" name="spldConsultantComment"></p>
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Background & General Information</b></h3><br><br>
+            <div class="col-md-12 mt-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Numbers, sex and age of pupils:</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">SpLD</th>
+                            <th scope="col">Accepted age range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Day Boys:</th>
+                            <td><input type="number" class="form-control" name="day_boys_total" placeholder="Total">
+                            </td>
+                            <td><input type="number" class="form-control" name="day_boys_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="day_boys_age_range"
+                                    placeholder="Accepted age range">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Day Girls:</th>
+                            <td><input type="number" class="form-control" name="day_girls_total" placeholder="Total">
+                            </td>
+                            <td><input type="number" class="form-control" name="day_girls_sp_ld" placeholder="SpLD">
+                            </td>
+                            <td><input type="text" class="form-control" name="day_girls_age_range"
+                                    placeholder="Accepted age range">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Boarding Boys:</th>
+                            <td><input type="number" class="form-control" name="boarding_boys_total"
+                                    placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="boarding_boys_sp_ld" placeholder="SpLD">
+                            </td>
+                            <td><input type="text" class="form-control" name="boarding_boys_age_range"
+                                    placeholder="Accepted age range"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Boarding Girls:</th>
+                            <td><input type="number" class="form-control" name="boarding_girls_total"
+                                    placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="boarding_girls_sp_ld"
+                                    placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="boarding_girls_age_range"
+                                    placeholder="Accepted age range"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Overall total:</th>
+                            <td><input type="number" class="form-control" name="overall_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="overall_sp_ld" placeholder="SpLD"></td>
+                            <td><input type="text" class="form-control" name="overall_age_range"
+                                    placeholder="Accepted age range">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-primary" id="bgGeneralInfoConsultantComment" name="bgGeneralInfoConsultantComment"></p>
+
+            <!-- ------------------------------CHAT GPT DONE ABOVE -------------------- -->
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <label for="class_size_mainstream" class="form-label">Class Size - mainstream</label>
+                    <textarea class="form-control" placeholder="Enter class size"
+                        name="class_size_mainstream"></textarea>
+                    <p class="text-primary" id="mainStreamConsultantComment" name="mainStreamConsultantComment"></p>
+                </div>
+
+
+                <div class="col-md-6 mt-3">
+                    <label for="class_size_learning_support" class="form-label">Class Size - learning support</label>
+                    <textarea class="form-control" placeholder="Enter class size"
+                        name="class_size_learning_support"></textarea>
+                    <p class="text-primary" id="learningSupportConsultantComment"
+                        name="learningSupportConsultantComment"></p>
+
+                </div>
+                <p>
+                    For completion by consultants only: Pastoral care arrangements, as relevant
+                    to SpLD students, based on Ofsted/ISI report
+                </p>
+                <p class="text-primary" id="pastoralCareConsultantComment" name="pastoralCareConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <label for="class_size_prospectus" class="form-label">Please share a
+                        Prospectus web link, including staff list; if this does not clearly show which
+                        teachers teach English, please indicate a copy will be supplied as a separate
+
+                        attachment or share a web link.</label>
+
+                    <input type="text" class="form-control" placeholder="Enter website" name="class_size_prospectus">
+                </div>
+
+                <div class="col-md-4 mt-3">
+                    <label for="fees_spld_pupils" class="form-label">Details
+                        of Fees and compulsory extras for SpLD pupils, if applicable. Please indicate
+                        if a separate attachment is included or share a web link</label>
+                    <input type="text" class="form-control" placeholder="Enter website" name="fees_spld_pupils">
+                </div>
+
+            </div>
+            <p class="text-primary" id="prospectusConsultantComment" name="prospectusConsultantComment"></p>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Policy and Philosophy with Regard to SpLD Pupils</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 1 &amp; 2</small><br>
+                    <label for="aims_philosophy" class="form-label">Aims and philosophy of the whole school</label>
+                    <textarea class="form-control" placeholder="Enter aims and philosophy"
+                        name="aims_philosophy"></textarea>
+                </div>
+                <p class="text-primary" id="aimConsultantComment" name="aimConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 1 &amp; 2</small><br>
+                    <label for="staff_handbook_copy" class="form-label">Provide link to the whole school Staff Handbook
+                        (SH)</label>
+                    <input type="text" class="form-control" placeholder="Enter website" name="staff_handbook_copy">
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-3">
+                <label for="policy_statements" class="form-label"><u>If not within SH,</u> &nbsp; please enclose copies
+                    of whole
+                    school policy statement(s) with regard to SpLD pupils outlining:<br>
+                    i. Policy for SEN/SpLD
+                    <input type="text" name="policy_sen_spld" class="form-control" placeholder="Link to Policy" />
+                    <br>
+                    ii. Support for policy from Senior Management Team
+                    <input type="text" name="policy_support_senior" class="form-control"
+                        placeholder="Link to Support" />
+                    <br>
+                    iii. Support for policy from governors
+                    <input type="text" name="policy_support_governors" class="form-control"
+                        placeholder="Link to Support" />
+                    <br>
+                    iv. Admissions Policy/Selection Criteria
+                    <input type="text" name="policy_admissions_criteria" class="form-control"
+                        placeholder="Link to Policy" />
+                    <br>
+                    v. Identification and assessment
+                    <input type="text" name="policy_identification_assessment" class="form-control"
+                        placeholder="Link to Policy" />
+                    <br>
+                </label>
+                <p class="text-primary" id="handBookConsultantComment" name="handBookConsultantComment"></p>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 4</small><br>
+                    <label for="school_response" class="form-label">Give specific examples of the whole school response
+                        to
+                        SpLD</label>
+                    <textarea class="form-control" placeholder="Enter school response"
+                        name="school_response"></textarea>
+                </div>
+                <p class="text-primary" id="responseConsultantComment" name="responseConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary"></small><br>
+                    <label for="government_funded_pupils" class="form-label">Number of Government Funded pupils</label>
+                    <input type="text" class="form-control" placeholder="Enter number of Government Funded pupils"
+                        name="government_funded_pupils">
+                </div>
+            </div>
+            <p class="text-primary" id="fundedConsultantComment" name="fundedConsultantComment"></p>
+
+
+            <br>
+            <hr class="mt-5">
+
+            <h3><b>Identification and Assessment</b></h3><br><br>
+            <div class="col-md-12 mt-3">
+                <small class="text-secondary">Criteria 1</small><br>
+                <label for="identify_pupils_details" class="form-label">Give details of how you identify pupils in your
+                    school who have or are at risk of SpLD and when this takes place in the admissions process:</label>
+                <textarea class="form-control" placeholder="Enter details" name="identify_pupils_details"></textarea>
+            </div>
+            <p class="text-primary" id="identifyConsultantComment" name="identifyConsultantComment"></p>
+
+            <div class="col-md-12 mt-3">
+                <small class="text-secondary">Criteria 1</small><br>
+                <label for="action_taken_details" class="form-label">Give details of what action you take when children
+                    are identified as at risk of SpLD:</label>
+                <textarea class="form-control" placeholder="Enter details" name="action_taken_details"></textarea>
+            </div>
+            <p class="text-primary" id="actionConsultantComment" name="actionConsultantComment"></p>
+
+            <div class="col-md-12 mt-3">
+                <small class="text-secondary">Criteria 1</small><br>
+                <label for="access_assessment_details" class="form-label">Give details of how children in your school
+                    can access a full assessment for SpLD:</label>
+                <textarea class="form-control" placeholder="Enter details" name="access_assessment_details"></textarea>
+            </div>
+            <p class="text-primary" id="assessmentConsultantComment" name="assessmentConsultantComment"></p>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Teaching and Learning</b></h3><br><br>
+
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <label for="week_organisation_details" class="form-label">How is the week organised?</label>
+                    <textarea class="form-control" id="week_organisation_details" placeholder="Enter details"
+                        name="week_organisation_details"></textarea>
+                </div>
+                <p class="text-primary" id="weekConsultantComment" name="weekConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <label for="arrangements_details" class="form-label">Details of arrangements for SpLD pupils,
+                        including prep/homework:</label>
+                    <textarea class="form-control" id="arrangements_details" placeholder="Enter details"
+                        name="arrangements_details"></textarea>
+                </div>
+            </div>
+            <p class="text-primary" id="arrangementConsultantComment" name="arrangementConsultantComment"></p>
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 3 & 4</small><br>
+                    <label for="lesson_preparation_details" class="form-label">Lesson preparation and delivery to meet
+                        the needs of
+                        SpLD pupils for:<br>
+                        • Curriculum subjects<br>
+                        • Literacy support</label>
+                    <textarea class="form-control" id="lesson_preparation_details" placeholder="Enter details"
+                        name="lesson_preparation_details"></textarea>
+                </div>
+                <p class="text-primary" id="preparationConsultantComment" name="preparationConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 3 & 4</small><br>
+                    <label for="provision_map_urls" class="form-label">Use of provision maps/IEP's (or equivalent):
+                        Please indicate two example URLs</label>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" id="provision_map1" placeholder="Enter URL"
+                                name="provision_map1">
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <input type="text" class="form-control" id="provision_map2" placeholder="Enter URL"
+                                name="provision_map2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-primary" id="provisionMapConsultantComment" name="provisionMapConsultantComment"></p>
+
+
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 3 & 4</small><br>
+                    <label for="record_keeping_details" class="form-label">Records and record keeping:</label>
+                    <textarea class="form-control" placeholder="Enter details" name="record_keeping_details"></textarea>
+                </div>
+
+            </div>
+            <p class="text-primary" id="recordsMapConsultantComment" name="recordsMapConsultantComment"></p>
+            <p class="text-primary" id="reviewConsultantComment" name="reviewConsultantComment"></p>
+
+
+
+            <div class="col-md-12 mt-3">
+
+                <label class="mt-3" for="assessment_summary">
+                    <small class="text-secondary">Criteria 3</small><br>
+                    Impact of provision – assessment summary for all pupils (only fill in the Stages relevant to
+                    your school):
+                </label>
+                <br><br>
+                <div class="table table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Classes 11-12<br> ages 16-18 yr olds</th>
+                                <th>Senior secondary</th>
+                                <th>No of students</th>
+                                <th>Number of students entered</th>
+                                <th>Percentage A*-E</th>
+                                <th>Average point score per pupil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Whole School</td>
+                                <td>
+                                    <select class="form-control" name="class_11_12_whole_school_board_1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_no_of_students_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_no_of_students_entered_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_per_A_to_E_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_avg_point_score_board_1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select class="form-control" name="class_11_12_whole_school_board2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_no_of_students_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_no_of_students_entered_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_per_A_to_E_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_avg_point_score_board_2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select class="form-control" name="class_11_12_whole_school_board3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_no_of_students_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_no_of_students_entered_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_per_A_to_E_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_whole_school_avg_point_score_board_3">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>SpLD Students</td>
+                                <td><select class="form-control" name="class_11_12_spld_board1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_no_of_students_board1"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_no_of_students_entered_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_Percentage_A_E_board1"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_Average_point_score_per_pupil_board1"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_11_12_spld_board2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_no_of_students_board2"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_no_of_students_entered_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_Percentage_A_E_board2"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_Average_point_score_per_pupil_board2"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_11_12_spld_board3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_no_of_students_board3"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_no_of_students_entered_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_Percentage_A_E_board3"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_11_12_spld_Average_point_score_per_pupil_board3"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <br><br>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Classes 8-10<br> ages 14-16 yr olds</th>
+                                <th>Secondary Stages</th>
+                                <th>No of students</th>
+                                <th>Percentage A*-C (grade 9-4)</th>
+                                <th>Percentage A*-C (grade 9-4) for 5+ GCSEs</th>
+                                <th>Percentage A*-G (grade 9-1) for 5+ GCSEs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Whole School</td>
+                                <td>
+                                    <select class="form-control" name="class_8_10_whole_school_board1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_no_of_students_board1"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_C_grade_9_4_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_C_grade_9_4_for_5_GCSEs_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_G_grade_9_1_for_5_GCSEs_board1">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select class="form-control" name="class_8_10_whole_school_board2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_no_of_students_board2"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_C_grade_9_4_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_C_grade_9_4_for_5_GCSEs_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_G_grade_9_1_for_5_GCSEs_board2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select class="form-control" name="class_8_10_whole_school_board3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_no_of_students_board3"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_C_grade_9_4_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_C_grade_9_4_for_5_GCSEs_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_whole_school_Percentage_A_G_grade_9_1_for_5_GCSEs_board3">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>SpLD Students</td>
+                                <td><select class="form-control" name="class_8_10_spld_students_board1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_no_of_students_board1"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_C_grade_9_4_board1"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_C_grade_9_4_for_5_GCSEs_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_G_grade_9_1_for_5_GCSEs_board1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_8_10_spld_students_board2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_no_of_students_board2"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_C_grade_9_4_board2"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_C_grade_9_4_for_5_GCSEs_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_G_grade_9_1_for_5_GCSEs_board2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_8_10_spld_students_board3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_no_of_students_board3"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_C_grade_9_4_board3"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_C_grade_9_4_for_5_GCSEs_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_8_10_spld_students_Percentage_A_G_grade_9_1_for_5_GCSEs_board3">
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <br><br>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Classes 5-8, 5-7, 6-8<br> for 12-14 yrs old</th>
+                                <th>Middle School</th>
+                                <th>No of students</th>
+                                <th>Percentage English</th>
+                                <th>Percentage Maths</th>
+                                <th>Percentage Science</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Whole School</td>
+                                <td><select class="form-control" name="class_5_8_whole_school_board1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_no_of_students_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_English_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_Maths_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_science_board1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_5_8_whole_school_board2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_no_of_students_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_English_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_Maths_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_science_board2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_5_8_whole_school_board3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_no_of_students_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_English_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_Maths_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_whole_school_percentage_science_board3">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SpLD Students</td>
+                                <td><select class="form-control" name="class_5_8_spld_board1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control" name="class_5_8_spld_no_of_students_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_English_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_Maths_board1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_science_board1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_5_8_spld_board2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control" name="class_5_8_spld_no_of_students_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_English_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_Maths_board2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_science_board2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_5_8_spld_board3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control" name="class_5_8_spld_no_of_students_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_English_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_Maths_board3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_5_8_spld_percentage_science_board3">
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+                <br><br>
+
+                <br><br>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Classes 1-4, 1-5 <br>for 5-12 yrs old</th>
+                                <th>Primary Stage</th>
+                                <th>No of students</th>
+                                <th>Percentage English</th>
+                                <th>Percentage Maths</th>
+                                <th>Percentage Science</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Whole School</td>
+                                <td><select class="form-control" name="class_1_4_whole_school_board_1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_school_no_of_students_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_english_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_maths_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_science_board_1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select class="form-control" name="class_1_4_whole_school_board_2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_school_no_of_students_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_english_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_maths_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_science_board_2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_1_4_whole_school_board_3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_school_no_of_students_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_english_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_maths_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_whole_percentage_science_board_3">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>SpLD Students</td>
+                                <td><select class="form-control" name="class_1_4_spld_board_1">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_no_of_students_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_english_board_1">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_maths_board_1"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_science_board_1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_1_4_spld_board_2">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_no_of_students_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_english_board_2">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_maths_board_2"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_science_board_2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select class="form-control" name="class_1_4_spld_board_3">
+
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="state">State Board</option>
+                                        <option value="cisce">CISCE</option>
+                                        <option value="ib">IB</option>
+                                        <option value="caie">Cambridge Assessment for International Education</option>
+                                    </select></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_no_of_students_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_english_board_3">
+                                </td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_maths_board_3"></td>
+                                <td><input type="text" class="form-control"
+                                        name="class_1_4_spld_percentage_science_board_3">
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+                <div class="col-md-12 mt-3">
+                    <label for="other_teaching_and_learning" class="form-label">Any other relevant information, e.g.
+                        details
+                        of any other examinations taken, literacy/numeracy assessments:</label>
+                    <textarea class="form-control" placeholder="Enter relevant information"
+                        name="other_teaching_and_learning"></textarea>
+                </div>
+
+            </div>
+            <p class="text-primary" id="educationConsultantComment" name="educationConsultantComment"></p>
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Facilities and Equipment for Access to Teaching of SpLD Pupils (These can be observed remotely.)</b>
+            </h3><br><br>
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.1</small><br>
+                    <label for="general_resources" class="form-label">General resources for teaching SpLD
+                        pupils:</label>
+                    <textarea class="form-control" placeholder="Enter general resources"
+                        name="general_resources"></textarea>
+                </div>
+                <p class="text-primary" id="generalSourcesConsultantComment" name="generalSourcesConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.2</small><br>
+                    <label for="ict_resources" class="form-label">ICT: Use of Assistive Technology prevalent across
+                        school; scanning pens,
+                        OrCam device, KAZ touch tying, Read &amp; Write software, O365 immersive
+                        reader </label>
+                    <textarea class="form-control" placeholder="Enter ICT resources" name="ict_resources"></textarea>
+                </div>
+
+            </div>
+            <p class="text-primary" id="ictConsultantComment" name="ictConsultantComment"></p>
+
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.3</small><br>
+                    <label for="exam_arrangements" class="form-label">Details of access (special examination)
+                        arrangements requested
+                        and made for SpLD pupils:</label>
+                    <textarea class="form-control" id="exam_arrangements" placeholder="Enter exam arrangements"
+                        name="exam_arrangements"></textarea>
+                </div>
+                <p class="text-primary" id="specialExamConsultantComment" name="specialExamConsultantComment"></p>
+
+                <div class="col-md-6 mt-3">
+                    <small class="text-secondary">Criteria 5.4</small><br>
+                    <label for="library_resources" class="form-label">Library: Colour coded books based on reading age
+                        Reading diary to promote positive reading culture</label>
+                    <textarea class="form-control" id="library_resources" placeholder="Enter library resources"
+                        name="library_resources"></textarea>
+                </div>
+
+            </div>
+            <p class="text-primary" id="libraryConsultantComment" name="libraryConsultantComment"></p>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Details of Learning Support Provision</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <label for="learning_support_role" class="form-label">Role of the Learning Support Department within
+                        the
+                        school:</label>
+                    <textarea class="form-control" id="learning_support_role" placeholder="Enter learning support role"
+                        name="learning_support_role"></textarea>
+                </div>
+                <p class="text-primary" id="learningSupportRoleConsultantComment"
+                    name="learningSupportRoleConsultantComment"></p>
+
+                <div class="col-md-4 mt-2">
+                    <label for="learning_centre_organization" class="form-label">Organisation of the Learning Centre or
+                        equivalent:</label>
+                    <textarea class="form-control" id="learning_centre_organization"
+                        placeholder="Enter learning centre organization" name="learning_centre_organization"></textarea>
+                </div>
+                <p class="text-primary" id="organisationConsultantComment" name="organisationConsultantComment"></p>
+
+                <div class="col-md-4 mt-2">
+                    <label for="head_of_unit_status" class="form-label">Does the Head of Unit have Head of Department
+                        status and
+                        input into curriculum design and delivery?</label>
+                    <textarea class="form-control" id="head_of_unit_status" placeholder="Enter head of unit status"
+                        name="head_of_unit_status"></textarea>
+                </div>
+            </div>
+            <p class="text-primary" id="haveHeadConsultantComment" name="haveHeadConsultantComment"></p>
+
+
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>Staffing and Staff Development</b></h3><br><br>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <small class="text-secondary">Criteria 7</small><br>
+                    <label for="learning_support_staff" class="form-label">Qualifications, date, awarding body, and
+                        experience of
+                        all learning support staff:</label>
+                    <textarea class="form-control" id="learning_support_staff"
+                        placeholder="Enter qualifications, date, awarding body, and experience"
+                        name="learning_support_staff"></textarea>
+                </div>
+                <p class="text-primary" id="staffQualificationConsultantComment"
+                    name="staffQualificationConsultantComment"></p>
+
+                <div class="col-md-4 mt-2">
+                    <small class="text-secondary">Criteria 7</small><br>
+                    <label for="staff_development" class="form-label">Staff development and in-service training of
+                        learning support
+                        staff within the last 18 months:</label>
+                    <textarea class="form-control" id="staff_development"
+                        placeholder="Enter staff development and in-service training details"
+                        name="staff_development"></textarea>
+                </div>
+                <p class="text-primary" id="staffDevelopmentConsultantComment" name="staffDevelopmentConsultantComment">
+                </p>
+
+                <div class="col-md-4 mt-2">
+                    <small class="text-secondary">Criteria 7</small><br>
+                    <label for="school_staff_development" class="form-label">Whole school staff development in relation
+                        to Dyslexia
+                        Awareness and Inclusion strategies e.g. IDP (Inclusion Development Programme):</label>
+                    <textarea class="form-control" id="school_staff_development"
+                        placeholder="Enter whole school staff development details"
+                        name="school_staff_development"></textarea>
+                </div>
+            </div>
+            <p class="text-primary" id="schoolStaffDevelopmentConsultantComment"
+                name="schoolStaffDevelopmentConsultantComment"></p>
+
+            <br>
+            <hr class="mt-5">
+            <h3><b>The experience of parents & pupils regarding the school, in particular, its response
+                    to SpLD pupils</b></h3><br><br>
+            <div class="col-md-12 mt-2">
+                <label for="list_of_spLD_pupils" class="form-label">Schools should provide link, with the supporting
+                    documentation, a list of the names of all known SpLD pupils in the school. CReSTeD will provide an
+                    explanatory
+                    letter to be sent to parents of all those named informing them of the visit and seeking their
+                    permission to give
+                    their contact details to the consultant. The consultant will randomly select names from the list to
+                    discuss
+                    their experiences as parents in relation to the school.<br><b>Parents can be contacted by
+                        email/school will
+                        acquire their permission</b></label>
+                <textarea class="form-control" placeholder="Enter the names of all known SpLD pupils"
+                    name="list_of_spLD_pupils"></textarea>
+            </div>
+            <p class="text-primary" id="parentsContactsDevelopmentConsultantComment"
+                name="parentsContactsDevelopmentConsultantComment"></p>
+            <p class="text-primary" id="studentResponseDevelopmentConsultantComment"
+                name="studentResponseDevelopmentConsultantComment"></p>
+
+            <div class="col-md-8 mt-5">
+                <input class="form-check-input" type="checkbox" value="" id="confirm_details_checkbox" required>
+                <label class="form-check-label" for="confirm_details_checkbox">
+                    I hereby agree that all the above-mentioned details are correct and I am the Head/Principal of the
+                    institute
+                </label>
+            </div>
+            <div class="col-md-4 d-none">
+                <label for="person_name" class="form-label">Type</label>
+                <input type="text" value="School" class="form-control" placeholder="Enter name" name="type_inst"
+                    required>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+    </div>
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+
+            function saveFormData() {
+                const form = document.getElementById('userForm');
+                const formData = new FormData(form);
+
+
+                for (let [key, value] of formData.entries()) {
+                    localStorage.setItem(key, value);
+                }
+
+            }
+
+
+            function loadFormData() {
+                const form = document.getElementById('userForm');
+
+
+                for (let key in localStorage) {
+                    if (localStorage.hasOwnProperty(key)) {
+                        const field = form.elements[key];
+                        if (field) {
+                            field.value = localStorage.getItem(key);
+                        }
+                    }
+                }
+            }
+
+
+
+         
+
+            window.addEventListener('load', loadFormData);
+
+
+            setInterval(saveFormData, 1000);
+        const form = document.getElementById('userForm');
+        var loader = document.getElementById('loader');
+        var error = document.getElementById('error');
+        var url = window.location.href;
+        var searchParams = new URLSearchParams(new URL(url).search);
+        var idValue = searchParams.get('id');
+        console.log(idValue);
+        form.style.display = 'none';
+        loader.style.display = 'block';
+
+        var fetchUrl = 'https://script.google.com/macros/s/AKfycbw_T_PcXVH5Yyd2L853wZqGHTNUr7tTgCBkKGRXrHikqioR5mtuZC0U69Vn4w6vf2fZkQ/exec?id=' + idValue;
+        fetch(fetchUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(Object.keys(data).length);
+                if (Object.keys(data).length === 0) {
+                    error.style.display = 'block';
+                    form.style.display = 'none';
+                    loader.style.display = 'none';
+
+                }
+                else {
+                    console.log(data);
+                    form.elements["sheet_id"].value = idValue;
+                    form.elements["person_name"].value = data.person_name;
+                    form.elements["telephone"].value = data.telephone;
+                    form.elements["email"].value = data.email;
+                    form.elements["alt_person_name"].value = data.alt_person_name;
+                    form.elements["alt_telephone"].value = data.alt_telephone;
+                    form.elements["alt_email"].value = data.alt_email;
+                    form.elements["school_name"].value = data.school_name;
+                    form.elements["school_address"].value = data.school_address;
+                    form.elements["school_telephone"].value = data.school_telephone;
+                    form.elements["school_email"].value = data.school_email;
+                    form.elements["school_website"].value = data.school_website;
+                    form.elements["head_name"].value = data.head_name;
+                    form.elements["head_title"].value = data.head_title;
+                    form.elements["head_telephone"].value = data.head_telephone;
+                    form.elements["head_qualifications"].value = data.head_qualifications;
+                    form.elements["head_awarding_body"].value = data.head_awarding_body;
+                    form.elements["specialist_name"].value = data.specialist_name;
+                    form.elements["specialist_title"].value = data.specialist_title;
+                    form.elements["specialist_telephone"].value = data.specialist_telephone;
+                    form.elements["specialist_qualifications"].value = data.specialist_qualifications;
+                    form.elements["specialist_awarding_body"].value = data.specialist_awarding_body;
+                    form.elements["day_boys_total"].value = data.day_boys_total;
+                    form.elements["day_boys_sp_ld"].value = data.day_boys_sp_ld;
+                    form.elements["day_boys_age_range"].value = data.day_boys_age_range;
+                    form.elements["day_girls_total"].value = data.day_girls_total;
+                    form.elements["day_girls_sp_ld"].value = data.day_girls_sp_ld;
+                    form.elements["day_girls_age_range"].value = data.day_girls_age_range;
+                    form.elements["boarding_boys_total"].value = data.boarding_boys_total;
+                    form.elements["boarding_boys_sp_ld"].value = data.boarding_boys_sp_ld;
+                    form.elements["boarding_boys_age_range"].value = data.boarding_boys_age_range;
+                    form.elements["boarding_girls_total"].value = data.boarding_girls_total;
+                    form.elements["boarding_girls_sp_ld"].value = data.boarding_girls_sp_ld;
+                    form.elements["boarding_girls_age_range"].value = data.boarding_girls_age_range;
+                    form.elements["overall_total"].value = data.overall_total;
+                    form.elements["overall_sp_ld"].value = data.overall_sp_ld;
+                    form.elements["overall_age_range"].value = data.overall_age_range;
+                    form.elements["class_size_mainstream"].value = data.class_size_mainstream;
+                    form.elements["class_size_learning_support"].value = data.class_size_learning_support;
+                    form.elements["class_size_prospectus"].value = data.class_size_prospectus;
+                    form.elements["fees_spld_pupils"].value = data.fees_spld_pupils;
+                    form.elements["aims_philosophy"].value = data.aims_philosophy;
+                    form.elements["staff_handbook_copy"].value = data.staff_handbook_copy;
+                    form.elements["school_response"].value = data.school_response;
+                    form.elements["government_funded_pupils"].value = data.government_funded_pupils;
+                    form.elements["identify_pupils_details"].value = data.identify_pupils_details;
+                    form.elements["action_taken_details"].value = data.action_taken_details;
+                    form.elements["access_assessment_details"].value = data.access_assessment_details;
+                    form.elements["week_organisation_details"].value = data.week_organisation_details;
+                    form.elements["arrangements_details"].value = data.arrangements_details;
+                    form.elements["lesson_preparation_details"].value = data.lesson_preparation_details;
+                    form.elements["provision_map1"].value = data.provision_map1;
+                    form.elements["provision_map2"].value = data.provision_map2;
+                    form.elements["record_keeping_details"].value = data.record_keeping_details;
+                    form.elements["class_11_12_whole_school_board_1"].value = data.class_11_12_whole_school_board_1;
+                    form.elements["class_11_12_whole_school_per_A_to_E_board_1"].value = data.class_11_12_whole_school_per_A_to_E_board_1;
+                    form.elements["class_11_12_whole_school_board2"].value = data.class_11_12_whole_school_board2;
+                    form.elements["class_11_12_whole_school_per_A_to_E_board_2"].value = data.class_11_12_whole_school_per_A_to_E_board_2;
+                    form.elements["class_11_12_whole_school_board3"].value = data.class_11_12_whole_school_board3;
+                    form.elements["class_11_12_whole_school_per_A_to_E_board_3"].value = data.class_11_12_whole_school_per_A_to_E_board_3;
+                    form.elements["class_11_12_spld_board1"].value = data.class_11_12_spld_board1;
+                    form.elements["class_11_12_spld_no_of_students_board1"].value = data.class_11_12_spld_no_of_students_board1;
+                    form.elements["class_11_12_spld_no_of_students_entered_board1"].value = data.class_11_12_spld_no_of_students_entered_board1;
+                    form.elements["class_11_12_spld_Percentage_A_E_board1"].value = data.class_11_12_spld_Percentage_A_E_board1;
+                    form.elements["class_11_12_spld_board2"].value = data.class_11_12_spld_board2;
+                    form.elements["class_11_12_spld_no_of_students_board2"].value = data.class_11_12_spld_no_of_students_board2;
+                    form.elements["class_11_12_spld_no_of_students_entered_board2"].value = data.class_11_12_spld_no_of_students_entered_board2;
+                    form.elements["class_11_12_spld_Percentage_A_E_board2"].value = data.class_11_12_spld_Percentage_A_E_board2;
+                    form.elements["class_11_12_spld_board3"].value = data.class_11_12_spld_board3;
+                    form.elements["class_11_12_spld_no_of_students_board3"].value = data.class_11_12_spld_no_of_students_board3;
+                    form.elements["class_11_12_spld_no_of_students_entered_board3"].value = data.class_11_12_spld_no_of_students_entered_board3;
+                    form.elements["class_11_12_spld_Percentage_A_E_board3"].value = data.class_11_12_spld_Percentage_A_E_board3;
+                    form.elements["class_8_10_whole_school_board1"].value = data.class_8_10_whole_school_board1;
+                    form.elements["class_8_10_whole_school_no_of_students_board1"].value = data.class_8_10_whole_school_no_of_students_board1;
+                    form.elements["class_8_10_whole_school_board2"].value = data.class_8_10_whole_school_board2;
+                    form.elements["class_8_10_whole_school_no_of_students_board2"].value = data.class_8_10_whole_school_no_of_students_board2;
+                    form.elements["class_8_10_whole_school_board3"].value = data.class_8_10_whole_school_board3;
+                    form.elements["class_8_10_whole_school_no_of_students_board3"].value = data.class_8_10_whole_school_no_of_students_board3;
+                    form.elements["class_8_10_spld_students_board1"].value = data.class_8_10_spld_students_board1;
+                    form.elements["class_8_10_spld_students_no_of_students_board1"].value = data.class_8_10_spld_students_no_of_students_board1;
+                    form.elements["class_8_10_spld_students_board2"].value = data.class_8_10_spld_students_board2;
+                    form.elements["class_8_10_spld_students_no_of_students_board2"].value = data.class_8_10_spld_students_no_of_students_board2;
+                    form.elements["class_8_10_spld_students_board3"].value = data.class_8_10_spld_students_board3;
+                    form.elements["class_8_10_spld_students_no_of_students_board3"].value = data.class_8_10_spld_students_no_of_students_board3;
+                    form.elements["class_5_8_whole_school_board1"].value = data.class_5_8_whole_school_board1;
+                    form.elements["class_5_8_whole_school_no_of_students_board1"].value = data.class_5_8_whole_school_no_of_students_board1;
+                    form.elements["class_5_8_whole_school_percentage_Maths_board1"].value = data.class_5_8_whole_school_percentage_Maths_board1;
+                    form.elements["class_5_8_whole_school_board2"].value = data.class_5_8_whole_school_board2;
+                    form.elements["class_5_8_whole_school_no_of_students_board2"].value = data.class_5_8_whole_school_no_of_students_board2;
+                    form.elements["class_5_8_whole_school_percentage_Maths_board2"].value = data.class_5_8_whole_school_percentage_Maths_board2;
+                    form.elements["class_5_8_whole_school_board3"].value = data.class_5_8_whole_school_board3;
+                    form.elements["class_5_8_whole_school_no_of_students_board3"].value = data.class_5_8_whole_school_no_of_students_board3;
+                    form.elements["class_5_8_whole_school_percentage_Maths_board3"].value = data.class_5_8_whole_school_percentage_Maths_board3;
+                    form.elements["class_5_8_spld_board1"].value = data.class_5_8_spld_board1;
+                    form.elements["class_5_8_spld_no_of_students_board1"].value = data.class_5_8_spld_no_of_students_board1;
+                    form.elements["class_5_8_spld_percentage_English_board1"].value = data.class_5_8_spld_percentage_English_board1;
+                    form.elements["class_5_8_spld_percentage_Maths_board1"].value = data.class_5_8_spld_percentage_Maths_board1;
+                    form.elements["class_5_8_spld_percentage_science_board1"].value = data.class_5_8_spld_percentage_science_board1;
+                    form.elements["class_5_8_spld_board2"].value = data.class_5_8_spld_board2;
+                    form.elements["class_5_8_spld_no_of_students_board2"].value = data.class_5_8_spld_no_of_students_board2;
+                    form.elements["class_5_8_spld_percentage_English_board2"].value = data.class_5_8_spld_percentage_English_board2;
+                    form.elements["class_5_8_spld_percentage_Maths_board2"].value = data.class_5_8_spld_percentage_Maths_board2;
+                    form.elements["class_5_8_spld_percentage_science_board2"].value = data.class_5_8_spld_percentage_science_board2;
+                    form.elements["class_5_8_spld_board3"].value = data.class_5_8_spld_board3;
+                    form.elements["class_5_8_spld_no_of_students_board3"].value = data.class_5_8_spld_no_of_students_board3;
+                    form.elements["class_5_8_spld_percentage_English_board3"].value = data.class_5_8_spld_percentage_English_board3;
+                    form.elements["class_5_8_spld_percentage_Maths_board3"].value = data.class_5_8_spld_percentage_Maths_board3;
+                    form.elements["class_5_8_spld_percentage_science_board3"].value = data.class_5_8_spld_percentage_science_board3;
+                    form.elements["class_1_4_whole_school_board_1"].value = data.class_1_4_whole_school_board_1;
+                    form.elements["class_1_4_whole_school_no_of_students_board_1"].value = data.class_1_4_whole_school_no_of_students_board_1;
+                    form.elements["class_1_4_whole_school_board_2"].value = data.class_1_4_whole_school_board_2;
+                    form.elements["class_1_4_whole_school_no_of_students_board_2"].value = data.class_1_4_whole_school_no_of_students_board_2;
+                    form.elements["class_1_4_whole_school_board_3"].value = data.class_1_4_whole_school_board_3;
+                    form.elements["class_1_4_whole_school_no_of_students_board_3"].value = data.class_1_4_whole_school_no_of_students_board_3;
+                    form.elements["class_1_4_spld_board_1"].value = data.class_1_4_spld_board_1;
+                    form.elements["class_1_4_spld_no_of_students_board_1"].value = data.class_1_4_spld_no_of_students_board_1;
+                    form.elements["class_1_4_spld_percentage_english_board_1"].value = data.class_1_4_spld_percentage_english_board_1;
+                    form.elements["class_1_4_spld_percentage_maths_board_1"].value = data.class_1_4_spld_percentage_maths_board_1;
+                    form.elements["class_1_4_spld_percentage_science_board_1"].value = data.class_1_4_spld_percentage_science_board_1;
+                    form.elements["class_1_4_spld_board_2"].value = data.class_1_4_spld_board_2;
+                    form.elements["class_1_4_spld_no_of_students_board_2"].value = data.class_1_4_spld_no_of_students_board_2;
+                    form.elements["class_1_4_spld_percentage_english_board_2"].value = data.class_1_4_spld_percentage_english_board_2;
+                    form.elements["class_1_4_spld_percentage_maths_board_2"].value = data.class_1_4_spld_percentage_maths_board_2;
+                    form.elements["class_1_4_spld_percentage_science_board_2"].value = data.class_1_4_spld_percentage_science_board_2;
+                    form.elements["class_1_4_spld_board_3"].value = data.class_1_4_spld_board_3;
+                    form.elements["class_1_4_spld_no_of_students_board_3"].value = data.class_1_4_spld_no_of_students_board_3;
+                    form.elements["class_1_4_spld_percentage_english_board_3"].value = data.class_1_4_spld_percentage_english_board_3;
+                    form.elements["class_1_4_spld_percentage_maths_board_3"].value = data.class_1_4_spld_percentage_maths_board_3;
+                    form.elements["class_1_4_spld_percentage_science_board_3"].value = data.class_1_4_spld_percentage_science_board_3;
+                    form.elements["other_teaching_and_learning"].value = data.other_teaching_and_learning;
+                    form.elements["general_resources"].value = data.general_resources;
+                    form.elements["ict_resources"].value = data.ict_resources;
+                    form.elements["exam_arrangements"].value = data.exam_arrangements;
+                    form.elements["library_resources"].value = data.library_resources;
+                    form.elements["learning_support_role"].value = data.learning_support_role;
+                    form.elements["learning_centre_organization"].value = data.learning_centre_organization;
+                    form.elements["head_of_unit_status"].value = data.head_of_unit_status;
+                    form.elements["learning_support_staff"].value = data.learning_support_staff;
+                    form.elements["staff_development"].value = data.staff_development;
+                    form.elements["school_staff_development"].value = data.school_staff_development;
+                    form.elements["list_of_spLD_pupils"].value = data.list_of_spLD_pupils;
+                    form.elements["type_inst"].value = data.type_inst;
+
+
+                    document.getElementById('nameOfConsultant').textContent = data.nameOfConsultant;
+                    document.getElementById('principalConsultantComment').textContent = data.principalConsultantComment;
+                    document.getElementById('spldConsultantComment').textContent = data.spldConsultantComment;
+                    document.getElementById('bgGeneralInfoConsultantComment').textContent = data.bgGeneralInfoConsultantComment;
+                    document.getElementById('mainStreamConsultantComment').textContent = data.mainStreamConsultantComment;
+                    document.getElementById('learningSupportConsultantComment').textContent = data.learningSupportConsultantComment;
+                    document.getElementById('pastoralCareConsultantComment').textContent = data.pastoralCareConsultantComment;
+                    document.getElementById('prospectusConsultantComment').textContent = data.prospectusConsultantComment;
+                    document.getElementById('aimConsultantComment').textContent = data.aimConsultantComment;
+                    document.getElementById('handBookConsultantComment').textContent = data.handBookConsultantComment;
+                    document.getElementById('responseConsultantComment').textContent = data.responseConsultantComment;
+                    document.getElementById('fundedConsultantComment').textContent = data.fundedConsultantComment;
+                    document.getElementById('identifyConsultantComment').textContent = data.identifyConsultantComment;
+                    document.getElementById('actionConsultantComment').textContent = data.actionConsultantComment;
+                    document.getElementById('assessmentConsultantComment').textContent = data.assessmentConsultantComment;
+                    document.getElementById('weekConsultantComment').textContent = data.weekConsultantComment;
+                    document.getElementById('arrangementConsultantComment').textContent = data.arrangementConsultantComment;
+                    document.getElementById('preparationConsultantComment').textContent = data.preparationConsultantComment;
+                    document.getElementById('provisionMapConsultantComment').textContent = data.provisionMapConsultantComment;
+                    document.getElementById('recordsMapConsultantComment').textContent = data.recordsMapConsultantComment;
+                    document.getElementById('reviewConsultantComment').textContent = data.reviewConsultantComment;
+                    document.getElementById('educationConsultantComment').textContent = data.educationConsultantComment;
+                    document.getElementById('generalSourcesConsultantComment').textContent = data.generalSourcesConsultantComment;
+                    document.getElementById('ictConsultantComment').textContent = data.ictConsultantComment;
+                    document.getElementById('specialExamConsultantComment').textContent = data.specialExamConsultantComment;
+                    document.getElementById('libraryConsultantComment').textContent = data.libraryConsultantComment;
+                    document.getElementById('learningSupportRoleConsultantComment').textContent = data.learningSupportRoleConsultantComment;
+                    document.getElementById('organisationConsultantComment').textContent = data.organisationConsultantComment;
+                    document.getElementById('haveHeadConsultantComment').textContent = data.haveHeadConsultantComment;
+                    document.getElementById('staffQualificationConsultantComment').textContent = data.staffQualificationConsultantComment;
+                    document.getElementById('staffDevelopmentConsultantComment').textContent = data.staffDevelopmentConsultantComment;
+                    document.getElementById('schoolStaffDevelopmentConsultantComment').textContent = data.schoolStaffDevelopmentConsultantComment;
+                    document.getElementById('parentsContactsDevelopmentConsultantComment').textContent = data.parentsContactsDevelopmentConsultantComment;
+                    document.getElementById('studentResponseDevelopmentConsultantComment').textContent = data.studentResponseDevelopmentConsultantComment;
+
+
+                    loader.style.display = 'none';
+                    form.style.display = 'block';
+
+                }
+
+
+            })
+            .catch(function (error) {
+                console.log('Error:', error);
+                loader.style.display = 'none';
+
+            });
+
+               form.addEventListener('submit', function (event) {
+                    localStorage.clear();
+                });
+
+
+    </script>
+</body>
+
+</html>
