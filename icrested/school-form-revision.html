@@ -1282,40 +1282,40 @@
     <br>
     <script>
 
-            function saveFormData() {
-                const form = document.getElementById('userForm');
-                const formData = new FormData(form);
+            // function saveFormData() {
+            //     const form = document.getElementById('userForm');
+            //     const formData = new FormData(form);
 
 
-                for (let [key, value] of formData.entries()) {
-                    localStorage.setItem(key, value);
-                }
+            //     for (let [key, value] of formData.entries()) {
+            //         localStorage.setItem(key, value);
+            //     }
 
-            }
-
-
-            function loadFormData() {
-                const form = document.getElementById('userForm');
+            // }
 
 
-                for (let key in localStorage) {
-                    if (localStorage.hasOwnProperty(key)) {
-                        const field = form.elements[key];
-                        if (field) {
-                            field.value = localStorage.getItem(key);
-                        }
-                    }
-                }
-            }
+            // function loadFormData() {
+            //     const form = document.getElementById('userForm');
+
+
+            //     for (let key in localStorage) {
+            //         if (localStorage.hasOwnProperty(key)) {
+            //             const field = form.elements[key];
+            //             if (field) {
+            //                 field.value = localStorage.getItem(key);
+            //             }
+            //         }
+            //     }
+            // }
 
 
 
          
 
-            window.addEventListener('load', loadFormData);
+            // window.addEventListener('load', loadFormData);
 
 
-            setInterval(saveFormData, 1000);
+            // setInterval(saveFormData, 1000);
         const form = document.getElementById('userForm');
         var loader = document.getElementById('loader');
         var error = document.getElementById('error');
@@ -1542,9 +1542,9 @@
 
             });
 
-               form.addEventListener('submit', function (event) {
-                    localStorage.clear();
-                });
+               // form.addEventListener('submit', function (event) {
+               //      localStorage.clear();
+               //  });
 
 
     </script>
