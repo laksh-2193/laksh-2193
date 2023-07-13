@@ -665,38 +665,38 @@
 </html>
 <script>
 
-    function saveFormData() {
-        const form = document.getElementById('userForm');
-        const formData = new FormData(form);
-        const timestamp = Date.now(); // Unique identifier
+    // function saveFormData() {
+    //     const form = document.getElementById('userForm');
+    //     const formData = new FormData(form);
+    //     const timestamp = Date.now(); // Unique identifier
 
-        for (let [key, value] of formData.entries()) {
-            localStorage.setItem(key + '_' + timestamp, value); // Append timestamp to key
-        }
-    }
+    //     for (let [key, value] of formData.entries()) {
+    //         localStorage.setItem(key + '_' + timestamp, value); // Append timestamp to key
+    //     }
+    // }
 
-    function loadFormData() {
-        const form = document.getElementById('userForm');
+    // function loadFormData() {
+    //     const form = document.getElementById('userForm');
 
-        for (let key in localStorage) {
-            if (localStorage.hasOwnProperty(key)) {
-                const [fieldName, timestamp] = key.split('_');
-                const field = form.elements[fieldName];
-                if (field) {
-                    field.value = localStorage.getItem(key);
-                }
-            }
-        }
-    }
+    //     for (let key in localStorage) {
+    //         if (localStorage.hasOwnProperty(key)) {
+    //             const [fieldName, timestamp] = key.split('_');
+    //             const field = form.elements[fieldName];
+    //             if (field) {
+    //                 field.value = localStorage.getItem(key);
+    //             }
+    //         }
+    //     }
+    // }
 
-    const form = document.getElementById('userForm');
-    form.addEventListener('submit', function (event) {
-        localStorage.clear();
-    });
+    // const form = document.getElementById('userForm');
+    // form.addEventListener('submit', function (event) {
+    //     localStorage.clear();
+    // });
 
-    window.addEventListener('load', loadFormData);
+    // window.addEventListener('load', loadFormData);
 
-    setInterval(saveFormData, 1000);
+    // setInterval(saveFormData, 1000);
 
 
 </script>
