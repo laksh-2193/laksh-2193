@@ -34,7 +34,7 @@
         <hr>
 
 
-        <form method="POST" id="userForm"
+        <form method="POST" id="userForm_school"
             action="https://script.google.com/macros/s/AKfycbzsWbPCvqs_GpKlxHxGqlgclRHZzGp9QPgFlaB7gMPtMeFyE9_JgPDqkWkF9ozi8x2RGQ/exec">
 
             <h3><b>Contact Details</b></h3><br><br>
@@ -1189,44 +1189,39 @@
 </body>
 
 </html>
+<!-- school.html -->
+
 <script>
+    function saveFormData() {
+        const form = document.getElementById('userForm_school');
+        const formData = new FormData(form);
 
-    // function saveFormData() {
-    //     const form = document.getElementById('userForm');
-    //     const formData = new FormData(form);
+        for (let [key, value] of formData.entries()) {
+            localStorage.setItem('school_' + key, value);
+        }
+    }
 
+    function loadFormData() {
+        const form = document.getElementById('userForm_school');
 
-    //     for (let [key, value] of formData.entries()) {
-    //         localStorage.setItem(key, value);
-    //     }
+        for (let key in localStorage) {
+            if (localStorage.hasOwnProperty(key)) {
+                if (key.startsWith('school_')) {
+                    const field = form.elements[key.substring(7)];
+                    if (field) {
+                        field.value = localStorage.getItem(key);
+                    }
+                }
+            }
+        }
+    }
 
-    // }
+    const form = document.getElementById('userForm_school');
+    form.addEventListener('submit', function (event) {
+        localStorage.clear();
+    });
 
+    window.addEventListener('load', loadFormData);
 
-    // function loadFormData() {
-    //     const form = document.getElementById('userForm');
-
-
-    //     for (let key in localStorage) {
-    //         if (localStorage.hasOwnProperty(key)) {
-    //             const field = form.elements[key];
-    //             if (field) {
-    //                 field.value = localStorage.getItem(key);
-    //             }
-    //         }
-    //     }
-    // }
-
-
-    // const form = document.getElementById('userForm');
-    // form.addEventListener('submit', function (event) {
-    //     localStorage.clear();
-    // });
-
-
-    // window.addEventListener('load', loadFormData);
-
-
-    // setInterval(saveFormData, 1000);
-
+    setInterval(saveFormData, 1000);
 </script>
