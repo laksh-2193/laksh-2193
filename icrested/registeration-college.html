@@ -34,7 +34,7 @@
         <hr>
 
 
-        <form method="POST" id="userForm"
+        <form method="POST" id="userForm_college"
             action="https://script.google.com/macros/s/AKfycbxURNPJmujtKlVqw-B6XxNs7hqzZs8qm93qUsT2i2XjNmTsdPkvSqbIJmVFQkQbTdw7/exec">
 
             <h3><b>Contact Details</b></h3><br><br>
@@ -171,7 +171,7 @@
                             <th scope="col">Numbers, sex and age of pupils:</th>
                             <th scope="col">Total</th>
                             <th scope="col">SpLD</th>
-                
+
                         </tr>
                     </thead>
                     <tbody>
@@ -180,7 +180,7 @@
                             <td><input type="number" class="form-control" name="day_boys_total" placeholder="Total">
                             </td>
                             <td><input type="number" class="form-control" name="day_boys_sp_ld" placeholder="SpLD"></td>
-                
+
                         </tr>
                         <tr>
                             <th scope="row">Day Females:</th>
@@ -188,26 +188,29 @@
                             </td>
                             <td><input type="number" class="form-control" name="day_girls_sp_ld" placeholder="SpLD">
                             </td>
-                
+
                         </tr>
                         <tr>
                             <th scope="row">Boarding Males:</th>
-                            <td><input type="number" class="form-control" name="boarding_boys_total" placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="boarding_boys_total"
+                                    placeholder="Total"></td>
                             <td><input type="number" class="form-control" name="boarding_boys_sp_ld" placeholder="SpLD">
                             </td>
-                
+
                         </tr>
                         <tr>
                             <th scope="row">Boarding Females:</th>
-                            <td><input type="number" class="form-control" name="boarding_girls_total" placeholder="Total"></td>
-                            <td><input type="number" class="form-control" name="boarding_girls_sp_ld" placeholder="SpLD"></td>
-                
+                            <td><input type="number" class="form-control" name="boarding_girls_total"
+                                    placeholder="Total"></td>
+                            <td><input type="number" class="form-control" name="boarding_girls_sp_ld"
+                                    placeholder="SpLD"></td>
+
                         </tr>
                         <tr>
                             <th scope="row">Overall total:</th>
                             <td><input type="number" class="form-control" name="overall_total" placeholder="Total"></td>
                             <td><input type="number" class="form-control" name="overall_sp_ld" placeholder="SpLD"></td>
-                
+
                         </tr>
                     </tbody>
                 </table>
@@ -418,87 +421,87 @@
 
 
                 <!-- Table 2 starts here -->
-                    <div class="table table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Undergraduate</th>
-                                    <th>Year 1</th>
-                                    <th>Year 2</th>
-                                    <th>Year 3</th>
-                                    <th>Year 4</th>
-                                    <th>Post Graduate</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                    
-                                    <td>
-                                        <label>Non-SpLDs BA</label>
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_ba_year1">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_ba_year2">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_ba_year3">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_ba_year4">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_ba_pg">
-                                    </td>
-                                </tr>
-                                <tr>
-                    
-                                    <td>
-                                        <label>Non-SpLDs BSc</label>
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_bsc_year1">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_bsc_year2">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_bsc_year3">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_bsc_year4">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="non_spld_bsc_pg">
-                                    </td>
-                                </tr>
-                    
-                    
-                                <tr>
-                    
-                                    <td><label>SpLD BA</label></td>
-                                    <td><input type="text" class="form-control" name="spld_ba_year1">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_ba_year2">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_ba_year3">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_ba_year4">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_ba_pg">
-                                    </td>
-                                </tr>
-                                <tr>
-                    
-                                    <td><label>SpLD BSc</label></td>
-                                    <td><input type="text" class="form-control" name="spld_bsc_year1">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_bsc_year2">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_bsc_year3">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_bsc_year4">
-                                    </td>
-                                    <td><input type="text" class="form-control" name="spld_bsc_pg">
-                                    </td>
-                                </tr>
-                    
-                    
-                            </tbody>
-                        </table>
-                    
-                    </div>
+                <div class="table table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Undergraduate</th>
+                                <th>Year 1</th>
+                                <th>Year 2</th>
+                                <th>Year 3</th>
+                                <th>Year 4</th>
+                                <th>Post Graduate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>
+                                    <label>Non-SpLDs BA</label>
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_ba_year1">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_ba_year2">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_ba_year3">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_ba_year4">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_ba_pg">
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <label>Non-SpLDs BSc</label>
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_bsc_year1">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_bsc_year2">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_bsc_year3">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_bsc_year4">
+                                </td>
+                                <td><input type="text" class="form-control" name="non_spld_bsc_pg">
+                                </td>
+                            </tr>
+
+
+                            <tr>
+
+                                <td><label>SpLD BA</label></td>
+                                <td><input type="text" class="form-control" name="spld_ba_year1">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_ba_year2">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_ba_year3">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_ba_year4">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_ba_pg">
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td><label>SpLD BSc</label></td>
+                                <td><input type="text" class="form-control" name="spld_bsc_year1">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_bsc_year2">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_bsc_year3">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_bsc_year4">
+                                </td>
+                                <td><input type="text" class="form-control" name="spld_bsc_pg">
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                </div>
 
                 <!-- table 2  ends here -->
 
@@ -665,38 +668,42 @@
 </html>
 <script>
 
-    // function saveFormData() {
-    //     const form = document.getElementById('userForm');
-    //     const formData = new FormData(form);
-    //     const timestamp = Date.now(); // Unique identifier
 
-    //     for (let [key, value] of formData.entries()) {
-    //         localStorage.setItem(key + '_' + timestamp, value); // Append timestamp to key
-    //     }
-    // }
+        function saveFormData() {
+    const form = document.getElementById('userForm_college');
+        const formData = new FormData(form);
 
-    // function loadFormData() {
-    //     const form = document.getElementById('userForm');
+        for (let [key, value] of formData.entries()) {
+            localStorage.setItem('college_' + key, value);
+    }
+  }
 
-    //     for (let key in localStorage) {
-    //         if (localStorage.hasOwnProperty(key)) {
-    //             const [fieldName, timestamp] = key.split('_');
-    //             const field = form.elements[fieldName];
-    //             if (field) {
-    //                 field.value = localStorage.getItem(key);
-    //             }
-    //         }
-    //     }
-    // }
+        function loadFormData() {
+    const form = document.getElementById('userForm_college');
 
-    // const form = document.getElementById('userForm');
-    // form.addEventListener('submit', function (event) {
-    //     localStorage.clear();
-    // });
+        for (let key in localStorage) {
+      if (localStorage.hasOwnProperty(key)) {
+        if (key.startsWith('college_')) {
+          const field = form.elements[key.substring(8)];
+        if (field) {
+            field.value = localStorage.getItem(key);
+          }
+        }
+      }
+    }
+  }
 
-    // window.addEventListener('load', loadFormData);
+        const form = document.getElementById('userForm_college');
+        form.addEventListener('submit', function (event) {
+            localStorage.clear();
+  });
 
-    // setInterval(saveFormData, 1000);
+        window.addEventListener('load', loadFormData);
+
+        setInterval(saveFormData, 1000);
+
+
+
 
 
 </script>
