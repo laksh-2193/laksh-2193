@@ -65,12 +65,11 @@
 
         .chat-container {
             flex: 1;
-            /* Make the chat container expand to fill available space */
             display: flex;
             flex-direction: column;
-            /* Stack children vertically */
             overflow-y: auto;
             padding: 10px;
+            padding-bottom: 50px;
         }
 
         .chat {
@@ -118,33 +117,43 @@
             const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
             return date.toLocaleString(undefined, options);
         }
+        function highlightURLs(text) {
+                const urlRegex = /https?:\/\/[^\s/$.?#].[^\s]*/g;
+                return text.replace(urlRegex, function (url) {
+                    return `<a href="${url}" target="_blank">${url}</a>`;
+                });
+            }
 
+            function appendMessage(message) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'message';
 
-       function appendMessage(message) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message';
+                    const messageTextDiv = document.createElement('div');
+                    messageTextDiv.className = 'message-text';
 
-            const messageTextDiv = document.createElement('div');
-            messageTextDiv.className = 'message-text';
+                    const timestampDiv = document.createElement('small');
+                    timestampDiv.textContent = formatTime(message.timestamp);
 
-            const timestampDiv = document.createElement('small');
-            timestampDiv.textContent = formatTime(message.timestamp);
+                    const messageContentDiv = document.createElement('div');
 
-            const messageContentDiv = document.createElement('div');
-            messageContentDiv.innerHTML = `<b>${message.message}</b>`;
+                    const messageWithLinks = highlightURLs(message.message);
 
-            messageTextDiv.appendChild(timestampDiv);
-            messageTextDiv.appendChild(document.createElement('br'));
-            messageTextDiv.appendChild(messageContentDiv);
+                    messageContentDiv.innerHTML = `<b>${messageWithLinks}</b>`;
 
-            messageDiv.appendChild(messageTextDiv);
+                    messageTextDiv.appendChild(timestampDiv);
+                    messageTextDiv.appendChild(document.createElement('br'));
+                    messageTextDiv.appendChild(messageContentDiv);
 
-            chatContainer.appendChild(messageDiv);
+                    messageDiv.appendChild(messageTextDiv);
 
-            const hr = document.createElement('hr');
-            chatContainer.appendChild(hr);
-        }
+                    chatContainer.appendChild(messageDiv);
 
+                    const hr = document.createElement('hr');
+                    chatContainer.appendChild(hr);
+
+                    chatContainer.scrollTop = chatContainer.scrollHeight - chatContainer.clientHeight;
+                    chatContainer.style.marginBottom = "60px";
+                }
 
         messagesRef.on('child_added', (snapshot) => {
                 const message = snapshot.val();
