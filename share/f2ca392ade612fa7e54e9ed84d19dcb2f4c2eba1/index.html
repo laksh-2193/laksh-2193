@@ -50,7 +50,9 @@
                     <input type="text" id="messageInput" class="form-control" placeholder="Type your message...">
                     <div class="input-group-append">
                         <button id="sendMessageButton" class="btn btn-primary" type="button">Send</button>
+                        <input type="file" id="files" name="files[]" class="btn btn-warning" multiple />
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -185,6 +187,50 @@
                     messageInput.value = '';
                 }
             });
+
+
+         $(document).ready(function () {
+                $('#files').change(handleFileSelection);
+            });
+            let storageRef = firebase.storage().ref("files")
+
+            function handleFileSelection(event) {
+                let file = document.getElementById('files').files[0];
+                console.log(file);
+                let thisRef = storageRef.child(file.name)
+                thisRef.put(file).then(res => {
+                    console.log("uploaded")
+                    storageRef.child(file.name).getDownloadURL().then(url => {
+                        console.log(url)
+                        const messageText = messageInput.value + "\n" + String(url);
+                        const timestamp = new Date().getTime();
+
+
+                        if (messageText.trim() !== '') {
+                            const newMessage = {
+                                timestamp: timestamp,
+                                message: messageText
+                            };
+
+                            database.ref('messages').push(newMessage);
+
+
+                        }
+
+                    })
+                        .catch(e => {
+
+                            console.log(e)
+                        });
+                    
+                })
+                    .catch(e => {
+                        console.log("error - " + e)
+                    })
+
+                
+
+            }
     </script>
   
 </body>
