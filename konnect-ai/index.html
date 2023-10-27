@@ -191,9 +191,8 @@
                 const parts = messageWithLinks.split(':');
 
                 if (parts.length >= 2) {
-                    
                     const underlinedText = `<u class="badge badge-success">${parts[1]}</u>`;
-                    const modifiedMessage = `${parts.slice(1).join(':')} - ${ underlinedText }`;
+                    const modifiedMessage = `${parts[0]} - ${underlinedText}`;
                     messageContentDiv.innerHTML = `<b>${modifiedMessage}</b>`;
                 } else {   
                     messageContentDiv.innerHTML = `<b>${messageWithLinks}</b>`;
@@ -243,6 +242,7 @@
                     database.ref('aixplore').push(newMessage);
 
                     messageInput.value = '';
+                    toolpurpose.value = '';
                 }
             });
 
