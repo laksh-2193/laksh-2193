@@ -38,7 +38,7 @@ Cognitive Classes](https://drive.google.com/file/d/1Yq5p5KwQGoFBdzLmo9Sh6kW-CZXD
 
 ## Academics
 ### Author
-- Book : [From Data to World](https://lakshaykumar.tech/from-data-to-world.html)
+- Book : [From Data to World : 5 Real-life secrets with Data Science](https://lakshaykumar.tech/from-data-to-world.html)
 - Blogs : [Hashnode](https://blogs.lakshaykumar.tech/)
 
 ### Projects
