@@ -1,5 +1,5 @@
 # Lakshay Kumar
-|| Undergraduate Student || Bangalore, Karnataka || <br>
+|| **Undergraduate Student** || **Bangalore, Karnataka** || <br>
 Author, Data-driven tech enthusiast and student ambassador at Microsoft. As a Project
 Manager at Atria Foundation, I'm launching projects to make quality education
 accessible. Authored 'From Data to World' and delivered tech talks for the meetup
