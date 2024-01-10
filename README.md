@@ -94,6 +94,8 @@ I'm passionate about creating impactful software solutions and continuing to lea
 
 ## Community Building
 
+### [LinkedIn Top Analytics Voice](https://www.lakshaykumar.tech/linkedin)
+
 ### Experience
 1. Microsoft Beta Student Ambassador : *Collaborating with Microsoft to promote technology awareness, share knowledge, and build a community around Microsoft products and technologies.*<br>
 [Sep 2023 - Present]
