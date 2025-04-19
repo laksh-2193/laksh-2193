@@ -1,240 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from wpriverthemes.com/landing/gridx-html/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2023 03:41:44 GMT -->
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lakshay Kumar - Projects</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords"
-        content="data science, lakshay kumar, artificial intelligence, machine learning, computer vision, projects" />
+    <title>Projects - Lakshay Kumar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Essential Meta Tags -->
     <meta name="description"
-        content="Lakshay Kumar is a young and aspiring Data Scientist who loves to build AI and ML applications that provide solutions to real-world problems. Explore Lakshay's data science projects and discover how he applies his skills to tackle challenges and drive innovation." />
+        content="Projects by Lakshay Kumar - Generative AI Engineer with expertise in machine learning and AI solutions.">
+    <meta name="keywords"
+        content="Lakshay Kumar, Projects, AI Projects, Machine Learning, Data Science, Portfolio">
     <meta name="author" content="Lakshay Kumar">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/iconoir.css">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="subscriber.js"></script>
 </head>
+
 <body>
+    <!-- Grid background -->
+    <div class="grid-background"></div>
+    <div class="noise-overlay"></div>
+    <div class="scanline"></div>
 
-    <main class="main-workdetails-page">
+    <!-- Code style decorations -->
+    <div class="code-decoration top-code">/* lakshay_kumar.projects */</div>
+    <div class="code-decoration bottom-code">// end_of_document</div>
 
-        <!-- Header -->
-        <header class="header-area">
-            <div class="container">
-                <div class="gx-row d-flex align-items-center justify-content-between">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.svg" alt="Logo">
-                    </a>
-
-                    <nav class="navbar">
-                        <ul class="menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li class="active"><a href="projects.html">Projects</a></li>
-                            <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
-                            <li><a href="talks.html">Talks</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    
-                    </nav>
-                    
-                    <a href="schedule.html" class="theme-btn">Let's Connect</a>
-
-                    <div class="show-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-brain"></i> <span>LK</span>
+                </a>
             </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container projects-page">
+        <header class="page-header">
+            <h1 class="page-title">Projects</h1>
+            <div class="h-line"></div>
+            <p class="page-subtitle">A showcase of my technical work and research</p>
         </header>
 
-        <!-- Breadcrumb -->
-        <section class="breadcrumb-area">
-            <div class="container">
-                <div class="breadcrumb-content" data-aos="fade-up">
-                    <p>Industrial / Academic</p>
-                    <h1 class="section-heading"><img src="assets/images/star-2.png" alt="lakshay kumar projects"> Projects <img src="assets/images/star-2.png" alt="Star"></h1>
-                </div>
-            </div>
-        </section>
+        <!-- Project Filters -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="genai">Generative AI</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="nlp">NLP</button>
+            <button class="filter-btn" data-filter="data">Data Science</button>
+        </div>
 
-
-        <!-- Blog Items -->
-        <section class="blog-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="blog-items">
-                           
-                            <div class="blog-item" data-aos="zoom-in">
-                                
-                            <div class="content">
-                                <span class="meta">Industrial || Jun 2023 - Present</a></span>
-                                <h1><a href="">Council for the Registration of Schools Teaching Dyslexic Pupils - UK</a></h1>
-                                <p>
-                                <p>In my role, I focused on automating the process of connecting and onboarding schools in India. This involved
-                                    developing
-                                    efficient systems and workflows to streamline the onboarding process. By leveraging automation tools and
-                                    technologies, I
-                                    successfully reduced manual efforts and improved the overall efficiency and scalability of school connections.
-                                </p>
-                                </p>
-                                <a class="theme-btn">Confidential</a>
-                            </div>
-                            </div>
-                                <div class="blog-item" data-aos="zoom-in">
-                                
-                            <div class="content">
-                                <span class="meta">Industrial || Mar 2023 - Present</a></span>
-                                <h1><a href="">Loyalty Program for Social Good - LoveAll</a></h1>
-                                <p>
-                                <p>
-                                    This project leverages technology through a loyalty program to address limited access to underprivileged education, aiming to provide equal opportunities for learning and empower marginalized communities.
-                                </p>
-                                </p>
-                                <a class="theme-btn">Confidential</a>
-                            </div>
-                            </div>
-                            <div class="blog-item" data-aos="zoom-in">
-                                
-                                <div class="content">
-                                    <span class="meta">Academic || Feb 2022</a></span>
-                                    <h1><a href="">Socialy Social Media</a></h1>
-                                    <p>
-                                    <p>Developed a socially intelligent social media platform that leverages advanced algorithms. Utilized machine
-                                        learning
-                                        algorithms to personalize content recommendations based on user preferences, interests, and social connections.
-                                    </p>
-                                    </p>
-                                    <a href="https://github.com/laksh-2193/Socialy" class="theme-btn">Check it out</a>
-                                </div>
-                            </div>
-
-                            <div class="blog-item" data-aos="zoom-in">
-                                <div class="content">
-                                    <span class="meta">Academic || Nov 2022</a></span>
-                                    <h1><a href="">Namma Metro Algorithm Designing</a></h1>
-                                    <p>
-                                    <p>Designed an algorithm for the Namma Metro system based on efficient data structures. Utilized graph data
-                                        structures to
-                                        represent stations and track connections, optimizing for quick traversal and route planning. Implemented
-                                        algorithms such
-                                        as Dijkstra's or A* for finding the shortest path between stations. Ensured scalability and robustness to
-                                        handle a large
-                                        volume of data and provide reliable navigation for metro commuters.</p>
-                                    </p>
-                                    <a href="https://github.com/laksh-2193/nammametro" class="theme-btn">Check it out</a>
-                                </div>
-                            </div>
-                            <div class="blog-item" data-aos="zoom-in">
-                                <div class="content">
-                                    <span class="meta">Academic || Sep 2022</a></span>
-                                    <h1><a href="">Flight Delay Prediction</a></h1>
-                                    <p>
-                                    <p>I analyzed historical flight delay data to develop a predictive model. By leveraging the previous delay
-                                        history of
-                                        flights, I identified patterns and factors contributing to delays. Using machine learning algorithms, I
-                                        built a model to
-                                        accurately forecast potential flight delays, enabling proactive measures for improved operations and
-                                        passenger
-                                        experience.</p>
-                                    </p>
-                                    <a href="https://blogs.lakshaykumar.tech/flights-delay-prediction" class="theme-btn">Check it out</a>
-                                </div>
-                            </div>
-                            <div class="blog-item" data-aos="zoom-in">
-                                <div class="content">
-                                    <span class="meta">Academic || Jul 2022</a></span>
-                                    <h1><a href="">Computer Vision in Drones</a></h1>
-                                    <p>
-                                    <p>Implemented computer vision techniques to integrate drones for surveillance, rescue operations, and control
-                                        through
-                                        finger gesture recognition. Developed algorithms for real-time object detection, tracking, and
-                                        identification. Enabled
-                                        efficient and intuitive interaction with drones, enhancing their capabilities in various scenarios.
-                                        Contributed to
-                                        advancing the field of drone technology for mission-critical applications.</p>
-                                    </p>
-                                    <a href="https://www.youtube.com/@aryanbakle363" class="theme-btn">Check it out</a>
-                                </div>
-                            </div>
-                            <div class="blog-item" data-aos="zoom-in">
-                                <div class="content">
-                                    <span class="meta">Academic || Mar 2022</a></span>
-                                    <h1><a href="">Trigo DALV</a></h1>
-                                    <p>
-                                    <p>Developed a recommendation system project for suggesting places in Bangalore based on individual preferences
-                                        within a
-                                        group. Utilized collaborative filtering and machine learning algorithms to analyze user choices and generate
-                                        personalized recommendations. Incorporated user feedback and ratings to continuously improve the accuracy
-                                        and relevance
-                                        of suggestions. Enhanced group decision-making and facilitated exploration of diverse places in Bangalore.
-                                    </p>
-                                    </p>
-                                    <a href="https://trigodalv.lakshaykumar7.repl.co" class="theme-btn">Check it out</a>
-                                </div>
-                            </div>
-
-                            
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-item" data-category="genai">
+                <div class="project-card large">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-type">Generative AI</span>
                         </div>
                     </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-        <!-- Footer -->
-            <footer class="footer-area">
-                <div class="container">
-                    <div class="footer-content text-center">
-            
-                        <ul class="footer-menu">
-            
-            
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
-                            <li><a href="talks.html">Talks</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-            
-                        </ul>
-                        <p class="copyright">
-                            &copy; All rights reserved by <span>WordPress River</span>
-                        </p>
+                    <div class="project-content">
+                        <h3>Neural Text Generation API</h3>
+                        <p class="project-description">A production-ready API for generating human-like text using fine-tuned GPT models. The system includes customizable parameters for controlling text style, length, and creativity, along with content filtering mechanisms.</p>
+                        <div class="project-details">
+                            <div class="project-goals">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Custom fine-tuning pipeline for domain-specific text generation</li>
+                                    <li>Efficient serving infrastructure with horizontal scaling</li>
+                                    <li>Robust content filtering and safety mechanisms</li>
+                                    <li>Interactive documentation and testing sandbox</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span>GPT</span>
+                                <span>FastAPI</span>
+                                <span>Docker</span>
+                                <span>AWS Lambda</span>
+                                <span>PyTorch</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
                     </div>
                 </div>
-            </footer>
+            </div>
 
+            <!-- Project 2 -->
+            <div class="project-item" data-category="data ml">
+                <div class="project-card large">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2024</span>
+                            <span class="project-type">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Dashboard</h3>
+                        <p class="project-description">Real-time analytics dashboard with predictive capabilities for financial data visualization. The system integrates historical data analysis with machine learning models to forecast market trends.</p>
+                        <div class="project-details">
+                            <div class="project-goals">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Interactive time-series visualization with zooming and filtering</li>
+                                    <li>Anomaly detection with automated alerts</li>
+                                    <li>Multiple ML models for short and long-term predictions</li>
+                                    <li>Custom reporting and data export capabilities</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>Python</span>
+                                <span>Prophet</span>
+                                <span>Flask</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item" data-category="nlp ml">
+                <div class="project-card large">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2024</span>
+                            <span class="project-type">NLP</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Multilingual Document Classifier</h3>
+                        <p class="project-description">An ML system that automatically classifies documents in 12 different languages with high accuracy. The model uses transformer-based architectures to understand content across languages.</p>
+                        <div class="project-details">
+                            <div class="project-goals">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Support for 12 languages with 95%+ accuracy</li>
+                                    <li>Document structure analysis for better classification</li>
+                                    <li>Explainable AI components to highlight decision factors</li>
+                                    <li>Optimized for both speed and accuracy</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span>BERT</span>
+                                <span>PyTorch</span>
+                                <span>NLP</span>
+                                <span>Hugging Face</span>
+                                <span>FastAPI</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-item" data-category="genai">
+                <div class="project-card large">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2024</span>
+                            <span class="project-type">Image Generation</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Artistic Style Transfer Engine</h3>
+                        <p class="project-description">A deep learning system that can transfer artistic styles between images using advanced neural network architectures. The project includes a web interface for interactive style manipulation.</p>
+                        <div class="project-details">
+                            <div class="project-goals">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Real-time style transfer with adjustable parameters</li>
+                                    <li>Library of pre-defined artistic styles</li>
+                                    <li>Custom style upload capability</li>
+                                    <li>Multi-resolution processing for detail preservation</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span>PyTorch</span>
+                                <span>GANs</span>
+                                <span>CNN</span>
+                                <span>WebGL</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-item" data-category="ml data">
+                <div class="project-card large">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-type">Healthcare ML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Medical Diagnosis Assistant</h3>
+                        <p class="project-description">A machine learning system designed to assist medical professionals in diagnosis by analyzing patient data and suggesting potential conditions based on symptoms and medical history.</p>
+                        <div class="project-details">
+                            <div class="project-goals">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Integration with electronic health records</li>
+                                    <li>Symptom analysis using NLP</li>
+                                    <li>Bayesian networks for diagnosis probability</li>
+                                    <li>Explainable AI for medical reasoning</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span>TensorFlow</span>
+                                <span>Python</span>
+                                <span>FHIR</span>
+                                <span>NLP</span>
+                                <span>Flask</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-item" data-category="nlp genai">
+                <div class="project-card large">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-type">Conversational AI</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Enterprise Customer Support Bot</h3>
+                        <p class="project-description">An advanced conversational AI system designed for enterprise customer support. The bot can handle complex queries, maintain context across conversations, and integrate with various backend systems.</p>
+                        <div class="project-details">
+                            <div class="project-goals">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Context-aware conversation management</li>
+                                    <li>Multi-turn dialogue capabilities</li>
+                                    <li>Integration with CRM and knowledge base systems</li>
+                                    <li>Sentiment analysis for customer satisfaction monitoring</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span>RASA</span>
+                                <span>BERT</span>
+                                <span>FastAPI</span>
+                                <span>Redis</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <!-- Collaboration CTA -->
+        <div class="collaboration-cta">
+            <h2>Interested in collaboration?</h2>
+            <p>I'm always open to discussing new projects and innovative ideas.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+        </div>
     </main>
-    
 
-    <script src="assets/js/jquery-3.6.4.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 • Lakshay Kumar • Generative AI Engineer</p>
+            <p class="footer-note">Designed and developed with AI assistance</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
-<!-- Mirrored from wpriverthemes.com/landing/gridx-html/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2023 03:41:45 GMT -->
 </html>

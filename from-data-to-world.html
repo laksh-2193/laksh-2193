@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -37,142 +37,474 @@
       href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
     />
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/aos.css" />
+    <style>
+      /* Custom properties */
+      :root {
+          --bg-color: #000000;
+          --card-bg: #121212;
+          --text-primary: #ffffff;
+          --text-secondary: #aaaaaa;
+          --accent: #ffffff;
+          --border: #333333;
+          --hover-bg: #1a1a1a;
+          --highlight: #3a86ff;
+          --success: #4cd964;
+          --error: #ff3b30;
+          --warning: #ff9500;
+          --section-spacing: 4rem;
+          --card-spacing: 1.5rem;
+      }
 
-    <link rel="stylesheet" href="assets/css/style.css" />
+      /* Reset and base styles */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Space Mono', monospace, -apple-system, system-ui, sans-serif;
+      }
+
+      body {
+          background-color: var(--bg-color);
+          color: var(--text-primary);
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          padding-top: 80px; /* For fixed nav */
+          position: relative;
+          overflow-x: hidden;
+          line-height: 1.6;
+          font-weight: 400;
+      }
+
+      /* Grid background */
+      .grid-background {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          opacity: 0.03;
+          background-size: 20px 20px;
+          background-image:
+              linear-gradient(to right, #ffffff 1px, transparent 1px),
+              linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+      }
+
+      /* Noise overlay */
+      .noise-overlay {
+          position: fixed;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+          opacity: 0.03;
+          pointer-events: none;
+          z-index: -1;
+      }
+
+      /* Scan line effect */
+      .scanline {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: rgba(255, 255, 255, 0.1);
+          opacity: 0.3;
+          z-index: 9;
+          animation: scanline 6s linear infinite;
+          pointer-events: none;
+      }
+
+      @keyframes scanline {
+          0% {
+              transform: translateY(-100px);
+          }
+          100% {
+              transform: translateY(100vh);
+          }
+      }
+
+      /* Code style decorations */
+      .code-decoration {
+          position: fixed;
+          font-family: monospace;
+          color: var(--text-secondary);
+          opacity: 0.2;
+          user-select: none;
+          font-size: 0.8rem;
+          z-index: 0;
+      }
+
+      .top-code {
+          top: 20px;
+          left: 20px;
+      }
+
+      .bottom-code {
+          bottom: 20px;
+          right: 20px;
+      }
+
+      .container {
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 2rem 1.5rem;
+          z-index: 1;
+      }
+
+      /* Navigation */
+      .main-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          backdrop-filter: blur(10px);
+          z-index: 1000;
+          border-bottom: 1px solid var(--border);
+      }
+
+      .nav-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 1.5rem;
+      }
+
+      .logo a {
+          display: flex;
+          align-items: center;
+          color: var(--text-primary);
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: bold;
+      }
+
+      .nav-links {
+          display: flex;
+          list-style: none;
+      }
+
+      .nav-links li {
+          margin-left: 1.5rem;
+      }
+
+      .nav-links a {
+          color: var(--text-secondary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: color 0.3s ease;
+          position: relative;
+          padding: 0.5rem 0;
+      }
+
+      .nav-links a:hover {
+          color: var(--text-primary);
+      }
+
+      .nav-links a.active {
+          color: var(--text-primary);
+      }
+
+      .menu-toggle {
+          display: none;
+          cursor: pointer;
+          font-size: 1.3rem;
+      }
+
+      /* Page headers */
+      .page-header {
+          text-align: center;
+          margin-bottom: 3rem;
+      }
+
+      .page-title {
+          font-size: 2.5rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+      }
+
+      .page-subtitle {
+          color: var(--text-secondary);
+          font-size: 1.1rem;
+          max-width: 700px;
+          margin: 0 auto;
+      }
+
+      /* Book details area */
+      .book-details-area {
+          padding: 2rem 0;
+      }
+
+      .book-details-content {
+          background: var(--card-bg);
+          padding: 2rem;
+          border: 1px solid var(--border);
+          margin-bottom: 3rem;
+      }
+
+      .img-box {
+          margin-bottom: 2rem;
+          text-align: center;
+      }
+
+      .img-box img {
+          max-width: 100%;
+          height: auto;
+          border: 1px solid var(--border);
+      }
+
+      .book-details-content h1 {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          color: var(--text-primary);
+      }
+
+      .book-details-content p {
+          color: var(--text-secondary);
+          margin-bottom: 1.5rem;
+          line-height: 1.7;
+      }
+
+      .list {
+          margin-bottom: 2rem;
+          padding-left: 1.5rem;
+      }
+
+      .list li {
+          color: var(--text-secondary);
+          margin-bottom: 0.5rem;
+      }
+
+      .cta-button {
+          display: inline-block;
+          background: var(--text-primary);
+          color: var(--bg-color);
+          text-decoration: none;
+          padding: 1rem 2rem;
+          font-weight: bold;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+      }
+
+      .cta-button:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+      .main-footer {
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(10px);
+          padding: 2rem 0;
+          text-align: center;
+          border-top: 1px solid var(--border);
+          margin-top: auto;
+      }
+
+      .footer-menu {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+      }
+
+      .footer-menu li {
+          margin: 0 1rem 0.5rem;
+      }
+
+      .footer-menu a {
+          color: var(--text-secondary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color 0.3s ease;
+      }
+
+      .footer-menu a:hover {
+          color: var(--text-primary);
+      }
+
+      .copyright {
+          color: var(--text-secondary);
+          font-size: 0.8rem;
+      }
+
+      .copyright span {
+          color: var(--text-primary);
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+          .page-title {
+              font-size: 2rem;
+          }
+          
+          .nav-links {
+              display: none;
+          }
+          
+          .menu-toggle {
+              display: block;
+          }
+          
+          .nav-links.active {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 70px;
+              left: 0;
+              width: 100%;
+              background: rgba(0, 0, 0, 0.9);
+              backdrop-filter: blur(10px);
+              padding: 1rem;
+              z-index: 100;
+              border-bottom: 1px solid var(--border);
+          }
+          
+          .nav-links.active li {
+              margin: 0.5rem 0;
+          }
+          
+          .book-details-content {
+              padding: 1.5rem;
+          }
+      }
+    </style>
   </head>
   <body>
-    <main class="main-workdetails-page">
-      <header class="header-area">
-        <div class="container">
-          <div class="gx-row d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo">
-              <img src="assets/images/logo.svg" alt="Logo" />
-            </a>
-
-            <nav class="navbar">
-              <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-
-            <a href="schedule.html" class="theme-btn">Let's Connect</a>
-
-            <div class="show-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+    <!-- Grid and effect overlays -->
+    <div class="grid-background"></div>
+    <div class="noise-overlay"></div>
+    <div class="scanline"></div>
+    
+    <!-- Code decorations -->
+    <div class="code-decoration top-code">/** book_details_v1.0 **/</div>
+    <div class="code-decoration bottom-code">/* © 2025 - Lakshay Kumar */</div>
+    
+    <main>
+      <!-- Main Navigation -->
+      <header class="main-nav">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">Lakshay Kumar</a>
           </div>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
+            <li><a href="talks.html">Talks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+
+          <div class="menu-toggle">☰</div>
         </div>
       </header>
 
-      <!-- Breadcrumb -->
-      <section class="breadcrumb-area">
+      <!-- Page Header -->
+      <section class="page-header">
         <div class="container">
-          <div class="breadcrumb-content" data-aos="fade-up">
-            <p>Authored by : Lakshay Kumar</p>
-            <h1 class="section-heading">
-              <img src="assets/images/star-2.png" alt="Star" />From Data to
-              World <img src=" assets/images/star-2.png" alt="Star" />
-            </h1>
-          </div>
+          <p class="page-subtitle">Authored by: Lakshay Kumar</p>
+          <h1 class="page-title">From Data to World</h1>
         </div>
       </section>
 
-      <!-- Blog Details -->
-      <section class="blog-details-area">
+      <!-- Book Details -->
+      <section class="book-details-area">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="blog-details-content">
-                <div class="img-box">
-                  <img
-                    src="images/books/from-data-to-world.png"
-                    alt="From Data to World : 5 Real world secrets with data science"
-                  />
-                </div>
+          <div class="book-details-content">
+            <div class="img-box">
+              <img
+                src="images/books/from-data-to-world.png"
+                alt="From Data to World : 5 Real world secrets with data science"
+              />
+            </div>
 
-                <h1>About the book</h1>
-                <p>"From Data to World: 5 Real-Life Secrets with Data Science" by
-                Lakshay Kumar is an engaging exploration into the world of data
-                science and its practical applications in real life. This book
-                is not merely a technical manual, but a comprehensive guide that
-                helps you understand the ins and outs of data science, showing
-                you how to wield it effectively to confront real-world
-                challenges.</p><p> With an abundance of technology and data at our
-                fingertips, the power to extract valuable insights and solve
-                complex problems has never been greater. But understanding how
-                to bridge the technical aspects of data science with practical
-                real-life application remains a hurdle for many. This book aims
-                to overcome that challenge.</p><p> In this transformative journey,
-                you'll learn about data exploration and visualization,
-                predictive modeling, machine learning algorithms, and ethical
-                considerations in data science. Lakshay Kumar, through his
-                experiences and interactions with data science professionals
-                across various industries, brings forth a range of topics that
-                focus on practical application, accompanied by real-world case
-                studies that showcase how data science impacts our everyday
-                lives. </p><p>"From Data to World: 5 Real-Life Secrets with Data
-                Science" will empower you to unlock the potential of data, drive
-                innovation, and leave a lasting positive impact on the world
-                around you. Embark on this exciting adventure to harness the
-                transformative power of data science, creating a future that is
-                both data-driven and impact-focused.</p>
+            <h1>About the book</h1>
+            <p>"From Data to World: 5 Real-Life Secrets with Data Science" by
+            Lakshay Kumar is an engaging exploration into the world of data
+            science and its practical applications in real life. This book
+            is not merely a technical manual, but a comprehensive guide that
+            helps you understand the ins and outs of data science, showing
+            you how to wield it effectively to confront real-world
+            challenges.</p>
+            
+            <p>With an abundance of technology and data at our
+            fingertips, the power to extract valuable insights and solve
+            complex problems has never been greater. But understanding how
+            to bridge the technical aspects of data science with practical
+            real-life application remains a hurdle for many. This book aims
+            to overcome that challenge.</p>
+            
+            <p>In this transformative journey,
+            you'll learn about data exploration and visualization,
+            predictive modeling, machine learning algorithms, and ethical
+            considerations in data science. Lakshay Kumar, through his
+            experiences and interactions with data science professionals
+            across various industries, brings forth a range of topics that
+            focus on practical application, accompanied by real-world case
+            studies that showcase how data science impacts our everyday
+            lives.</p>
+            
+            <p>"From Data to World: 5 Real-Life Secrets with Data
+            Science" will empower you to unlock the potential of data, drive
+            innovation, and leave a lasting positive impact on the world
+            around you. Embark on this exciting adventure to harness the
+            transformative power of data science, creating a future that is
+            both data-driven and impact-focused.</p>
 
-                <br><p>This book covers - </p>
-                <ul class="list">
-                  <li>- Uncovering Patterns of Universe.</li>
-                  <li>- Data driven ventures.</li>
-                  <li>- From Past to Future: A Data-Driven Approach to Predicting Exam Marks.</li>
-                  <li>- Navigating Predictive Uncertainty.</li>
-                  <li>- Forcasting Fate.</li>
-                  <li>- Cloudy with the chance of data.</li>
-                  <li>- From small talk to book data.</li>
-                  
-                </ul>
+            <br><p>This book covers - </p>
+            <ul class="list">
+              <li>- Real life in mathematical way.</li>
+              <li>- Data driven ventures.</li>
+              <li>- From Past to Future: A Data-Driven Approach to Predicting Exam Marks.</li>
+              <li>- Navigating Predictive Uncertainty.</li>
+              <li>- Forcasting Fate.</li>
+              <li>- Cloudy with the chance of data.</li>
+              <li>- From small talk to book data.</li>
+            </ul>
 
-                
-
-                <div class="tags">
-                  
-                  <a href="https://books-by-lakshay.carrd.co/" class="theme-btn">Find on amazon</a>
-                </div>
-              </div>
+            <div class="cta-container">
+              <a href="https://books-by-lakshay.carrd.co/" class="cta-button">Find on Amazon</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Footer -->
-      <footer class="footer-area">
+      <footer class="main-footer">
         <div class="container">
-          <div class="footer-content text-center">
-            <ul class="footer-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
-              <li><a href="talks.html">Talks</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <p class="copyright">
-              &copy; All rights reserved by <span>WordPress River</span>
-            </p>
-          </div>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
+            <li><a href="talks.html">Talks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <p class="copyright">
+            &copy; All rights reserved by <span>Lakshay Kumar</span>
+          </p>
         </div>
       </footer>
     </main>
 
-    <script src=" assets/js/jquery-3.6.4.js"></script>
-    <script src=" assets/js/bootstrap.bundle.min.js"></script>
-    <script src=" assets/js/aos.js"></script>
-    <script src=" assets/js/main.js"></script>
+    <script>
+      // Mobile menu toggle
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
