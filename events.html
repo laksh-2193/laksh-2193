@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to event page */
+        .event-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .loading-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color);
+            z-index: 10;
+            text-align: center;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--text-primary);
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        .loading-message {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .loading-timer {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .event-error {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            margin: 0 auto;
+        }
+        
+        .event-error h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--error);
+        }
+        
+        .event-error p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Remove iframe styles as we're using redirect instead */
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="grid-background"></div>
+    <div class="noise-overlay"></div>
+    <div class="scanline"></div>
+    
+    <!-- Code decorations -->
+    <div class="code-decoration top-code">&lt;event_viewer v1.0&gt;</div>
+    <div class="code-decoration bottom-code">&lt;/event_viewer&gt;</div>
+    
+    <!-- Event container -->
+    <div class="event-container">
+        <!-- Loading screen -->
+        <div class="loading-container" id="loadingContainer">
+            <div class="loading-spinner"></div>
+            <div class="loading-message">Loading Event</div>
+            <div class="loading-timer" id="timer"></div>
+        </div>
+        
+        <!-- Error message -->
+        <div class="loading-container" id="errorContainer" style="display: none;">
+            <div class="event-error">
+                <h2>Event Not Found</h2>
+                <p>No event ID was provided or the event could not be loaded. Please check the URL and try again.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get event ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventId = urlParams.get('id');
+            
+            // Get user IP address
+            async function getIP() {
+                try {
+                    const response = await fetch('https://api.ipify.org?format=json');
+                    const data = await response.json();
+                    return data.ip;
+                } catch (error) {
+                    console.error('Error fetching IP:', error);
+                    return 'unknown';
+                }
+            }
+            
+            // Post data to AppScript
+            async function postToAppScript(ip, eventUrl) {
+                // Replace with your deployed AppScript URL
+                const appScriptUrl = 'https://script.google.com/macros/s/AKfycbx0NarzhKY8hz-BGHdLBB3fCJYW_RlpG93tcawhV601dpcFb5EJmnCUyfUpsSeIDejmOQ/exec';
+                
+                try {
+                    await fetch(appScriptUrl, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            ip: ip,
+                            event_url: eventId
+                        })
+                    });
+                    console.log('Data posted to AppScript');
+                } catch (error) {
+                    console.error('Error posting to AppScript:', error);
+                }
+            }
+            
+            // Start countdown timer
+            function startTimer(seconds, eventId) {
+                const timerElement = document.getElementById('timer');
+                let timeLeft = seconds;
+                
+                const interval = setInterval(() => {
+                    timerElement.textContent = `Redirecting in ${timeLeft} seconds...`;
+                    timeLeft--;
+                    
+                    if (timeLeft < 0) {
+                        clearInterval(interval);
+                        // Redirect to the event page
+                        window.location.href = `https://konfhub.com/${eventId}`;
+                    }
+                }, 1000);
+            }
+            
+            // Initialize event page
+            async function initEventPage() {
+                if (!eventId || eventId.trim() === '') {
+                    // No event ID provided, show error
+                    document.getElementById('loadingContainer').style.display = 'none';
+                    document.getElementById('errorContainer').style.display = 'flex';
+                    return;
+                }
+                
+                // Get IP address
+                const ipAddress = await getIP();
+                
+                // Post data to AppScript
+                postToAppScript(ipAddress, window.location.href);
+                
+                // Start timer
+                startTimer(3, eventId);
+            }
+            
+            // Start the process
+            initEventPage();
+        });
+    </script>
+</body>
+</html>
