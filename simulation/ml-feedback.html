@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML-Style Number Guessing Game</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .game-area {
+            margin-bottom: 30px;
+        }
+        .input-area {
+            display: flex;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        input {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .history {
+            margin-top: 30px;
+        }
+        .history h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .guess-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .guess-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .guess-number {
+            font-weight: bold;
+        }
+        .guess-feedback {
+            color: #666;
+        }
+        .accuracy-meter {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .accuracy-fill {
+            height: 100%;
+            background: linear-gradient(to right, #ff6b6b, #feca57, #1dd1a1);
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+        .game-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .difficulty {
+            margin-bottom: 20px;
+        }
+        .difficulty label {
+            margin-right: 10px;
+        }
+        .game-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .stat-box {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 100px;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ML-Style Number Guessing Game</h1>
+        
+        <div class="difficulty">
+            <label>Difficulty:</label>
+            <input type="radio" id="easy" name="difficulty" value="100" checked>
+            <label for="easy">Easy (1-100)</label>
+            
+            <input type="radio" id="medium" name="difficulty" value="500">
+            <label for="medium">Medium (1-500)</label>
+            
+            <input type="radio" id="hard" name="difficulty" value="1000">
+            <label for="hard">Hard (1-1000)</label>
+        </div>
+        
+        <div class="game-area">
+            <p id="game-message">I've generated a random number. Try to guess what it is!</p>
+            
+            <div class="accuracy-meter">
+                <div class="accuracy-fill" id="accuracy-fill"></div>
+            </div>
+            
+            <div class="input-area">
+                <input type="number" id="guess-input" placeholder="Enter your guess">
+                <button id="guess-button">Guess</button>
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+        </div>
+        
+        <div class="game-stats">
+            <div class="stat-box">
+                <div class="stat-value" id="attempts">0</div>
+                <div class="stat-label">Attempts</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="best-score">-</div>
+                <div class="stat-label">Best Score</div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="new-game">New Game</button>
+            <button id="hint-button">Get Hint</button>
+        </div>
+        
+        <div class="history">
+            <h3>Guess History</h3>
+            <ul class="guess-list" id="guess-history"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Game variables
+        let targetNumber;
+        let maxNumber = 100;
+        let attempts = 0;
+        let gameActive = true;
+        let bestScore = localStorage.getItem('bestScore') || Infinity;
+        
+        // DOM elements
+        const guessInput = document.getElementById('guess-input');
+        const guessButton = document.getElementById('guess-button');
+        const feedbackElement = document.getElementById('feedback');
+        const guessHistory = document.getElementById('guess-history');
+        const newGameButton = document.getElementById('new-game');
+        const hintButton = document.getElementById('hint-button');
+        const attemptsElement = document.getElementById('attempts');
+        const bestScoreElement = document.getElementById('best-score');
+        const accuracyFill = document.getElementById('accuracy-fill');
+        const difficultyRadios = document.querySelectorAll('input[name="difficulty"]');
+        
+        // Initialize the game
+        function initGame() {
+            // Get selected difficulty
+            for (const radio of difficultyRadios) {
+                if (radio.checked) {
+                    maxNumber = parseInt(radio.value);
+                    break;
+                }
+            }
+            
+            targetNumber = Math.floor(Math.random() * maxNumber) + 1;
+            attempts = 0;
+            gameActive = true;
+            
+            // Update UI
+            guessInput.value = '';
+            feedbackElement.style.display = 'none';
+            guessHistory.innerHTML = '';
+            attemptsElement.textContent = '0';
+            accuracyFill.style.width = '0%';
+            
+            if (bestScore !== Infinity) {
+                bestScoreElement.textContent = bestScore;
+            } else {
+                bestScoreElement.textContent = '-';
+            }
+            
+            document.getElementById('game-message').textContent = 
+                `I've generated a random number between 1 and ${maxNumber}. Try to guess what it is!`;
+                
+            guessInput.focus();
+        }
+        
+        // Process the user's guess
+        function processGuess() {
+            if (!gameActive) return;
+            
+            const userGuess = parseInt(guessInput.value);
+            
+            // Validate input
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > maxNumber) {
+                feedbackElement.textContent = `Please enter a valid number between 1 and ${maxNumber}.`;
+                feedbackElement.className = 'feedback incorrect';
+                feedbackElement.style.display = 'block';
+                return;
+            }
+            
+            attempts++;
+            attemptsElement.textContent = attempts;
+            
+            // Calculate distance and direction
+            const distance = Math.abs(targetNumber - userGuess);
+            const percentageOff = (distance / maxNumber) * 100;
+            const accuracy = 100 - percentageOff;
+            
+            // Update the accuracy meter
+            accuracyFill.style.width = `${accuracy}%`;
+            
+            // Determine direction
+            const direction = userGuess < targetNumber ? 'right' : 'left';
+            
+            // Create feedback message
+            let feedbackMessage;
+            let feedbackClass;
+            
+            if (userGuess === targetNumber) {
+                feedbackMessage = `Congratulations! You guessed the correct number in ${attempts} attempts!`;
+                feedbackClass = 'correct';
+                gameActive = false;
+                
+                // Update best score
+                if (attempts < bestScore) {
+                    bestScore = attempts;
+                    localStorage.setItem('bestScore', bestScore);
+                    bestScoreElement.textContent = bestScore;
+                }
+            } else {
+                // ML-style feedback based on distance
+                let proximityFeedback;
+                
+                if (distance <= maxNumber * 0.01) {
+                    proximityFeedback = "You're extremely close!";
+                } else if (distance <= maxNumber * 0.05) {
+                    proximityFeedback = "You're very close!";
+                } else if (distance <= maxNumber * 0.1) {
+                    proximityFeedback = "You're getting closer!";
+                } else if (distance <= maxNumber * 0.2) {
+                    proximityFeedback = "You're in the neighborhood.";
+                } else if (distance <= maxNumber * 0.3) {
+                    proximityFeedback = "You're still quite far.";
+                } else {
+                    proximityFeedback = "You're very far away.";
+                }
+                
+                feedbackMessage = `${proximityFeedback} Move to the ${direction} (${distance} units away).`;
+                feedbackClass = 'incorrect';
+            }
+            
+            // Update feedback display
+            feedbackElement.textContent = feedbackMessage;
+            feedbackElement.className = `feedback ${feedbackClass}`;
+            feedbackElement.style.display = 'block';
+            
+            // Add to history
+            const historyItem = document.createElement('li');
+            historyItem.className = 'guess-item';
+            historyItem.innerHTML = `
+                <span class="guess-number">Guess #${attempts}: ${userGuess}</span>
+                <span class="guess-feedback">${userGuess === targetNumber ? 'Correct!' : `Move ${direction} (${distance} away)`}</span>
+            `;
+            guessHistory.prepend(historyItem);
+            
+            // Clear input for next guess
+            guessInput.value = '';
+            guessInput.focus();
+        }
+        
+        // Provide a hint
+        function giveHint() {
+            if (!gameActive) return;
+            
+            const range = Math.floor(maxNumber * 0.1); // 10% of max range
+            const lowerBound = Math.max(1, targetNumber - range);
+            const upperBound = Math.min(maxNumber, targetNumber + range);
+            
+            feedbackElement.textContent = `Hint: The number is between ${lowerBound} and ${upperBound}.`;
+            feedbackElement.className = 'feedback';
+            feedbackElement.style.display = 'block';
+        }
+        
+        // Event listeners
+        guessButton.addEventListener('click', processGuess);
+        guessInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                processGuess();
+            }
+        });
+        
+        newGameButton.addEventListener('click', initGame);
+        hintButton.addEventListener('click', giveHint);
+        
+        for (const radio of difficultyRadios) {
+            radio.addEventListener('change', initGame);
+        }
+        
+        // Initialize the game on page load
+        window.addEventListener('load', initGame);
+    </script>
+</body>
+</html>
