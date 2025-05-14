@@ -308,7 +308,7 @@
                     proximityFeedback = "You're very far away.";
                 }
                 
-                feedbackMessage = `${proximityFeedback} Move to the ${direction} (${distance} units away).`;
+                feedbackMessage = `${proximityFeedback} Move to the ${direction}.`;
                 feedbackClass = 'incorrect';
             }
             
@@ -322,7 +322,7 @@
             historyItem.className = 'guess-item';
             historyItem.innerHTML = `
                 <span class="guess-number">Guess #${attempts}: ${userGuess}</span>
-                <span class="guess-feedback">${userGuess === targetNumber ? 'Correct!' : `Move ${direction} (${distance} away)`}</span>
+                <span class="guess-feedback">${userGuess === targetNumber ? 'Correct!' : `Move ${direction}`}</span>
             `;
             guessHistory.prepend(historyItem);
             
