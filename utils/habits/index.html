@@ -20,12 +20,12 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .header {
-            margin-bottom: 24px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
@@ -40,45 +40,62 @@
         }
 
         .discipline-score {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            text-align: center;
+            background: #1a1a1a;
             border: 1px solid #2a2a2a;
-            padding: 28px 40px;
-            border-radius: 24px;
+            padding: 20px;
+            border-radius: 20px;
+            min-width: 160px;
             position: relative;
-            overflow: hidden;
-            margin-bottom: 24px;
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 32px;
-            align-items: center;
         }
 
-        .discipline-score::before {
+        .discipline-label {
+            font-size: 0.65em;
+            color: #666;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .discipline-value {
+            font-size: 2.8em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 6px;
+            position: relative;
+        }
+
+        .discipline-value::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            opacity: 0.6;
-        }
-
-        .discipline-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #2a2a2a;
+            z-index: -1;
         }
 
         .discipline-progress-ring {
-            width: 90px;
-            height: 90px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            z-index: -1;
         }
 
         .discipline-progress-ring circle {
             fill: none;
-            stroke-width: 6;
+            stroke-width: 3;
             stroke-linecap: round;
             transform: rotate(-90deg);
             transform-origin: 50% 50%;
@@ -89,88 +106,21 @@
             stroke: #2a2a2a;
         }
 
-        .discipline-center-content {
-            position: absolute;
+        .discipline-rank {
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: 600;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-
-        .discipline-value {
-            font-size: 1.8em;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-        }
-
-        .discipline-info {
-            display: flex;
-            flex-direction: column;
             gap: 6px;
         }
 
-        .discipline-label {
-            font-size: 0.7em;
-            color: #666;
-            letter-spacing: 2px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .discipline-title {
-            font-size: 1.6em;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff 0%, #ccc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .discipline-subtitle {
-            font-size: 0.9em;
-            color: #888;
-        }
-
-        .discipline-rank-badge {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 24px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid #2a2a2a;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-        }
-
         .discipline-rank-emoji {
-            font-size: 2em;
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
-        }
-
-        .discipline-rank-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .discipline-rank-label {
-            font-size: 0.7em;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .discipline-rank {
             font-size: 1.2em;
-            color: #fff;
-            font-weight: 700;
-            letter-spacing: -0.5px;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
         }
+
 
         .btn {
             background: #667eea;
@@ -206,21 +156,14 @@
             border-radius: 16px;
             padding: 20px;
             border: 1px solid #2a2a2a;
-            transition: all 0.2s;
-        }
-
-        .stat-card-small:hover {
-            border-color: #3a3a3a;
-            transform: translateY(-2px);
         }
 
         .stat-card-small .label {
             color: #888;
-            font-size: 0.75em;
+            font-size: 0.85em;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             margin-bottom: 8px;
-            font-weight: 600;
         }
 
         .stat-card-small .value {
@@ -256,12 +199,6 @@
             border: 1px solid #2a2a2a;
             position: relative;
             overflow: hidden;
-            transition: all 0.2s;
-        }
-
-        .analytics-card:hover {
-            border-color: #3a3a3a;
-            transform: translateY(-2px);
         }
 
         .analytics-card::before {
@@ -270,7 +207,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, #667eea, #764ba2);
         }
 
@@ -282,11 +219,10 @@
         }
 
         .card-title {
-            font-size: 0.85em;
+            font-size: 0.95em;
             color: #888;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         .card-trend {
@@ -467,19 +403,6 @@
             border-color: #ff3b30;
         }
 
-        @media (max-width: 1024px) {
-            .discipline-score {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                text-align: center;
-                justify-items: center;
-            }
-
-            .discipline-info {
-                align-items: center;
-            }
-        }
-
         @media (max-width: 768px) {
             .analytics-grid {
                 grid-template-columns: 1fr;
@@ -492,50 +415,38 @@
             .card-value {
                 font-size: 2.5em;
             }
-
-            .discipline-score {
-                padding: 20px;
-            }
-
-            .discipline-rank-badge {
-                padding: 12px 16px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Habits</h1>
-            <div class="date" id="dateDisplay">Loading...</div>
-        </div>
-
-        <div class="discipline-score" id="disciplineScore">
-            <div class="discipline-icon">
-                <svg class="discipline-progress-ring" width="90" height="90">
-                    <circle class="discipline-progress-bg" cx="45" cy="45" r="40"></circle>
-                    <circle class="discipline-progress-fill" id="progressCircle" cx="45" cy="45" r="40" 
-                            stroke-dasharray="251" stroke-dashoffset="251"></circle>
-                </svg>
-                <div class="discipline-center-content">
-                    <div class="discipline-value" id="disciplineValue">---</div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <h1>Habits</h1>
+                    <div class="date" id="dateDisplay">Loading...</div>
                 </div>
-            </div>
-
-            <div class="discipline-info">
-                <div class="discipline-label">Discipline Score</div>
-                <div class="discipline-title">Your Performance</div>
-                <div class="discipline-subtitle">Based on consistency, streaks & momentum</div>
-            </div>
-
-            <div class="discipline-rank-badge">
-                <span class="discipline-rank-emoji" id="disciplineEmoji">🌱</span>
-                <div class="discipline-rank-info">
-                    <div class="discipline-rank-label">Status</div>
-                    <div class="discipline-rank" id="disciplineRank">Calculating...</div>
+                <div class="discipline-score" id="disciplineScore">
+                    <div class="discipline-label">DISCIPLINE SCORE</div>
+                    <div style="position: relative; display: inline-block;">
+                        <svg class="discipline-progress-ring" width="100" height="100">
+                            <circle class="discipline-progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="discipline-progress-fill" id="progressCircle" cx="50" cy="50" r="45" 
+                                    stroke-dasharray="283" stroke-dashoffset="283"></circle>
+                        </svg>
+                        <div style="position: relative; z-index: 1; padding: 20px 0;">
+                            <div class="discipline-value" id="disciplineValue">---</div>
+                        </div>
+                    </div>
+                    <div class="discipline-rank">
+                        <span class="discipline-rank-emoji" id="disciplineEmoji">🌱</span>
+                        <span id="disciplineRank">Calculating...</span>
+                    </div>
                 </div>
             </div>
         </div>
+
+
 
         <div class="stats-overview">
             <div class="stat-card-small">
@@ -585,7 +496,7 @@
         let currentData = null;
 
         window.addEventListener('DOMContentLoaded', () => {
-            loadData();
+            loadData(); // Auto-load with hardcoded key
         });
 
         async function loadData() {
@@ -628,10 +539,11 @@
 
         function calculateDisciplineScore(historicHabits, currentDay) {
             const allHabits = Object.values(historicHabits);
-            if (allHabits.length === 0 || currentDay === 0) return { score: 0, rank: 'Beginner', rankEmoji: '🌱' };
+            if (allHabits.length === 0 || currentDay === 0) return { score: 0, rank: 'Beginner' };
 
-            let score = 300;
+            let score = 300; // Start at 300 (like CIBIL starts at 300)
             
+            // Factor 1: Overall consistency (40% weight) - Max +280 points
             let totalChecks = 0;
             let totalPossible = 0;
             allHabits.forEach(habit => {
@@ -643,6 +555,7 @@
             const consistencyRate = totalPossible > 0 ? (totalChecks / totalPossible) : 0;
             score += Math.round(consistencyRate * 280);
 
+            // Factor 2: Streak bonus (20% weight) - Max +140 points
             let longestStreak = 0;
             let currentStreak = 0;
             for (let day = 0; day < currentDay; day++) {
@@ -657,9 +570,10 @@
                     currentStreak = 0;
                 }
             }
-            const streakBonus = Math.min(140, longestStreak * 5);
+            const streakBonus = Math.min(140, longestStreak * 5); // 5 points per day, max 140
             score += streakBonus;
 
+            // Factor 3: Recent performance (20% weight) - Max +140 points
             const last7Days = Math.min(7, currentDay);
             let recentTotal = 0;
             let recentPossible = 0;
@@ -672,6 +586,7 @@
             const recentRate = recentPossible > 0 ? (recentTotal / recentPossible) : 0;
             score += Math.round(recentRate * 140);
 
+            // Factor 4: Momentum (10% weight) - Max +70 points
             const last3Days = Math.min(3, currentDay);
             let momentumTotal = 0;
             let momentumPossible = 0;
@@ -684,6 +599,7 @@
             const momentumRate = momentumPossible > 0 ? (momentumTotal / momentumPossible) : 0;
             score += Math.round(momentumRate * 70);
 
+            // Factor 5: Perfect days bonus (10% weight) - Max +70 points
             let perfectDays = 0;
             for (let day = 0; day < currentDay; day++) {
                 let allComplete = true;
@@ -692,11 +608,13 @@
                 });
                 if (allComplete) perfectDays++;
             }
-            const perfectDayBonus = Math.min(70, perfectDays * 3);
+            const perfectDayBonus = Math.min(70, perfectDays * 3); // 3 points per perfect day
             score += perfectDayBonus;
 
+            // Cap score at 900
             score = Math.min(900, Math.round(score));
 
+            // Determine rank
             let rank = 'Beginner';
             let rankEmoji = '🌱';
             if (score >= 850) {
@@ -726,6 +644,9 @@
             } else if (score >= 450) {
                 rank = 'Novice';
                 rankEmoji = '🎯';
+            } else {
+                rank = 'Beginner';
+                rankEmoji = '🌱';
             }
 
             return { score, rank, rankEmoji };
@@ -738,35 +659,38 @@
             document.getElementById('disciplineEmoji').textContent = disciplineData.rankEmoji;
             document.getElementById('disciplineRank').textContent = disciplineData.rank;
             
+            // Update circular progress ring
             const progressCircle = document.getElementById('progressCircle');
-            const percentage = (disciplineData.score - 300) / 600;
-            const circumference = 251;
+            const percentage = (disciplineData.score - 300) / 600; // 300-900 range
+            const circumference = 283; // 2 * PI * 45
             const offset = circumference - (percentage * circumference);
             
             progressCircle.style.strokeDashoffset = offset;
             
-            let strokeColor = '#4cd964';
+            // Color based on score
+            let strokeColor = '#4cd964'; // Default green
             
             if (disciplineData.score >= 850) {
-                strokeColor = '#ff006e';
+                strokeColor = '#ff006e'; // Pink for Legendary
             } else if (disciplineData.score >= 800) {
-                strokeColor = '#00d4ff';
+                strokeColor = '#00d4ff'; // Cyan for Elite
             } else if (disciplineData.score >= 750) {
-                strokeColor = '#ffd000';
+                strokeColor = '#ffd000'; // Gold for Master
             } else if (disciplineData.score >= 700) {
-                strokeColor = '#667eea';
+                strokeColor = '#667eea'; // Purple for Expert
             } else if (disciplineData.score >= 650) {
-                strokeColor = '#ff9500';
+                strokeColor = '#ff9500'; // Orange for Advanced
             } else if (disciplineData.score >= 600) {
-                strokeColor = '#4cd964';
+                strokeColor = '#4cd964'; // Green for Proficient
             } else if (disciplineData.score >= 500) {
-                strokeColor = '#00d4ff';
+                strokeColor = '#00d4ff'; // Cyan for Improving/Developing
             } else {
-                strokeColor = '#888';
+                strokeColor = '#888'; // Gray for beginners
             }
             
             progressCircle.style.stroke = strokeColor;
             
+            // Update value gradient to match
             const valueElement = document.getElementById('disciplineValue');
             if (disciplineData.score >= 800) {
                 valueElement.style.background = `linear-gradient(135deg, ${strokeColor} 0%, #fff 50%, ${strokeColor} 100%)`;
@@ -794,6 +718,7 @@
             const total = data.habits.length;
             const rate = total > 0 ? Math.round((completed / total) * 100) : 0;
 
+            // Get weekly and monthly goal percentages from API statistics
             const weeklyGoal = data.statistics.weekly_goal_percentage 
                 ? Math.round(data.statistics.weekly_goal_percentage * 100) 
                 : 0;
@@ -803,12 +728,14 @@
 
             document.getElementById('todayStats').textContent = `${completed}/${total}`;
             
+            // Update rate with emoji if 100%
             if (rate === 100) {
                 document.getElementById('rateStats').textContent = `${rate}% 🎯`;
             } else {
                 document.getElementById('rateStats').textContent = `${rate}%`;
             }
             
+            // Update weekly with emoji and special text if >100%
             if (weeklyGoal >= 200) {
                 document.getElementById('weeklyGoalStats').innerHTML = `${weeklyGoal}% 🔥<div style="font-size: 0.5em; margin-top: 4px; color: #4cd964;">x${(weeklyGoal/100).toFixed(1)}</div>`;
             } else if (weeklyGoal >= 150) {
@@ -819,6 +746,7 @@
                 document.getElementById('weeklyGoalStats').textContent = `${weeklyGoal}%`;
             }
             
+            // Update monthly with emoji and special text if >100%
             if (monthlyGoal >= 200) {
                 document.getElementById('monthlyGoalStats').innerHTML = `${monthlyGoal}% 🔥<div style="font-size: 0.5em; margin-top: 4px; color: #4cd964;">x${(monthlyGoal/100).toFixed(1)}</div>`;
             } else if (monthlyGoal >= 150) {
@@ -829,18 +757,22 @@
                 document.getElementById('monthlyGoalStats').textContent = `${monthlyGoal}%`;
             }
             
+            // Color code the stats
             const rateElement = document.getElementById('rateStats');
             const weeklyElement = document.getElementById('weeklyGoalStats');
             const monthlyElement = document.getElementById('monthlyGoalStats');
             
+            // Add glow effect for >100%
             const rateCard = rateElement.parentElement;
             const weeklyCard = weeklyElement.parentElement;
             const monthlyCard = monthlyElement.parentElement;
             
+            // Remove existing glow classes
             rateCard.classList.remove('stat-exceeding');
             weeklyCard.classList.remove('stat-exceeding');
             monthlyCard.classList.remove('stat-exceeding');
             
+            // Rate color
             if (rate >= 100) {
                 rateElement.style.color = '#4cd964';
                 rateCard.classList.add('stat-exceeding');
@@ -854,6 +786,7 @@
                 rateElement.style.color = '#ff3b30';
             }
             
+            // Weekly goal color with gradient for >150%
             if (weeklyGoal >= 150) {
                 weeklyElement.style.background = 'linear-gradient(135deg, #4cd964, #00d084)';
                 weeklyElement.style.webkitBackgroundClip = 'text';
@@ -879,6 +812,7 @@
                 weeklyElement.style.webkitTextFillColor = '#ff3b30';
             }
             
+            // Monthly goal color with gradient for >150%
             if (monthlyGoal >= 150) {
                 monthlyElement.style.background = 'linear-gradient(135deg, #4cd964, #00d084)';
                 monthlyElement.style.webkitBackgroundClip = 'text';
@@ -908,6 +842,7 @@
         function updateAnalyticsCards(data) {
             const { historic_habits, days_in_month, day_of_month } = data;
             
+            // Calculate analytics
             const consistencyData = calculateConsistency(historic_habits, day_of_month);
             const weeklyData = calculateWeeklyAverage(historic_habits, day_of_month);
             const trendData = calculateTrend(historic_habits, day_of_month);
@@ -924,6 +859,7 @@
             const allHabits = Object.values(historicHabits);
             if (allHabits.length === 0) return { rate: 0, change: 0, weeklyData: [] };
 
+            // Calculate overall consistency
             let totalChecks = 0;
             let totalPossible = 0;
 
@@ -936,6 +872,7 @@
 
             const currentRate = totalPossible > 0 ? (totalChecks / totalPossible) * 100 : 0;
 
+            // Calculate last week vs previous week
             const lastWeekStart = Math.max(0, currentDay - 7);
             const prevWeekStart = Math.max(0, currentDay - 14);
 
@@ -957,6 +894,7 @@
             const prevWeekRate = prevWeekPossible > 0 ? (prevWeekTotal / prevWeekPossible) * 100 : 0;
             const change = lastWeekRate - prevWeekRate;
 
+            // Calculate daily consistency for chart
             const weeklyData = [];
             const daysToShow = Math.min(14, currentDay);
             for (let i = currentDay - daysToShow; i < currentDay; i++) {
@@ -974,6 +912,7 @@
             const allHabits = Object.values(historicHabits);
             if (allHabits.length === 0) return { average: 0, change: 0, weeklyData: [] };
 
+            // Calculate last 7 days average
             const lastWeekStart = Math.max(0, currentDay - 7);
             let lastWeekTotal = 0;
             let lastWeekCount = 0;
@@ -987,6 +926,7 @@
 
             const lastWeekAvg = lastWeekCount > 0 ? (lastWeekTotal / lastWeekCount) * 100 : 0;
 
+            // Calculate previous 7 days average
             const prevWeekStart = Math.max(0, currentDay - 14);
             let prevWeekTotal = 0;
             let prevWeekCount = 0;
@@ -1001,6 +941,7 @@
             const prevWeekAvg = prevWeekCount > 0 ? (prevWeekTotal / prevWeekCount) * 100 : 0;
             const change = lastWeekAvg - prevWeekAvg;
 
+            // Generate daily averages for last 14 days
             const weeklyData = [];
             const daysToShow = Math.min(14, currentDay);
             for (let i = currentDay - daysToShow; i < currentDay; i++) {
@@ -1018,6 +959,7 @@
             const allHabits = Object.values(historicHabits);
             if (allHabits.length === 0) return { direction: 'neutral', percentage: 0, weeklyTrend: [] };
 
+            // Calculate last 7 days vs previous 7 days
             const recentStart = Math.max(0, currentDay - 7);
             const olderStart = Math.max(0, currentDay - 14);
 
@@ -1041,6 +983,7 @@
 
             const direction = change > 0 ? 'positive' : change < 0 ? 'negative' : 'neutral';
 
+            // Generate weekly trend data
             const weeklyTrend = [];
             const weeksToShow = Math.min(4, Math.floor(currentDay / 7));
             
@@ -1066,6 +1009,7 @@
             const trendClass = data.change > 0 ? 'positive' : data.change < 0 ? 'negative' : 'neutral';
             const trendSymbol = data.change > 0 ? '↑' : data.change < 0 ? '↓' : '→';
             
+            // Color code the consistency rate
             let rateColor = '#888';
             let rateText = 'Poor';
             if (data.rate >= 90) {
@@ -1113,6 +1057,7 @@
             const trendClass = data.change > 0 ? 'positive' : data.change < 0 ? 'negative' : 'neutral';
             const trendSymbol = data.change > 0 ? '↑' : data.change < 0 ? '↓' : '→';
             
+            // Color code the weekly average
             let avgColor = '#888';
             if (data.average >= 80) avgColor = '#4cd964';
             else if (data.average >= 60) avgColor = '#667eea';
@@ -1137,6 +1082,7 @@
         function createTrendCard(data) {
             const trendSymbol = data.direction === 'positive' ? '↑' : data.direction === 'negative' ? '↓' : '→';
             
+            // Determine trend level and color based on percentage change
             let trendText = 'Stable';
             let trendColor = '#888';
             
@@ -1168,6 +1114,9 @@
                     trendText = 'Slightly Down';
                     trendColor = '#ff9500';
                 }
+            } else {
+                trendText = 'Stable';
+                trendColor = '#888';
             }
             
             return `
@@ -1199,6 +1148,7 @@
                 const completed = last7Days.filter(v => v === 1).length;
                 const rate = last7Days.length > 0 ? Math.round((completed / last7Days.length) * 100) : 0;
                 
+                // Color coding for percentage
                 let rateColor = '#888';
                 if (rate >= 80) rateColor = '#4cd964';
                 else if (rate >= 60) rateColor = '#667eea';
@@ -1219,6 +1169,7 @@
                 `;
             }).join('');
 
+            // Draw mini progress charts
             setTimeout(() => {
                 data.habits.forEach((habit, index) => {
                     const history = data.historic_habits[habit.habit] || [];
@@ -1226,6 +1177,7 @@
                     drawMiniChart(`habitChart${index}`, last7Days);
                 });
 
+                // Draw analytics charts
                 const consistencyData = calculateConsistency(data.historic_habits, data.day_of_month);
                 const weeklyData = calculateWeeklyAverage(data.historic_habits, data.day_of_month);
                 const trendData = calculateTrend(data.historic_habits, data.day_of_month);
@@ -1288,6 +1240,7 @@
             });
             ctx.stroke();
 
+            // Fill area under line
             ctx.lineTo(width, height);
             ctx.lineTo(0, height);
             ctx.closePath();
@@ -1295,12 +1248,14 @@
             ctx.fill();
         }
 
+
         async function toggleHabit(habitId, checked) {
             if (!API_SECRET) {
                 showToast('Please enter your API secret key first', 'error');
                 return;
             }
 
+            // Optimistic UI update - update immediately
             const habitItems = document.querySelectorAll('.habit-item');
             let targetHabit = null;
             
@@ -1309,6 +1264,7 @@
                 const habitInfo = item.querySelector('.habit-info');
                 const habitName = habitInfo?.querySelector('.habit-name')?.textContent;
                 
+                // Find matching habit by comparing with current data
                 if (currentData && currentData.habits) {
                     const matchingHabit = currentData.habits.find(h => h.id === habitId);
                     if (matchingHabit && habitName === matchingHabit.habit) {
@@ -1320,6 +1276,7 @@
             if (targetHabit) {
                 const checkbox = targetHabit.querySelector('.habit-checkbox');
                 
+                // Update UI immediately
                 if (checked) {
                     targetHabit.classList.add('completed');
                     checkbox.classList.add('checked');
@@ -1328,9 +1285,11 @@
                     checkbox.classList.remove('checked');
                 }
                 
+                // Update today's stats immediately
                 updateTodayStatsOptimistic(checked);
             }
 
+            // Then make API call in background
             try {
                 await fetch(API_URL, {
                     method: 'POST',
@@ -1343,6 +1302,7 @@
                     })
                 });
 
+                // Wait a moment, then refresh to get accurate stats
                 setTimeout(() => {
                     loadData();
                 }, 1000);
@@ -1351,6 +1311,7 @@
                 console.error('Error toggling habit:', error);
                 showToast('Failed to update habit', 'error');
                 
+                // Revert UI on error
                 if (targetHabit) {
                     const checkbox = targetHabit.querySelector('.habit-checkbox');
                     if (!checked) {
@@ -1376,12 +1337,14 @@
             
             todayStatsEl.textContent = `${newCompleted}/${total}`;
             
+            // Add emoji for 100%
             if (newRate === 100) {
                 rateStatsEl.textContent = `${newRate}% 🎯`;
             } else {
                 rateStatsEl.textContent = `${newRate}%`;
             }
             
+            // Update rate color
             if (newRate >= 80) rateStatsEl.style.color = '#4cd964';
             else if (newRate >= 60) rateStatsEl.style.color = '#667eea';
             else if (newRate >= 40) rateStatsEl.style.color = '#ff9500';
