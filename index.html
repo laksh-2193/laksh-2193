@@ -1,326 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakshay Kumar - Generative AI Engineer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Essential Meta Tags -->
-    <meta name="description"
-        content="Lakshay Kumar is a Generative AI Engineer specialized in machine learning algorithms and predictive modeling that transform complex data into meaningful insights.">
-    <meta name="keywords"
-        content="Lakshay Kumar, Generative AI Engineer, Data Scientist, Machine Learning, Artificial Intelligence, Data Analysis, Neural Networks, NLP, Statistics, Python">
-    <meta name="author" content="Lakshay Kumar">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0B">
+  <title>Lakshay Kumar — AI Agent Engineer | GenAI @ Zato</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F5F5F7'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='ui-monospace,monospace' font-size='15' font-weight='700' fill='%230A0A0B'%3ELK%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="description" content="Lakshay Kumar is an AI Agent Engineer based in Bangalore. Builds production multi-agent systems, RAG copilots, and agentic infrastructure at Zato.">
+  <meta name="keywords" content="Lakshay Kumar, AI Agents, GenAI Engineer, LangGraph, RAG, Multi-Agent Systems, Anthropic, Claude, Agentic AI, Zato">
+  <meta name="author" content="Lakshay Kumar">
+  <meta property="og:title" content="Lakshay Kumar — AI Agent Engineer">
+  <meta property="og:description" content="Builds production AI agents — multi-agent orchestration, RAG copilots, and agentic infra. GenAI Engineer at Zato, Bangalore.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lakshaykumar.tech">
+  <meta property="og:image" content="https://www.lakshaykumar.tech/og.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.88/build/spline-viewer.js"></script>
+
+  <link rel="canonical" href="https://www.lakshaykumar.tech/">
+  <meta property="og:site_name" content="Lakshay Kumar">
+  <meta name="twitter:title" content="Lakshay Kumar — AI Agent Engineer">
+  <meta name="twitter:description" content="Builds production AI agents — multi-agent orchestration, RAG copilots, and agentic infra. GenAI Engineer at Zato, Bangalore.">
+  <meta name="twitter:image" content="https://www.lakshaykumar.tech/og.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lakshay Kumar",
+  "alternateName": "Laksh",
+  "jobTitle": "GenAI Engineer",
+  "description": "AI Agent Engineer building production multi-agent systems, RAG copilots, and agentic infrastructure.",
+  "url": "https://www.lakshaykumar.tech",
+  "email": "mailto:lakshay@zatohq.com",
+  "telephone": "+91-8595984485",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Zato",
+    "url": "https://zatohq.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Atria University"
+  },
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "AI Agents",
+    "Multi-agent systems",
+    "Retrieval Augmented Generation",
+    "LangGraph",
+    "Anthropic Claude",
+    "Generative AI",
+    "Computer Vision",
+    "Machine Learning"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/lakshaykumar-tech/",
+    "https://blogs.lakshaykumar.tech"
+  ]
+}
+</script>
 </head>
-    
 
 <body>
-    <!-- Grid background -->
-    <div class="grid-background"></div>
-    <div class="noise-overlay"></div>
-    <div class="scanline"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
 
-    <!-- Code style decorations -->
-    <div class="code-decoration top-code">/* lakshay_kumar.dashboard */</div>
-    <div class="code-decoration bottom-code">// end_of_document</div>
+  <nav class="nav" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">L<span class="dot"></span></span>
+        <span>lakshay kumar <small>· /tech</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">index</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="experience.html">work</a></li>
+        <li><a href="projects.html">agents</a></li>
+        <li><a href="talks.html">talks</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">
+        let's talk
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <button class="nav-burger" id="burger" aria-label="menu"><span></span></button>
+    </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-brain"></i> <span>LK</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Dashboard</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+  <main>
+    <!-- HERO -->
+    <section class="wrap hero">
+      <div class="hero-content reveal">
+        <div class="hero-tag">
+          <span class="dot"></span>
+          <span><b>genai engineer</b> · zato · bangalore</span>
         </div>
-    </nav>
 
-    <main class="container dashboard">
-        <!-- Header Section -->
-        <header class="dashboard-header">
-            <div class="profile-section">
-                <div class="avatar-wrapper">
-                    <div class="avatar-border"></div>
-                    <div class="avatar">
-                        <i class="fas fa-brain data-icon"></i>
-                    </div>
-                </div>
-                <div class="profile-info">
-                    <h1 class="name static-text">Lakshay Kumar</h1>
-                    <div class="h-line"></div>
-                    <p class="title">Generative AI Engineer</p>
-                    <div class="skills">
-                        <div class="skill">Python</div>
-                        <div class="skill">Machine Learning</div>
-                        <div class="skill">Data Analysis</div>
-                        <div class="skill">Neural Networks</div>
-                        <div class="skill">NLP</div>
-                        <div class="skill">Statistics</div>
-                        <div class="skill">GenAI</div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <h1>
+          <span class="light">I build </span><em>AI agents</em>
+          <br>
+          <span>that <span class="strong tw" data-typewriter='["ship.","reason.","act.","scale."]'></span></span>
+          <span class="light"> Not just demos.</span>
+        </h1>
 
-        <!-- Stats Section -->
-        <section class="stats-section">
-            <div class="stats-card">
-                <div class="stats-icon">
-                    <i class="fas fa-calendar-check"></i>
-                </div>
-                <div class="stats-content">
-                    <h3>Experience</h3>
-                    <p class="stats-number">7+</p>
-                    <p class="stats-label">Years</p>
-                </div>
-            </div>
-            <div class="stats-card">
-                <div class="stats-icon">
-                    <i class="fas fa-code-branch"></i>
-                </div>
-                <div class="stats-content">
-                    <h3>Projects</h3>
-                    <p class="stats-number">30+</p>
-                    <p class="stats-label">Completed</p>
-                </div>
-            </div>
-            <div class="stats-card">
-                <div class="stats-icon">
-                    <i class="fas fa-microphone-alt"></i>
-                </div>
-                <div class="stats-content">
-                    <h3>Talks</h3>
-                    <p class="stats-number">15+</p>
-                    <p class="stats-label">Delivered</p>
-                </div>
-            </div>
-        </section>
+        <p class="lead">
+          <b>Lakshay Kumar</b> — GenAI Engineer at <b>Zato</b>. I design and ship multi-agent
+          systems that plan, call tools, hold context, and recover from failure.
+          Production-grade infrastructure for the agentic era.
+        </p>
 
-        <!-- Quick Links -->
-        <section class="quick-links-section">
-            <h2 class="section-title">Quick Access</h2>
-            <div class="quick-links">
-                <a href="https://academics.lakshaykumar.tech" class="quick-link">
-                    <i class="fa-solid fa-book"></i>
-                    <span>Academics</span>
-                </a>
-                <a href="https://blogs.lakshaykumar.tech" class="quick-link">
-                    <i class="fa-solid fa-blog"></i>
-                    <span>Blogs</span>
-                </a>
-                <a href="https://resources.lakshaykumar.tech" class="quick-link">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <span>Resources</span>
-                </a>
-                <a href="https://links.lakshaykumar.tech" class="quick-link">
-                    <i class="fas fa-link"></i>
-                    <span>More Links</span>
-                </a>
-                <a href="https://www.lakshaykumar.tech/resume.pdf" class="quick-link">
-                    <i class="fas fa-file-pdf"></i>
-                    <span>Resume</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Recent Experience -->
-        <section class="recent-experience-section">
-            <div class="section-header">
-                <h2 class="section-title">Recent Experience</h2>
-                <a href="experience.html" class="view-all-btn">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="cards-container">
-                <div class="experience-card">
-                    <div class="card-header">
-                        <h3>Senior GenAI Engineer</h3>
-                        <span class="date">2023 - Present</span>
-                    </div>
-                    <h4 class="company">TechInsight AI Labs</h4>
-                    <p class="description">Leading the development of advanced generative AI models for enterprise solutions. Implemented transformer-based architectures resulting in 40% improvement in text generation quality.</p>
-                    <div class="tech-tags">
-                        <span>PyTorch</span>
-                        <span>Transformers</span>
-                        <span>LLMs</span>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="card-header">
-                        <h3>ML Engineer</h3>
-                        <span class="date">2021 - 2023</span>
-                    </div>
-                    <h4 class="company">DataNexus Corp</h4>
-                    <p class="description">Developed and deployed machine learning models for predictive analytics. Reduced model inference time by 35% through optimization techniques.</p>
-                    <div class="tech-tags">
-                        <span>TensorFlow</span> 
-                        <span>Kubernetes</span>
-                        <span>Python</span>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="card-header">
-                        <h3>Data Scientist</h3>
-                        <span class="date">2019 - 2021</span>
-                    </div>
-                    <h4 class="company">AnalyticsEdge Inc</h4>
-                    <p class="description">Created data pipelines and analytical models that drove business decisions. Implemented NLP solutions for customer feedback analysis.</p>
-                    <div class="tech-tags">
-                        <span>scikit-learn</span>
-                        <span>NLTK</span>
-                        <span>SQL</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recent Projects -->
-        <section class="recent-projects-section">
-            <div class="section-header">
-                <h2 class="section-title">Recent Projects</h2>
-                <a href="projects.html" class="view-all-btn">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="cards-container">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Neural Text Generation API</h3>
-                        <p>A production-ready API for generating human-like text using fine-tuned GPT models.</p>
-                        <div class="tech-tags">
-                            <span>GPT</span>
-                            <span>FastAPI</span>
-                            <span>Docker</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Predictive Analytics Dashboard</h3>
-                        <p>Real-time analytics dashboard with predictive capabilities for financial data visualization.</p>
-                        <div class="tech-tags">
-                            <span>React</span>
-                            <span>D3.js</span>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Multilingual Document Classifier</h3>
-                        <p>An ML system that automatically classifies documents in 12 different languages with high accuracy.</p>
-                        <div class="tech-tags">
-                            <span>BERT</span>
-                            <span>PyTorch</span>
-                            <span>NLP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recent Talks -->
-        <section class="recent-talks-section">
-            <div class="section-header">
-                <h2 class="section-title">Recent Talks</h2>
-                <a href="talks.html" class="view-all-btn">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="cards-container">
-                <div class="talk-card">
-                    <div class="talk-date">
-                        <span class="month">MAR</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <div class="talk-content">
-                        <h3>The Future of Generative AI in Enterprise Solutions</h3>
-                        <p class="event">AI Summit 2025, San Francisco</p>
-                        <p class="description">Explored how generative AI is transforming enterprise software and business operations.</p>
-                    </div>
-                </div>
-                <div class="talk-card">
-                    <div class="talk-date">
-                        <span class="month">NOV</span>
-                        <span class="year">2024</span>
-                    </div>
-                    <div class="talk-content">
-                        <h3>Building Responsible AI Systems</h3>
-                        <p class="event">Tech Ethics Conference, London</p>
-                        <p class="description">Discussed ethical considerations and best practices in AI development.</p>
-                    </div>
-                </div>
-                <div class="talk-card">
-                    <div class="talk-date">
-                        <span class="month">SEP</span>
-                        <span class="year">2024</span>
-                    </div>
-                    <div class="talk-content">
-                        <h3>Optimizing Large Language Models for Production</h3>
-                        <p class="event">PyCon India 2024, Bangalore</p>
-                        <p class="description">Shared techniques for making LLMs more efficient for production environments.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Links -->
-        <section class="social-links-section">
-            <h2 class="section-title">Connect With Me</h2>
-            <div class="social-links">
-                <a href="#" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-medium"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 • Lakshay Kumar • Generative AI Engineer</p>
-            <p class="footer-note">Designed and developed with AI assistance</p>
+        <div class="hero-ctas">
+          <a href="projects.html" class="btn btn-primary">
+            see live agents
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="contact.html" class="btn btn-ghost">
+            let's talk
+          </a>
+          <a href="resume.pdf" target="_blank" class="btn btn-link">
+            resume <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 11l6-6M11 11V5H5"/></svg>
+          </a>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7BC3THF4Q1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <div class="hero-meta">
+          <div>
+            <span class="k">Building since</span>
+            <span class="v">'18</span>
+          </div>
+          <div>
+            <span class="k">Agents shipped</span>
+            <span class="v">12<em>+</em></span>
+          </div>
+          <div>
+            <span class="k">Talks delivered</span>
+            <span class="v">15<em>+</em></span>
+          </div>
+          <div>
+            <span class="k">Based</span>
+            <span class="v">BLR · IN</span>
+          </div>
+        </div>
+      </div>
 
-  gtag('config', 'G-7BC3THF4Q1');
-</script>
+      <!-- 3D STAGE -->
+      <div class="hero-stage reveal">
+        <div class="stage-fallback">loading agent · 3d scene</div>
+        <spline-viewer
+          url="https://prod.spline.design/XekpbprDmF9aDvo4/scene.splinecode"
+          loading-anim-type="none"
+          events-target="global">
+        </spline-viewer>
+        <div class="stage-meta"><span class="live"></span> nexbot · v2.0</div>
+        <div class="stage-corners"><span></span><span></span><span></span><span></span></div>
+        <div class="stage-frame"></div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>multi-agent orchestration</span>
+        <span>retrieval augmented generation</span>
+        <span>tool-calling pipelines</span>
+        <span>vector search at scale</span>
+        <span>langgraph · langchain · claude · openai</span>
+        <span>agentic ops</span>
+        <span>enterprise rag</span>
+        <span>fine-tuned llms</span>
+        <span>computer vision</span>
+        <span>data engineering</span>
+        <span>multi-agent orchestration</span>
+        <span>retrieval augmented generation</span>
+        <span>tool-calling pipelines</span>
+        <span>vector search at scale</span>
+        <span>langgraph · langchain · claude · openai</span>
+        <span>agentic ops</span>
+        <span>enterprise rag</span>
+        <span>fine-tuned llms</span>
+        <span>computer vision</span>
+        <span>data engineering</span>
+      </div>
+    </div>
+
+    <!-- WHAT I BUILD -->
+    <section class="wrap block">
+      <div class="section-h reveal">
+        <span class="ix">[01] · capabilities</span>
+        <h2>What I <em>build</em>.</h2>
+        <span></span>
+      </div>
+
+      <div class="cap-list">
+        <div class="cap reveal">
+          <span class="cap-num">/01</span>
+          <div class="cap-body">
+            <h3>Multi-agent <em>orchestration</em></h3>
+            <p>Planner-executor architectures with hierarchical sub-agents that decompose tasks, call tools, retry on failure, and hand off between specialists.</p>
+            <div class="cap-tags"><span>langgraph</span><span>claude</span><span>react</span><span>handoff</span></div>
+          </div>
+          <span class="cap-vis">topology · runtime</span>
+        </div>
+
+        <div class="cap reveal">
+          <span class="cap-num">/02</span>
+          <div class="cap-body">
+            <h3>Enterprise <em>RAG</em></h3>
+            <p>Production retrieval pipelines: hybrid search, re-ranking, multi-tenant access control, citation grounding. Pinecone, Qdrant, pgvector — whatever fits the latency budget.</p>
+            <div class="cap-tags"><span>qdrant</span><span>pinecone</span><span>pgvector</span><span>rerank</span></div>
+          </div>
+          <span class="cap-vis">retrieval · grounding</span>
+        </div>
+
+        <div class="cap reveal">
+          <span class="cap-num">/03</span>
+          <div class="cap-body">
+            <h3>Tool-calling <em>APIs</em></h3>
+            <p>Schema-driven tool surfaces. Type-safe argument validation, side-effect contracts, dry-run mode, audit logs. Agents stop hallucinating actions.</p>
+            <div class="cap-tags"><span>fastapi</span><span>pydantic</span><span>typescript</span><span>openapi</span></div>
+          </div>
+          <span class="cap-vis">interface · contracts</span>
+        </div>
+
+        <div class="cap reveal">
+          <span class="cap-num">/04</span>
+          <div class="cap-body">
+            <h3>Agentic <em>ops</em></h3>
+            <p>Eval harnesses, prompt versioning, regression suites, observability. Agents need ops too — drift, regressions, and silent failures get caught upstream.</p>
+            <div class="cap-tags"><span>evals</span><span>traces</span><span>versioning</span><span>regressions</span></div>
+          </div>
+          <span class="cap-vis">infrastructure · ops</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENT BAY (live terminal) -->
+    <section class="wrap block">
+      <div class="section-h reveal">
+        <span class="ix">[02] · live demo</span>
+        <h2>Watch an agent <em>think</em>.</h2>
+        <span></span>
+      </div>
+
+      <div class="agent-bay reveal">
+        <div class="agent-bay-meta">
+          <div>
+            <h3>Lakshay's <em>orchestrator</em></h3>
+            <p>A planner-executor agent introducing me. Built on Anthropic Claude with a custom tool registry. Live, not pre-recorded.</p>
+          </div>
+          <dl class="kvs">
+            <dt>runtime</dt>
+            <dd>claude-opus-4</dd>
+            <dt>topology</dt>
+            <dd>planner → executor</dd>
+            <dt>tools</dt>
+            <dd>14 registered</dd>
+            <dt>status</dt>
+            <dd><span class="live-pulse">live</span></dd>
+          </dl>
+        </div>
+        <div class="terminal" data-terminal>
+          <div class="terminal-head">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="ttl"><b>lakshay@agent</b> · ~/orchestrator</div>
+            <div class="right">claude-opus-4</div>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="prompt">$</span><span class="t-cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="wrap block">
+      <div class="stats reveal">
+        <div>
+          <div class="num">12<em>+</em></div>
+          <div class="label">agents in production</div>
+        </div>
+        <div>
+          <div class="num">8<sup>yrs</sup></div>
+          <div class="label">building software</div>
+        </div>
+        <div>
+          <div class="num">15<em>+</em></div>
+          <div class="label">conference talks</div>
+        </div>
+        <div>
+          <div class="num">1<sup>book</sup></div>
+          <div class="label">authored, published</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED AGENTS -->
+    <section class="wrap block">
+      <div class="section-h reveal">
+        <span class="ix">[03] · selected work</span>
+        <h2>Agents in <em>production</em>.</h2>
+        <a class="more" href="projects.html">all agents
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="agents-grid">
+        <a href="projects.html" class="agent-card reveal">
+          <div class="top">
+            <span class="badge live">live</span>
+            <span class="num">— 001</span>
+          </div>
+          <h3>DocIQ</h3>
+          <p>Multi-tenant document intelligence platform. Agentic RAG over enterprise contracts, invoices, and technical specs. Hybrid retrieval, structured extraction, citation-grounded answers.</p>
+          <div class="stack">
+            <span>claude</span><span>langgraph</span><span>qdrant</span><span>fastapi</span><span>postgres</span>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+        </a>
+
+        <a href="projects.html" class="agent-card reveal">
+          <div class="top">
+            <span class="badge ship">shipped</span>
+            <span class="num">— 002</span>
+          </div>
+          <h3>OMS-v1 <em>Copilot</em></h3>
+          <p>Order management copilot. Natural-language operator agent: queries inventory, flags exceptions, drafts vendor emails, schedules dispatch. Replaces 60% of ops handoffs.</p>
+          <div class="stack">
+            <span>openai</span><span>tool-calling</span><span>postgres</span><span>react</span><span>redis</span>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+        </a>
+
+        <a href="projects.html" class="agent-card reveal">
+          <div class="top">
+            <span class="badge">research</span>
+            <span class="num">— 003</span>
+          </div>
+          <h3>AI <em>Battlefield</em></h3>
+          <p>Adversarial multi-agent simulator. Two agent armies negotiate, deceive, and cooperate over a shared world model. Tests alignment failures under self-play pressure.</p>
+          <div class="stack">
+            <span>claude</span><span>multi-agent</span><span>simulation</span><span>python</span>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+        </a>
+
+        <a href="projects.html" class="agent-card reveal">
+          <div class="top">
+            <span class="badge">ongoing</span>
+            <span class="num">— 004</span>
+          </div>
+          <h3>ERP-v1 <em>Layer</em></h3>
+          <p>Agentic interface bolted onto a legacy ERP. Conversational queries, audit-grade actions with confirmations, role-aware tool routing. ERP becomes typeable, not clickable.</p>
+          <div class="stack">
+            <span>langgraph</span><span>fastapi</span><span>postgres</span><span>next.js</span>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- BEYOND CODE -->
+    <section class="wrap block">
+      <div class="section-h reveal">
+        <span class="ix">[04] · beyond code</span>
+        <h2>Writer, <em>speaker</em>, mentor.</h2>
+        <span></span>
+      </div>
+
+      <div class="cap-list reveal">
+        <div class="cap">
+          <span class="cap-num">/book</span>
+          <div class="cap-body">
+            <h3><em>From Data</em> to World</h3>
+            <p>Author of <em>From Data to World — 5 Real-life Secrets with Data Science</em>. A grounded, story-first take on what data actually does once it leaves the notebook.</p>
+            <div class="cap-tags"><span>author</span><span>2023</span></div>
+          </div>
+          <a href="from-data-to-world.html" class="cap-vis" style="color:var(--ink-dim);text-decoration:underline;text-underline-offset:4px;">read →</a>
+        </div>
+        <div class="cap">
+          <span class="cap-num">/talks</span>
+          <div class="cap-body">
+            <h3>Speaker · <em>15+ talks</em></h3>
+            <p>Microsoft Reactor · ThoughtWorks · Solapur FOSS · TinyML · AI Unleashed · panel discussions on GenAI, edge computing, and agentic AI.</p>
+            <div class="cap-tags"><span>genai</span><span>agents</span><span>tinyml</span><span>iot</span></div>
+          </div>
+          <a href="talks.html" class="cap-vis" style="color:var(--ink-dim);text-decoration:underline;text-underline-offset:4px;">all talks →</a>
+        </div>
+        <div class="cap">
+          <span class="cap-num">/community</span>
+          <div class="cap-body">
+            <h3>Microsoft <em>MLSA</em> · Atria Foundation</h3>
+            <p>Microsoft Learn Student Ambassador — community-led GenAI workshops. Project Manager at Atria Foundation, launching projects to make quality education accessible.</p>
+            <div class="cap-tags"><span>microsoft</span><span>education</span><span>workshops</span></div>
+          </div>
+          <span class="cap-vis">mentoring · community</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wrap">
+      <div class="cta reveal">
+        <h2>Want to <em>compare notes</em> on agents?</h2>
+        <p>Always happy to chat about agents, RAG, or shipping LLMs in production. Tech discussions, mentorship, or talks.</p>
+        <div class="row">
+          <a href="contact.html" class="btn btn-primary">
+            schedule a call
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="mailto:lakshay@zatohq.com" class="btn btn-ghost">lakshay@zatohq.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- AGENT DOCK -->
+  <div class="dock">
+    <div class="dock-panel">
+      <div class="dock-head">
+        <h4>// lakshay-agent</h4>
+        <span class="live">online</span>
+      </div>
+      <div class="dock-body" id="dockBody"></div>
+      <div class="suggest" id="dockSuggest">
+        <button>who is lakshay</button>
+        <button>show projects</button>
+        <button>tech stack</button>
+        <button>how to reach</button>
+        <button>book</button>
+      </div>
+    </div>
+    <button class="dock-toggle" id="dockToggle" aria-label="open agent">
+      <span class="pulse"></span>
+      <span>ask agent</span>
+    </button>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark">L<span class="dot"></span></span>
+            <span>lakshay kumar <small>· /tech</small></span>
+          </a>
+          <p style="margin-top:16px;">AI agent engineer building production multi-agent systems. Based in Bangalore. Writing software since 2018.</p>
+        </div>
+        <div>
+          <h5>Site</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Work</a></li>
+            <li><a href="projects.html">Agents</a></li>
+            <li><a href="talks.html">Talks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://blogs.lakshaykumar.tech" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="from-data-to-world.html">The book</a></li>
+            <li><a href="https://academics.lakshaykumar.tech" target="_blank" rel="noopener">Academics</a></li>
+            <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/lakshaykumar-tech/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:lakshay@zatohq.com">lakshay@zatohq.com</a></li>
+            <li><a href="tel:+918595984485">+91 859 598 4485</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <span>© <span data-year>2026</span> lakshay kumar · built with agents · v2.1</span>
+        <div class="foot-soc">
+          <a href="https://www.linkedin.com/in/lakshaykumar-tech/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 5h2v8h-2zM4.5 4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM7 5h1.9v1.1c.3-.5.9-1.3 2.3-1.3 2.4 0 2.8 1.6 2.8 3.7V13h-2V9.1c0-.9 0-2.1-1.3-2.1S9 7.9 9 9v4H7z"/></svg></a>
+          <a href="mailto:lakshay@zatohq.com" aria-label="Email"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M3 5l5 4 5-4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7BC3THF4Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7BC3THF4Q1');
+  </script>
 </body>
-
 </html>

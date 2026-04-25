@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0A0B"/>
+      <stop offset="1" stop-color="#11131C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#5B6CFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#5B6CFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- corner ticks -->
+  <g stroke="rgba(255,255,255,0.18)" stroke-width="1.5" fill="none">
+    <path d="M 60 60 L 60 80 M 60 60 L 80 60"/>
+    <path d="M 1140 60 L 1140 80 M 1140 60 L 1120 60"/>
+    <path d="M 60 570 L 60 550 M 60 570 L 80 570"/>
+    <path d="M 1140 570 L 1140 550 M 1140 570 L 1120 570"/>
+  </g>
+
+  <!-- top bar -->
+  <g font-family="ui-monospace, 'Geist Mono', monospace" font-size="16" fill="#6c6f86" letter-spacing="2">
+    <text x="84" y="92">~/lakshaykumar.tech</text>
+    <circle cx="1100" cy="86" r="5" fill="#5DD49C"/>
+    <text x="1115" y="92" text-anchor="end" x="1095">live</text>
+  </g>
+
+  <!-- headline -->
+  <text x="84" y="280" font-family="'Geist', system-ui, sans-serif" font-size="96" font-weight="500" fill="#F5F5F7" letter-spacing="-4">Lakshay Kumar</text>
+  <text x="84" y="370" font-family="'Geist', system-ui, sans-serif" font-size="56" font-weight="300" fill="#A1A1AA" letter-spacing="-2">AI Agent <tspan font-style="italic" font-family="'Instrument Serif', Georgia, serif" font-weight="400" fill="#F5F5F7">Engineer</tspan></text>
+
+  <!-- subline -->
+  <text x="84" y="470" font-family="'Geist', system-ui, sans-serif" font-size="24" fill="#A1A1AA" letter-spacing="-0.5">GenAI Engineer at Zato · builds production multi-agent systems</text>
+
+  <!-- bottom row -->
+  <g font-family="ui-monospace, monospace" font-size="16" fill="#6c6f86" letter-spacing="2">
+    <text x="84" y="556">CLAUDE</text>
+    <text x="220" y="556">·</text>
+    <text x="240" y="556">LANGGRAPH</text>
+    <text x="400" y="556">·</text>
+    <text x="420" y="556">RAG</text>
+    <text x="490" y="556">·</text>
+    <text x="510" y="556">AGENTIC OPS</text>
+    <text x="700" y="556">·</text>
+    <text x="720" y="556">BANGALORE</text>
+  </g>
+
+  <!-- LK mark -->
+  <g transform="translate(1060, 500)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#F5F5F7"/>
+    <text x="28" y="38" text-anchor="middle" font-family="ui-monospace, monospace" font-size="22" font-weight="700" fill="#0A0A0B">LK</text>
+  </g>
+</svg>

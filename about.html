@@ -1,217 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Lakshay Kumar</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Essential Meta Tags -->
-    <meta name="description"
-        content="About Lakshay Kumar - Generative AI Engineer specialized in machine learning algorithms and predictive modeling.">
-    <meta name="keywords"
-        content="Lakshay Kumar, Generative AI Engineer, About, Background, Skills, Education">
-    <meta name="author" content="Lakshay Kumar">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0B">
+  <title>About Lakshay Kumar — AI Engineer, Author, Speaker</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F5F5F7'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='ui-monospace,monospace' font-size='15' font-weight='700' fill='%230A0A0B'%3ELK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Lakshay Kumar — GenAI Engineer at Zato, author of From Data to World, Microsoft MLSA. AI agent engineer based in Bangalore building production LLM systems.">
+  <meta property="og:title" content="About Lakshay Kumar">
+  <meta property="og:description" content="AI Agent Engineer at Zato. Author of From Data to World. Speaker at Microsoft Reactor, ThoughtWorks, TinyML.">
+  <meta property="og:type" content="profile">
+
+  <link rel="canonical" href="https://www.lakshaykumar.tech/about.html">
+  <meta property="og:url" content="https://www.lakshaykumar.tech/about.html">
+  <meta property="og:image" content="https://www.lakshaykumar.tech/og.svg">
+  <meta property="og:site_name" content="Lakshay Kumar">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Lakshay Kumar">
+  <meta name="twitter:description" content="AI Agent Engineer at Zato. Author of From Data to World. Speaker at Microsoft Reactor, ThoughtWorks, TinyML.">
+  <meta name="twitter:image" content="https://www.lakshaykumar.tech/og.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lakshay Kumar",
+  "alternateName": "Laksh",
+  "jobTitle": "GenAI Engineer",
+  "description": "AI Agent Engineer building production multi-agent systems, RAG copilots, and agentic infrastructure.",
+  "url": "https://www.lakshaykumar.tech",
+  "email": "mailto:lakshay@zatohq.com",
+  "telephone": "+91-8595984485",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Zato",
+    "url": "https://zatohq.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Atria University"
+  },
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "AI Agents",
+    "Multi-agent systems",
+    "Retrieval Augmented Generation",
+    "LangGraph",
+    "Anthropic Claude",
+    "Generative AI",
+    "Computer Vision",
+    "Machine Learning"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/lakshaykumar-tech/",
+    "https://blogs.lakshaykumar.tech"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.lakshaykumar.tech/"},
+    {"@type":"ListItem","position":2,"name":"About","item":"https://www.lakshaykumar.tech/about.html"}
+  ]
+}
+</script>
 </head>
 
 <body>
-    <!-- Grid background -->
-    <div class="grid-background"></div>
-    <div class="noise-overlay"></div>
-    <div class="scanline"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
 
-    <!-- Code style decorations -->
-    <div class="code-decoration top-code">/* lakshay_kumar.about */</div>
-    <div class="code-decoration bottom-code">// end_of_document</div>
+  <nav class="nav" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">L<span class="dot"></span></span>
+        <span>lakshay kumar <small>· /tech</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">index</a></li>
+        <li><a href="about.html" class="active">about</a></li>
+        <li><a href="experience.html">work</a></li>
+        <li><a href="projects.html">agents</a></li>
+        <li><a href="talks.html">talks</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">
+        let's talk
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <button class="nav-burger" id="burger" aria-label="menu"><span></span></button>
+    </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-brain"></i> <span>LK</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+  <main>
+    <section class="wrap page-h reveal">
+      <div class="crumbs"><a href="index.html">~/index</a> · /about</div>
+      <h1>Builder. <em>Author.</em><br>Reluctant futurist.</h1>
+      <p class="lead">Engineer at the seam where language models meet production systems. I write code, I write books, and I run my mouth on stages — usually about why agents need ops too.</p>
+    </section>
+
+    <section class="wrap-narrow block">
+      <div class="about-solo reveal">
+        <div class="about-body">
+          <p>I build <em>AI agents that ship</em>. Not the demo-reel kind — the kind that operate inside enterprise systems with real users, real audit logs, and real stakes.</p>
+          <p>Currently <b>GenAI Engineer at Zato</b>, where I lead agent architecture across our document intelligence (DocIQ) and operations copilot (OMS) products. Before that, I cut my teeth on data science, computer vision on drones, and Web3 health records.</p>
+          <p>I'm also an <b>author</b> — <em>From Data to World</em> is my attempt to write a data-science book that doesn't read like a tutorial. I speak at meetups (Microsoft Reactor, ThoughtWorks, Solapur FOSS, TinyML), mentor through Microsoft's MLSA program, and run education projects at Atria Foundation.</p>
+          <p>Outside of work I read systems papers and rebuild old ideas in modern stacks — to see what changes when the building blocks get an order of magnitude better.</p>
+
+          <dl class="kv">
+            <dt>Currently</dt>
+            <dd>GenAI Engineer @ <a href="https://zatohq.com" target="_blank" rel="noopener">Zato</a></dd>
+            <dt>Based</dt>
+            <dd>Bangalore, Karnataka, India</dd>
+            <dt>Studying</dt>
+            <dd>B.Tech, Digital Transformation · Atria University · 8 CGPA</dd>
+            <dt>Writing</dt>
+            <dd><a href="from-data-to-world.html">From Data to World</a> · <a href="https://blogs.lakshaykumar.tech" target="_blank" rel="noopener">blogs.lakshaykumar.tech</a></dd>
+            <dt>Speaking</dt>
+            <dd>Microsoft Reactor · ThoughtWorks · Solapur FOSS · TinyML · 15+ talks</dd>
+            <dt>Mentoring</dt>
+            <dd>Microsoft Learn Student Ambassador · Atria Foundation</dd>
+            <dt>Reach</dt>
+            <dd><a href="mailto:lakshay@zatohq.com">lakshay@zatohq.com</a></dd>
+          </dl>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <main class="container about-page">
-        <header class="page-header">
-            <h1 class="page-title">About Me</h1>
-            <div class="h-line"></div>
-        </header>
+    <section class="wrap block">
+      <div class="section-h reveal">
+        <span class="ix">[01] · stack</span>
+        <h2>What I work <em>with</em>.</h2>
+        <span></span>
+      </div>
 
-        <section class="about-content">
-            <div class="about-intro">
-                <div class="about-avatar">
-                    <div class="avatar-wrapper large">
-                        <div class="avatar-border"></div>
-                        <div class="avatar">
-                            <i class="fas fa-brain data-icon"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h2>Lakshay Kumar</h2>
-                    <p class="title">Generative AI Engineer</p>
-                    
-
-                    
-                    <div class="quick-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Location, Country</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Education Degree</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-calendar-check"></i>
-                            <span>7+ Years Experience</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-sections">
-                <div class="about-section">
-                    <h3><i class="fas fa-user-circle"></i> Bio</h3>
-                    <!-- Content placeholder - you'll add your own content here -->
-                    <p>Content will be added by the user.</p>
-                </div>
-
-                <div class="about-section">
-                    <h3><i class="fas fa-cogs"></i> Skills & Expertise</h3>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h4>Programming</h4>
-                            <div class="skill-group">
-                                <div class="skill-item">
-                                    <span class="skill-name">Python</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 95%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">JavaScript</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">SQL</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>Machine Learning</h4>
-                            <div class="skill-group">
-                                <div class="skill-item">
-                                    <span class="skill-name">Neural Networks</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 90%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">NLP</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 92%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">Computer Vision</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 75%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>Tools & Frameworks</h4>
-                            <div class="skill-group">
-                                <div class="skill-item">
-                                    <span class="skill-name">PyTorch</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 88%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">TensorFlow</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">Docker</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-level" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-section">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="education-items">
-                        <div class="education-item">
-                            <div class="ed-year">2015 - 2017</div>
-                            <div class="ed-info">
-                                <h4>Master's in Computer Science</h4>
-                                <p>University Name</p>
-                                <p class="ed-description">Specialized in Machine Learning and Artificial Intelligence</p>
-                            </div>
-                        </div>
-                        <div class="education-item">
-                            <div class="ed-year">2011 - 2015</div>
-                            <div class="ed-info">
-                                <h4>Bachelor's in Computer Engineering</h4>
-                                <p>University Name</p>
-                                <p class="ed-description">Graduated with honors</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Download Resume Button -->
-        <div class="resume-download">
-            <a href="#" class="download-btn">
-                <i class="fas fa-file-download"></i> Download Resume
-            </a>
+      <div class="cap-list reveal">
+        <div class="cap">
+          <span class="cap-num">/agents</span>
+          <div class="cap-body">
+            <h3>Agent <em>frameworks</em></h3>
+            <p>LangGraph for stateful multi-agent flows. Anthropic Claude SDK for production reliability. Custom orchestrators when frameworks get in the way.</p>
+            <div class="cap-tags"><span>langgraph</span><span>anthropic</span><span>openai</span><span>llamaindex</span></div>
+          </div>
+          <span class="cap-vis">runtime</span>
         </div>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 • Lakshay Kumar • Generative AI Engineer</p>
-            <p class="footer-note">Designed and developed with AI assistance</p>
+        <div class="cap">
+          <span class="cap-num">/data</span>
+          <div class="cap-body">
+            <h3>Retrieval &amp; <em>data</em></h3>
+            <p>Hybrid search, re-rankers, structured extraction. Postgres pgvector for low-ops, Qdrant/Pinecone when scale demands it.</p>
+            <div class="cap-tags"><span>qdrant</span><span>pinecone</span><span>pgvector</span><span>elastic</span><span>cohere-rerank</span></div>
+          </div>
+          <span class="cap-vis">storage</span>
         </div>
-    </footer>
+        <div class="cap">
+          <span class="cap-num">/serve</span>
+          <div class="cap-body">
+            <h3>Serving &amp; <em>infra</em></h3>
+            <p>FastAPI + Pydantic for typed tool surfaces. Docker, GCP/Azure, Redis for state, Postgres for source-of-truth. Streaming everywhere.</p>
+            <div class="cap-tags"><span>fastapi</span><span>docker</span><span>postgres</span><span>redis</span><span>gcp</span><span>azure</span></div>
+          </div>
+          <span class="cap-vis">production</span>
+        </div>
+        <div class="cap">
+          <span class="cap-num">/web</span>
+          <div class="cap-body">
+            <h3>Web &amp; <em>experience</em></h3>
+            <p>React/Next for agent UIs — streaming chat, tool-call visualizations, audit trails. Tailwind for speed when shipping is the brief.</p>
+            <div class="cap-tags"><span>next.js</span><span>react</span><span>typescript</span><span>tailwind</span></div>
+          </div>
+          <span class="cap-vis">frontend</span>
+        </div>
+        <div class="cap">
+          <span class="cap-num">/foundations</span>
+          <div class="cap-body">
+            <h3>Classical foundations</h3>
+            <p>Where I started: scikit-learn, classical ML, computer vision (OpenCV, MediaPipe), Power BI dashboards, statistics. Still pull these out when LLMs are the wrong tool.</p>
+            <div class="cap-tags"><span>scikit-learn</span><span>opencv</span><span>mediapipe</span><span>pandas</span><span>statistics</span></div>
+          </div>
+          <span class="cap-vis">classical</span>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="wrap block">
+      <div class="section-h reveal">
+        <span class="ix">[02] · receipts</span>
+        <h2>Education &amp; <em>certifications</em>.</h2>
+        <span></span>
+      </div>
+
+      <div class="cap-list reveal">
+        <div class="cap">
+          <span class="cap-num">2021—</span>
+          <div class="cap-body">
+            <h3>B.Tech · Digital <em>Transformation</em></h3>
+            <p>Atria University, Bangalore — current cohort. 8 CGPA. Cross-disciplinary curriculum spanning ML, design, and systems thinking.</p>
+          </div>
+          <span class="cap-vis">undergraduate</span>
+        </div>
+        <div class="cap">
+          <span class="cap-num">2020—21</span>
+          <div class="cap-body">
+            <h3>Class XII · ISC <em>Non-Med</em></h3>
+            <p>Jiva Public School — 91%.</p>
+          </div>
+          <span class="cap-vis">secondary</span>
+        </div>
+        <div class="cap">
+          <span class="cap-num">/cert</span>
+          <div class="cap-body">
+            <h3>Certifications</h3>
+            <p>Python for Data Science · IBM. Data Analysis with Python · Cognitive Classes. Microsoft AI Classroom Series.</p>
+            <div class="cap-tags"><span>ibm</span><span>cognitive-classes</span><span>microsoft</span></div>
+          </div>
+          <span class="cap-vis">credentials</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="cta reveal">
+        <h2>Want to <em>compare notes</em>?</h2>
+        <p>Tech discussions, mentorship, or speaking — happy to chat. I reply to every thoughtful note.</p>
+        <div class="row">
+          <a href="contact.html" class="btn btn-primary">
+            schedule a call
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="resume.pdf" target="_blank" class="btn btn-ghost">download resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="dock">
+    <div class="dock-panel">
+      <div class="dock-head">
+        <h4>// lakshay-agent</h4>
+        <span class="live">online</span>
+      </div>
+      <div class="dock-body" id="dockBody"></div>
+      <div class="suggest" id="dockSuggest">
+        <button>who is lakshay</button>
+        <button>show projects</button>
+        <button>tech stack</button>
+        <button>how to reach</button>
+        <button>book</button>
+      </div>
+    </div>
+    <button class="dock-toggle" id="dockToggle" aria-label="open agent">
+      <span class="pulse"></span>
+      <span>ask agent</span>
+    </button>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark">L<span class="dot"></span></span>
+            <span>lakshay kumar <small>· /tech</small></span>
+          </a>
+          <p style="margin-top:16px;">AI agent engineer building production multi-agent systems. Based in Bangalore. Writing software since 2018.</p>
+        </div>
+        <div>
+          <h5>Site</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Work</a></li>
+            <li><a href="projects.html">Agents</a></li>
+            <li><a href="talks.html">Talks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://blogs.lakshaykumar.tech" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="from-data-to-world.html">The book</a></li>
+            <li><a href="https://academics.lakshaykumar.tech" target="_blank" rel="noopener">Academics</a></li>
+            <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/lakshaykumar-tech/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:lakshay@zatohq.com">lakshay@zatohq.com</a></li>
+            <li><a href="tel:+918595984485">+91 859 598 4485</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <span>© <span data-year>2026</span> lakshay kumar · built with agents · v2.1</span>
+        <div class="foot-soc">
+          <a href="https://www.linkedin.com/in/lakshaykumar-tech/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 5h2v8h-2zM4.5 4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM7 5h1.9v1.1c.3-.5.9-1.3 2.3-1.3 2.4 0 2.8 1.6 2.8 3.7V13h-2V9.1c0-.9 0-2.1-1.3-2.1S9 7.9 9 9v4H7z"/></svg></a>
+          <a href="mailto:lakshay@zatohq.com" aria-label="Email"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M3 5l5 4 5-4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

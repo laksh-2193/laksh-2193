@@ -1,129 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from wpriverthemes.com/landing/gridx-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2023 03:40:53 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0B">
+  <title>404 — page not found</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F5F5F7'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='ui-monospace,monospace' font-size='15' font-weight='700' fill='%230A0A0B'%3ELK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .e404 {
+      min-height: 100dvh;
+      display: grid; place-items: center;
+      text-align: center;
+      padding: var(--s-7) var(--s-5);
+    }
+    .e404-num {
+      font-family: var(--f-sans); font-weight: 300;
+      font-size: clamp(8rem, 24vw, 16rem);
+      line-height: 0.85;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+      margin-bottom: var(--s-4);
+    }
+    .e404-num em {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .e404 p {
+      color: var(--ink-dim); font-size: 1rem; max-width: 50ch;
+      margin: 0 auto var(--s-6);
+      line-height: 1.55;
+    }
+    .e404 .meta {
+      font-family: var(--f-mono); font-size: 11px;
+      color: var(--ink-mute); letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: var(--s-5);
+    }
+    .e404 .row { display: flex; gap: var(--s-3); justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lakshay Kumar - Aspiring Data Scientist</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta
-      name="keywords"
-      content="data science, lakshay kumar, artificial intelligence, machine learning, computer vision"
-    />
-    <meta
-      name="description"
-      content="Lakshay Kumar is young aspiring Data Scientist, who love to build AI and
-        					ML applications, that can contribute as a solution in real
-        					world problems."
-    />
-    <meta name="author" content="Lakshay Kumar" />
+  <main class="e404">
+    <div>
+      <div class="meta">// agent · 404 · path not resolved</div>
+      <div class="e404-num">4<em>0</em>4</div>
+      <p>The agent looked everywhere — index, work, agents, talks. This page isn't in the registry. Most likely it moved, or the URL has a typo.</p>
+      <div class="row">
+        <a href="index.html" class="btn btn-primary">
+          back to index
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-ghost">report it</a>
+      </div>
+    </div>
+  </main>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-    <link rel="stylesheet" href="assets/css/iconoir.css" />
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/aos.css" />
-
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-
-  <body>
-    <main class="main-homepage">
-      <!-- Header -->
-      <header class="header-area">
-        <div class="container">
-          <div class="gx-row d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo">
-              <img src="assets/images/logo.svg" alt="Logo" />
-            </a>
-
-            <nav class="navbar">
-              <ul class="menu">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-
-            <a href="schedule.html" class="theme-btn">Let's Connect</a>
-
-            <div class="show-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </header>
-      <section class="about-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12" data-aos="zoom-in">
-              <div class="about-me-box shadow-box">
-                <a class="overlay-link" href="index.html"></a>
-                <img src="assets/images/bg1.png" alt="BG" class="bg-img" />
-                
-
-                <div class="infos">
-                    
-                    <lottie-player style="margin-right:auto;margin-left:auto;" src="https://assets4.lottiefiles.com/packages/lf20_htuvtwfy.json" background="transparent"  speed="1"  style="width: 100px; height: 100px;" loop autoplay></lottie-player>
-
-                  <h1
-                    class="section-heading aos-init aos-animate"
-                    data-aos="fade-up"
-                  >
-                    <img src="assets/images/star-2.png" alt="Star" /> Oops! Looks like you landed on a wrong page. <img src="assets/images/star-2.png" alt="Star" />
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer-area">
-        <div class="container">
-          <div class="footer-content text-center">
-            <ul class="footer-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="https://blogs.lakshaykumar.tech/">Blogs</a></li>
-              <li><a href="talks.html">Talks</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <p class="copyright">
-              &copy; All rights reserved by <span>WordPress River</span>
-            </p>
-          </div>
-        </div>
-      </footer>
-    </main>
-
-    <script src="assets/js/jquery-3.6.4.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-
-  <!-- Mirrored from wpriverthemes.com/landing/gridx-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2023 03:41:06 GMT -->
+  <script src="script.js"></script>
+</body>
 </html>

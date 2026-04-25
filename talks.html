@@ -1,101 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talks & Presentations - Lakshay Kumar</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Essential Meta Tags -->
-    <meta name="description"
-        content="Talks and presentations by Lakshay Kumar - Generative AI Engineer sharing expertise in AI, machine learning, and data science.">
-    <meta name="keywords"
-        content="Lakshay Kumar, Talks, Presentations, Conferences, AI, Machine Learning, Data Science">
-    <meta name="author" content="Lakshay Kumar">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0B">
+  <title>Talks — Microsoft Reactor, TinyML, ThoughtWorks</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F5F5F7'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='ui-monospace,monospace' font-size='15' font-weight='700' fill='%230A0A0B'%3ELK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Conference talks by Lakshay Kumar at Microsoft Reactor, ThoughtWorks, Solapur FOSS, TinyML, AI Unleashed. Topics: agents, RAG, edge ML, computer vision.">
+  <style>
+    .talk-thumb {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+      background: var(--bg-elev);
+      border-radius: var(--r-1);
+      overflow: hidden;
+      margin-top: 12px;
+      border: 1px solid var(--line);
+    }
+    .talk-thumb img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity .25s ease, transform .4s ease; }
+    .talk:hover .talk-thumb img { opacity: 1; transform: scale(1.02); }
+  </style>
+
+  <link rel="canonical" href="https://www.lakshaykumar.tech/talks.html">
+  <meta property="og:url" content="https://www.lakshaykumar.tech/talks.html">
+  <meta property="og:image" content="https://www.lakshaykumar.tech/og.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lakshay Kumar">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Talks — Lakshay Kumar">
+  <meta name="twitter:description" content="Speaker at Microsoft Reactor, ThoughtWorks, TinyML and more. 15+ technical talks on AI agents and ML.">
+  <meta name="twitter:image" content="https://www.lakshaykumar.tech/og.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lakshay Kumar",
+  "alternateName": "Laksh",
+  "jobTitle": "GenAI Engineer",
+  "description": "AI Agent Engineer building production multi-agent systems, RAG copilots, and agentic infrastructure.",
+  "url": "https://www.lakshaykumar.tech",
+  "email": "mailto:lakshay@zatohq.com",
+  "telephone": "+91-8595984485",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Zato",
+    "url": "https://zatohq.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Atria University"
+  },
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "AI Agents",
+    "Multi-agent systems",
+    "Retrieval Augmented Generation",
+    "LangGraph",
+    "Anthropic Claude",
+    "Generative AI",
+    "Computer Vision",
+    "Machine Learning"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/lakshaykumar-tech/",
+    "https://blogs.lakshaykumar.tech"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.lakshaykumar.tech/"},
+    {"@type":"ListItem","position":2,"name":"Talks","item":"https://www.lakshaykumar.tech/talks.html"}
+  ]
+}
+</script>
 </head>
 
 <body>
-    <!-- Grid background -->
-    <div class="grid-background"></div>
-    <div class="noise-overlay"></div>
-    <div class="scanline"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
 
-    <!-- Code style decorations -->
-    <div class="code-decoration top-code">/* lakshay_kumar.talks */</div>
-    <div class="code-decoration bottom-code">// end_of_document</div>
+  <nav class="nav" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">L<span class="dot"></span></span><span>lakshay kumar <small>· /tech</small></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">index</a></li><li><a href="about.html">about</a></li>
+        <li><a href="experience.html">work</a></li><li><a href="projects.html">agents</a></li>
+        <li><a href="talks.html" class="active">talks</a></li><li><a href="contact.html">contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">let's talk <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <button class="nav-burger" id="burger" aria-label="menu"><span></span></button>
+    </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-brain"></i> <span>LK</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="talks.html" class="active">Talks</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+  <main>
+    <section class="wrap page-h reveal">
+      <div class="crumbs"><a href="index.html">~/index</a> · /talks</div>
+      <h1>Words about <em>building things</em>.</h1>
+      <p class="lead">Conference talks, panels, workshops, and meetup sessions. Mostly about agents, RAG, computer vision on edge devices, and what changes when you have to ship the demo.</p>
+    </section>
+
+    <section class="wrap block">
+      <div class="talks-grid reveal">
+
+        <div class="talk">
+          <div class="when">JAN<b>'25</b></div>
+          <div>
+            <h3>Agentic AI in <em>Production</em></h3>
+            <div class="where">Konnect AI · Bangalore</div>
+            <p>Patterns and pitfalls when shipping multi-agent systems. Live walkthrough of an agent failing well.</p>
+            <div class="talk-thumb"><img src="images/talks/konnect-ai-jan.jpeg" alt="Konnect AI" loading="lazy"></div>
+          </div>
         </div>
-    </nav>
 
-    <main class="container talks-page">
-        <header class="page-header">
-            <h1 class="page-title">Talks & Presentations</h1>
-            <div class="h-line"></div>
-            <p class="page-subtitle">Sharing knowledge and insights at conferences and events</p>
-        </header>
-
-        <!-- Featured Talk -->
-        <section class="featured-talk">
-            <div class="featured-talk-card">
-                <div class="featured-badge">
-                    <i class="fas fa-star"></i>
-                    <span>Featured</span>
-                </div>
-                <div class="featured-talk-content">
-                    <!-- Content will be inserted by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Upcoming Talks -->
-        <section class="upcoming-talks">
-            <h2 class="section-title">Upcoming Talks</h2>
-            <!-- Upcoming talks will be inserted by JavaScript -->
-        </section>
-
-        <!-- Talks List Section -->
-        <section class="talks-list-section">
-            <h2 class="section-title">All Presentations</h2>
-            <!-- Year tabs and talks will be inserted here by JavaScript -->
-        </section>
-        
-        <!-- Invite CTA -->
-        <div class="speaking-cta">
-            <i class="fas fa-microphone-alt"></i>
-            <h2>Interested in having me speak at your event?</h2>
-            <p>I'm available for conferences, webinars, and workshops on AI, ML, and data science topics.</p>
-            <a href="contact.html" class="cta-button">Contact Me</a>
+        <div class="talk">
+          <div class="when">DEC<b>'24</b></div>
+          <div>
+            <h3>Panel: GenAI in the <em>Indian Stack</em></h3>
+            <div class="where">Panel Discussion · Industry roundtable</div>
+            <p>What changes for Indian enterprises when LLMs become procurement-ready.</p>
+            <div class="talk-thumb"><img src="images/talks/PanelDiscussionWithLakshay.png" alt="Panel discussion" loading="lazy"></div>
+          </div>
         </div>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 • Lakshay Kumar • Generative AI Engineer</p>
-            <p class="footer-note">Designed and developed with AI assistance</p>
+        <div class="talk">
+          <div class="when">NOV<b>'24</b></div>
+          <div>
+            <h3>AI <em>Unleashed</em></h3>
+            <div class="where">AI Unleashed · Bangalore</div>
+            <p>From RAG to agents — a practical taxonomy of where each pattern fits.</p>
+            <div class="talk-thumb"><img src="images/talks/aiUnleashed.png" alt="AI Unleashed" loading="lazy"></div>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="talk">
+          <div class="when">OCT<b>'24</b></div>
+          <div>
+            <h3>Generative AI for <em>Real Apps</em></h3>
+            <div class="where">Microsoft Reactor</div>
+            <p>Walkthrough of building a small but real LLM-powered assistant from prompt to production.</p>
+            <div class="talk-thumb"><img src="images/talks/genrative_ai.png" alt="Generative AI talk" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="talk">
+          <div class="when">SEP<b>'24</b></div>
+          <div>
+            <h3>Edge <em>Computing</em></h3>
+            <div class="where">LinkedIn Live · Tech panel</div>
+            <p>Why edge inference is the unglamorous half of every AI deployment.</p>
+            <div class="talk-thumb"><img src="images/talks/linkedin_edgecomputing.png" alt="Edge computing" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="talk">
+          <div class="when">AUG<b>'24</b></div>
+          <div>
+            <h3>TinyML on <em>Microcontrollers</em></h3>
+            <div class="where">TinyML Meetup · Bangalore</div>
+            <p>Squeezing useful inference into 256KB of RAM. Hardware constraints sharpen ML.</p>
+            <div class="talk-thumb"><img src="images/talks/tinyMLTalk.png" alt="TinyML talk" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="talk">
+          <div class="when">JUL<b>'24</b></div>
+          <div>
+            <h3>Solapur FOSS <em>Conference</em></h3>
+            <div class="where">SolapurFOSS · Maharashtra</div>
+            <p>Open-source ML in regional ecosystems. The gap between tutorial and deployment.</p>
+            <div class="talk-thumb"><img src="images/talks/SolapurFOSS.png" alt="Solapur FOSS" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="talk">
+          <div class="when">JUN<b>'24</b></div>
+          <div>
+            <h3>Drones &amp; <em>Computer Vision</em></h3>
+            <div class="where">Microsoft Reactor</div>
+            <p>Live demo: a mini DJI Tello detecting unsafe behaviors in real time. The talk that started everything.</p>
+            <div class="talk-thumb"><img src="images/talks/reactor_drones.png" alt="Reactor drones talk" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="talk">
+          <div class="when">MAY<b>'24</b></div>
+          <div>
+            <h3>IoT &amp; <em>Drones</em></h3>
+            <div class="where">IoT Shows · Industry meetup</div>
+            <p>Hands-on session: small drones, big sensors, and where on-device ML earns its keep.</p>
+            <div class="talk-thumb"><img src="images/talks/iotshows_drones.jpg" alt="IoT drones" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="talk">
+          <div class="when">APR<b>'24</b></div>
+          <div>
+            <h3>Open-source Python <em>Packages</em></h3>
+            <div class="where">Microsoft Reactor</div>
+            <p>What I learned publishing two small open-source packages — distribution, docs, and the long tail of issues.</p>
+            <div class="talk-thumb"><img src="images/talks/reactor_packages.png" alt="Reactor packages" loading="lazy"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="cta reveal">
+        <h2>Want me at <em>your event?</em></h2>
+        <p>Workshops, panels, conference talks. I prefer technical formats with live demos.</p>
+        <div class="row">
+          <a href="contact.html" class="btn btn-primary">invite me to speak <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="dock">
+    <div class="dock-panel">
+      <div class="dock-head"><h4>// lakshay-agent</h4><span class="live">online</span></div>
+      <div class="dock-body" id="dockBody"></div>
+      <div class="suggest" id="dockSuggest">
+        <button>who is lakshay</button><button>show projects</button>
+        <button>tech stack</button><button>how to reach</button><button>book</button>
+      </div>
+    </div>
+    <button class="dock-toggle" id="dockToggle" aria-label="open agent">
+      <span class="pulse"></span><span>ask agent</span>
+    </button>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand-mark">L<span class="dot"></span></span><span>lakshay kumar <small>· /tech</small></span></a>
+          <p style="margin-top:16px;">AI agent engineer building production multi-agent systems. Based in Bangalore. Writing software since 2018.</p>
+        </div>
+        <div><h5>Site</h5><ul>
+          <li><a href="about.html">About</a></li><li><a href="experience.html">Work</a></li>
+          <li><a href="projects.html">Agents</a></li><li><a href="talks.html">Talks</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div><h5>Resources</h5><ul>
+          <li><a href="https://blogs.lakshaykumar.tech" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="from-data-to-world.html">The book</a></li>
+          <li><a href="https://academics.lakshaykumar.tech" target="_blank" rel="noopener">Academics</a></li>
+          <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul></div>
+        <div><h5>Connect</h5><ul>
+          <li><a href="https://www.linkedin.com/in/lakshaykumar-tech/" target="_blank" rel="noopener">LinkedIn</a></li>
+          
+          <li><a href="mailto:lakshay@zatohq.com">lakshay@zatohq.com</a></li>
+          <li><a href="tel:+918595984485">+91 859 598 4485</a></li>
+        </ul></div>
+      </div>
+      <div class="foot-bot">
+        <span>© <span data-year>2026</span> lakshay kumar · built with agents · v2.1</span>
+        <div class="foot-soc">
+          <a href="https://www.linkedin.com/in/lakshaykumar-tech/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 5h2v8h-2zM4.5 4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM7 5h1.9v1.1c.3-.5.9-1.3 2.3-1.3 2.4 0 2.8 1.6 2.8 3.7V13h-2V9.1c0-.9 0-2.1-1.3-2.1S9 7.9 9 9v4H7z"/></svg></a>
+          <a href="mailto:lakshay@zatohq.com" aria-label="Email"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M3 5l5 4 5-4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

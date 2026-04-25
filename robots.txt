@@ -1,16 +1,8 @@
 User-agent: *
-Disallow: /favicon.png
-Disallow: /OfferLetter.pdf
+Allow: /
+
 Disallow: /CNAME
 Disallow: /README.md
-Disallow: /js/
-Disallow: /inc/
-Disallow: /css/
-Disallow: /schedule
-Disallow: /twitter.html
-Disallow: /linkedin
-Disallow: /webinars.html
-Disallow: /instagram.htm
-Disallow: /cdn-cgi/l/email-protection.html
-Disallow: https://links.lakshaykumar.tech/index.html
-Disallow: /share
+Disallow: /share/
+
+Sitemap: https://www.lakshaykumar.tech/sitemap.xml
