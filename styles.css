@@ -96,8 +96,11 @@ img, svg { max-width: 100%; display: block; }
 main { padding-top: 88px; }
 
 @media (max-width: 720px) {
-  .wrap, .wrap-narrow { padding: 0 var(--s-4); }
+  .wrap, .wrap-narrow { padding: 0 var(--s-5); }
   main { padding-top: 72px; }
+}
+@media (max-width: 480px) {
+  .wrap, .wrap-narrow { padding: 0 20px; }
 }
 
 /* ====================== TYPE ====================== */
@@ -621,6 +624,8 @@ section.block + section.block { padding-top: 0; }
     padding: var(--s-5) 0;
   }
   .cap-vis { display: none; }
+  .cap-body p, .cap-body h3 { max-width: none; }
+  .cap-tags { gap: 6px; }
 }
 
 /* ====================== AGENT TERMINAL (standalone) ====================== */
@@ -1345,6 +1350,10 @@ footer {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   margin-top: var(--s-9);
+}
+@media (max-width: 720px) {
+  .cta { padding: var(--s-7) var(--s-3); margin-top: var(--s-7); }
+  .cta h2 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
 }
 .cta h2 {
   font-size: clamp(2rem, 5.5vw, 4rem);
