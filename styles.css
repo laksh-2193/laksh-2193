@@ -1068,7 +1068,7 @@ section.block + section.block { padding-top: 0; }
 
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 640px);
   gap: var(--s-7);
   align-items: start;
 }
@@ -1101,17 +1101,6 @@ section.block + section.block { padding-top: 0; }
 .channel .arr { color: var(--ink-mute); transition: transform .2s ease; }
 .channel:hover .arr { transform: translateX(4px); color: var(--ink); }
 
-.cform {
-  border: 1px solid var(--line);
-  border-radius: var(--r-3);
-  padding: var(--s-6);
-  background: var(--surface);
-}
-.cform h3 {
-  font-size: 1.4rem; font-weight: 500; letter-spacing: -0.03em;
-  margin-bottom: var(--s-2);
-}
-.cform > p { color: var(--ink-dim); font-size: 0.9rem; margin-bottom: var(--s-5); }
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--s-4); }
 .field label {
   font-family: var(--f-mono); font-size: 10.5px;
